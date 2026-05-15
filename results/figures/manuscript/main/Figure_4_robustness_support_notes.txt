@@ -1,0 +1,101 @@
+﻿Figure4_robustness_support
+==============================
+
+Caption title:
+Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2-THRB dual-axis model
+
+Revision scope:
+- Figure 4 v3.1 is a layout and graphical-language revision of v3.
+- No data values or upstream analyses were changed.
+
+Input files:
+- robustness_validation/05_robustness_validation_integrated_table.csv
+- robustness_validation/04_shortlist_priority_stability.csv
+- robustness_validation/02_leave_one_sample_out_master_results_revised.csv
+- celloracle_run/prepared_data/celloracle_round1_metadata.csv
+- external_validation/single_group_support/external_support_ranking.csv
+- external_validation_round2/external_round2_support_ranking.csv
+
+Panel A data and columns:
+- Table: robustness_validation/05_robustness_validation_integrated_table.csv plus robustness_validation/04_shortlist_priority_stability.csv
+- Columns: {'TF': 'tf', 'Expr. LOSO direction': 'loo_expr_consistency_rate', 'Regulon LOSO direction': 'loo_regulon_consistency_rate', 'Shortlist retention': 'shortlist_retention_frequency', 'Rank stability': 'robustness_validation/04_shortlist_priority_stability.csv::priority_stability_score', 'Raw median rank': 'median_rank_when_retained (not displayed in Panel A)'}
+- Robustness metrics: Expr. LOSO direction = leave-one-sample-out expression direction consistency; Regulon LOSO direction = leave-one-sample-out regulon direction consistency; Shortlist retention = shortlist_retention_frequency; Rank stability = normalized priority/rank stability score from the shortlist stability table.
+- Panel A v3.1 deletes the raw median-rank small text and keeps only normalized rank stability in the main visual.
+- Panel A values:
+    tf,expr_loso,regulon_loso,shortlist_retention,rank_stability,robustness_class
+
+NFE2L2,1.0000,1.0000,1.0000,0.7917,lesion axis
+
+THRB,1.0000,1.0000,0.6667,0.7500,control anchor
+
+BHLHE40,1.0000,1.0000,1.0000,0.8000,secondary
+
+SOX2,1.0000,1.0000,1.0000,0.8125,retained
+
+Panel B data and columns:
+- Table: robustness_validation/02_leave_one_sample_out_master_results_revised.csv
+- Columns: {'TF': 'tf', 'dropped_sample': 'dropped_sample', 'expression log2FC': 'expr_log2fc', 'regulon ΔAUC': 'regulon_diff', 'sample label': 'celloracle_run/prepared_data/celloracle_round1_metadata.csv::clinical_sample_label', 'x-axis columns': 'Full, −G120_D3, −G120_N1, −G133_D2, −G133_N2'}
+- LOSO effect rows: NFE2L2 expression log2FC, NFE2L2 regulon ΔAUC, THRB expression log2FC, THRB regulon ΔAUC.
+- Columns on x-axis: Full, −G120_D3, −G120_N1, −G133_D2, −G133_N2
+- Expression log2FC and regulon ΔAUC have different numeric scales, so Panel B uses row-scaled signed effects: each row was divided by its maximum absolute value across Full and leave-one-sample-out conditions. Sign was preserved; positive values indicate lesion-associated direction and negative values indicate internal-control-associated direction.
+- Panel B color indicates row-scaled signed effect; overlaid numbers are raw effect values.
+- Raw effect table:
+    effect,Full,−G120_D3,−G120_N1,−G133_D2,−G133_N2
+
+NFE2L2 expression log2FC,0.6860,0.7953,0.5310,0.5573,1.0034
+
+NFE2L2 regulon ΔAUC,0.0089,0.0157,0.0063,0.0015,0.0134
+
+THRB expression log2FC,-0.3616,-0.2874,-0.4555,-0.4466,-0.1820
+
+THRB regulon ΔAUC,-0.2452,-0.2485,-0.1571,-0.2415,-0.3985
+
+Panel C data and columns:
+- Table: external_validation/single_group_support/external_support_ranking.csv
+- Columns: {'TF': 'tf', 'Support score': 'support_score', 'Point size': 'overall_positive_fraction', 'Expected axis': 'expected_higher_group_main'}
+- GSE140393 is treated as a single-group supportive analysis, not formal validation.
+- Panel C v3.1 is a ranked lollipop using Support score on the x-axis; point size uses positive fraction when available.
+- Panel C values:
+    tf,support_score_plot,point_size_metric,expected_axis
+
+NFE2L2,1.0000,0.2579,lesion
+
+THRB,0.8000,0.0116,internal_control
+
+SOX2,0.3505,0.0655,lesion
+
+BHLHE40,0.2308,0.0678,lesion
+
+Panel D data and columns:
+- Table: external_validation_round2/external_round2_support_ranking.csv
+- Columns: {'TF': 'tf', 'Group log2FC': 'group_log2fc_lesion_vs_internal_control', 'Cluster support': 'cluster_support_fraction', 'Direction': 'group_direction_consistent_with_main', 'Support score': 'support_score'}
+- GSE190452 is treated as a cross-syndrome supportive analysis, not formal external validation.
+- Group log2FC uses direction color: positive = disease/TLE-associated, negative = control-like. Cluster support is shown as a horizontal bar. Direction uses ✓ for direction-consistent and × for direction-attenuated.
+- Panel D support class text was shortened in v3.1: NFE2L2 = disease-side support; THRB = control-like partial; SOX2 = partial support; BHLHE40 = attenuated.
+- Panel D values:
+    tf,group_log2fc,cluster_support,direction_consistent,support_class
+
+NFE2L2,0.3993,0.8214,1.0000,disease-side support
+
+THRB,-0.2309,0.6071,1.0000,control-like partial
+
+SOX2,0.2910,0.6786,1.0000,partial support
+
+BHLHE40,-0.5576,0.5357,0.0000,attenuated
+
+Required interpretation notes:
+Figure 4 v3.1 uses existing robustness and external supportive-analysis outputs only; no upstream analysis was rerun.
+Robustness is reported as sample-level / leave-one-sample-out robustness, not donor-level robustness.
+GSE140393 is described as single-group supportive analysis.
+GSE190452 is described as cross-syndrome supportive analysis.
+No functional enrichment, drug repositioning, CellOracle vector field, pySCENIC rerun, CellOracle rerun, or newly downloaded data were used.
+
+Warnings / substitutions:
+    None.
+
+Output files:
+- manuscript_output/figures_main/Figure4_robustness_support.png
+- manuscript_output/figures_main/Figure4_robustness_support.pdf
+- manuscript_output/figures_main/Figure4_robustness_support.svg
+- manuscript_output/figures_main/Figure4_robustness_support_notes.txt
+

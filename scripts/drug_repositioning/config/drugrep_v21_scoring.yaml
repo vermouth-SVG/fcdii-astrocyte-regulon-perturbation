@@ -1,0 +1,12 @@
+v21_scoring_search:
+  note: pre-BBB rescoring only; no Enrichr rerun, no BBB automation, no docking.
+  weight_ranges:
+    enrichment_support_score: [0.20, 0.28]
+    cross_signature_score: [0.14, 0.20]
+    axis_relevance_score: [0.14, 0.18]
+    mechanism_interpretability_score: [0.05, 0.10]
+    translational_suitability_score: [0.18, 0.26]
+    axis_assignment_confidence_score: [0.10, 0.16]
+  primary_target_count_tested: [4, 5, 6]
+  primary_min_support_tested: [2, 3]
+  thrb_supportive_min_translational_tested: [0.75, 0.90]

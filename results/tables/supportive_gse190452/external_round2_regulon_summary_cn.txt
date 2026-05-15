@@ -1,0 +1,8 @@
+GSE190452 在本公开包中仅作为 cross-syndrome supportive/contextual evidence 使用，不作为正式 TF-level validation。
+本轮不再依赖 round2 自身重新构建 regulon，而是使用 discovery 队列筛出的 4 个 regulon GMT 对 round2 表达矩阵进行 AUCell projection。
+按 expression 与 regulon 支持性证据整合后的综合支持度排序，结果为 SOX2 > THRB > NFE2L2 > BHLHE40。
+NFE2L2 保留支持性信号，combined_support_score=0.400，作为 lesion 侧候选轴的上下文证据。
+THRB 保留对照侧支持性信号：其 regulon 活性在 internal_control 侧更高，combined_support_score=0.467，并且 regulon cluster_support_fraction=0.64。
+BHLHE40 的支持度弱于 NFE2L2 和 THRB，combined_support_score=0.362，更适合作为第二梯队候选。
+SOX2 仍保留一定信号，但综合支持度低于前两位核心候选，combined_support_score=0.578。
+综合来看，round2 分析提供 expression-level 与 projected regulon-level supportive evidence；这些结果不应表述为正式外部验证、机制确认或实验验证。

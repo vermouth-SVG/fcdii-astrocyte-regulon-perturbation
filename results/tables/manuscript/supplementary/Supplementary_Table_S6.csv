@@ -1,0 +1,8 @@
+TF,Discovery_expression_direction,Discovery_regulon_direction,LOSO_expression_rate,LOSO_regulon_rate,Pseudobulk_expression_direction,Pseudobulk_expression_effect,Pseudobulk_regulon_direction,Integrated_retention,Grid_retention,Median_rank,Best_rank,Worst_rank,Sample_level_robustness,Priority_tier
+NFE2L2,lesion,lesion,1.0,1.0,lesion,0.743,lesion,1.0,1.0,6.0,5.0,8.0,Directionally stable,Primary lesion-associated axis
+THRB,internal-control,internal-control,1.0,1.0,internal-control,-0.328,internal-control,0.667,0.667,1.0,1.0,1.0,Directionally stable with threshold sensitivity,Primary internal-control-associated axis
+BHLHE40,lesion,lesion,1.0,1.0,lesion,1.17,lesion,1.0,1.0,5.0,4.0,6.0,Directionally stable secondary signal,Secondary lesion-associated candidate
+SOX2,lesion,lesion,1.0,1.0,lesion,0.702,lesion,1.0,1.0,4.0,3.0,4.0,Directionally stable but target-limited,Retained / lower-priority
+HMGA1,lesion,lesion,1.0,1.0,lesion,0.786,lesion,0.667,,,,,Directionally stable context signal,Lesion-side context
+SATB2,internal-control,internal-control,1.0,1.0,internal-control,-0.75,internal-control,1.0,,,,,Directionally stable supportive signal,Supportive internal-control-associated
+RARB,internal-control,internal-control,1.0,1.0,internal-control,-0.683,internal-control,1.0,,,,,Directionally stable supportive signal,Supportive internal-control-associated

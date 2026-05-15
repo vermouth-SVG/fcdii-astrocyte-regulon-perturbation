@@ -1,0 +1,3 @@
+Supplementary Fig. S4. Complete sample-level robustness and sensitivity analyses.
+
+(A) Leave-one-sample-out expression effects for candidate TFs across the full discovery object and each sample-excluded analysis. (B) Leave-one-sample-out regulon activity effects, shown as regulon AUC differences. (C) Pseudobulk support comparing expression log2FC and regulon differences for candidate TFs. (D) Threshold sensitivity and shortlist retention analysis across regulon FDR and expression-effect thresholds. These analyses assess sample-level robustness and sensitivity within the GSE268807 astrocyte pilot and should not be interpreted as donor-level or external validation.

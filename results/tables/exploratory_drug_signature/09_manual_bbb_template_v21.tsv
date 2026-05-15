@@ -1,0 +1,13 @@
+compound	associated_axis	lead_layer_v21	v21_evidence_tier	canonical_smiles	manual_bbb_layer	manual_bbb_evidence_source	manual_bbb_note
+VALPROIC ACID	NFE2L2	primary_mechanism_direction_leads	primary_prebbb	CCCC(CCC)C(=O)O	NA	NA	NA
+lobeline	NFE2L2	primary_mechanism_direction_leads	primary_prebbb	CN1[C@@H](CCC[C@@H]1CC(=O)C2=CC=CC=C2)C[C@@H](C3=CC=CC=C3)O	NA	NA	NA
+(-)-Epigallocatechin gallate	NFE2L2	primary_mechanism_direction_leads	primary_prebbb	C1[C@H]([C@H](OC2=CC(=CC(=C21)O)O)C3=CC(=C(C(=C3)O)O)O)OC(=O)C4=CC(=C(C(=C4)O)O)O	NA	NA	NA
+quercetin	NFE2L2	primary_mechanism_direction_leads	primary_prebbb	C1=CC(=C(C=C1C2=C(C(=O)C3=C(C=C(C=C3O2)O)O)O)O)O	NA	NA	NA
+Gabapentin enacarbil	THRB	supportive_manual_review_leads	manual_review_weak_fdr	CC(C)C(=O)OC(C)OC(=O)NCC1(CCCCC1)CC(=O)O	NA	NA	NA
+S-(+)-Rolipram	THRB	supportive_manual_review_leads	manual_review_weak_fdr	COC1=C(C=C(C=C1)[C@@H]2CC(=O)NC2)OC3CCCC3	NA	NA	NA
+Roflumilast	THRB	supportive_manual_review_leads	manual_review_weak_fdr	C1CC1COC2=C(C=CC(=C2)C(=O)NC3=C(C=NC=C3Cl)Cl)OC(F)F	NA	NA	NA
+zaprinast	THRB	supportive_manual_review_leads	manual_review_weak_fdr	CCCOC1=CC=CC=C1C2=NC3=NNN=C3C(=O)N2	NA	NA	NA
+papaverine	THRB	supportive_manual_review_leads	manual_review_weak_fdr	COC1=C(C=C(C=C1)CC2=NC=CC3=CC(=C(C=C32)OC)OC)OC	NA	NA	NA
+trichostatin A	NFE2L2	supportive_manual_review_leads	supportive_prebbb	C[C@H](/C=C(\C)/C=C/C(=O)NO)C(=O)C1=CC=C(C=C1)N(C)C	NA	NA	NA
+MS-275	NFE2L2	supportive_manual_review_leads	supportive_prebbb	C1=CC=C(C(=C1)N)NC(=O)C2=CC=C(C=C2)CNC(=O)OCC3=CN=CC=C3	NA	NA	NA
+scriptaid	NFE2L2	supportive_manual_review_leads	supportive_prebbb	C1=CC2=C3C(=C1)C(=O)N(C(=O)C3=CC=C2)CCCCCC(=O)NO	NA	NA	NA

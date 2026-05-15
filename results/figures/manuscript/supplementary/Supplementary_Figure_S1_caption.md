@@ -1,0 +1,3 @@
+Supplementary Fig. S1. Discovery object provenance and AUCell-matched input overview.
+
+(A) Final four-sample composition of the GSE268807 astrocyte pilot used for downstream pySCENIC, AUCell, CellOracle, and robustness analyses. (B) Upstream source-level QC and subsampling trace before final analysis object assembly. (C) Final sample-by-group cell matrix showing 1,434 internal-control astrocytes and 888 lesion astrocytes, totaling 2,322 astrocytes. (D) Input lineage and analytical object trace from raw pilot input to the merged RNA object and AUCell-matched export. The final analysis object contained 2,322 cells, 36,601 genes, and 105 pySCENIC regulons.

@@ -1,0 +1,26 @@
+候选 TF shortlist 阈值敏感性检查总结
+=============================================
+共评估阈值组合: 81 套
+阈值: regulon FDR = 0.01/0.05/0.10；表达 |log2FC| = 0/0.25/0.5；阳性细胞比例 = 0/0.05/0.10；规则 = 3 类。
+
+重点 4 TF:
+- NFE2L2: 保留频率=1.00, 中位排名=6.0, regulon方向=lesion, 表达方向=lesion
+- THRB: 保留频率=0.67, 中位排名=1.0, regulon方向=internal_control, 表达方向=internal_control
+- BHLHE40: 保留频率=1.00, 中位排名=5.0, regulon方向=lesion, 表达方向=lesion
+- SOX2: 保留频率=1.00, 中位排名=4.0, regulon方向=lesion, 表达方向=lesion
+
+解释原则: 保留频率越高，说明该 TF 对阈值选择越不敏感；中位排名越靠前，说明优先级更稳定。
+
+全部 TF 保留频率:
+     tf  retained_count  total_combinations  retention_frequency  median_rank_when_retained  best_rank  worst_rank regulon_effect_group expr_higher_group   regulon_fdr  expr_wilcoxon_fdr  log2fc_lesion_vs_internal_control  positive_fraction_in_higher_group  support_sort_score
+  SATB2              81                  81             1.000000                        2.0        1.0         2.0     internal_control  internal_control  5.548088e-99       2.342053e-31                          -0.705894                           0.410739           34.818760
+   RARB              81                  81             1.000000                        3.0        2.0         3.0     internal_control  internal_control  1.966879e-81       9.597954e-12                          -0.632515                           0.231520           28.614862
+   SOX2              81                  81             1.000000                        4.0        3.0         4.0               lesion            lesion  9.389271e-66       6.358243e-06                           0.669343                           0.252252           23.144299
+BHLHE40              81                  81             1.000000                        5.0        4.0         6.0               lesion            lesion  1.276036e-34       1.529949e-07                           1.136343                           0.158784           12.392425
+ NFE2L2              81                  81             1.000000                        6.0        5.0         8.0               lesion            lesion  1.637867e-19       4.488027e-06                           0.684524                           0.362613            6.987108
+   THRB              54                  81             0.666667                        1.0        1.0         1.0     internal_control  internal_control 4.053395e-114       7.475241e-21                          -0.361413                           0.641562           40.042070
+  HMGA1              54                  81             0.666667                        7.0        6.0         9.0               lesion            lesion  1.688176e-19       2.007902e-03                           0.744530                           0.072072            6.945404
+   ATF7               9                  81             0.111111                        6.0        6.0         7.0               lesion            lesion  7.059259e-21       9.573506e-01                           0.072323                           0.287162            7.235680
+  CEBPD               3                  81             0.037037                        5.0        5.0         5.0               lesion            lesion  1.012979e-48       9.247352e-01                           0.021132                           0.042793           16.913995
+   TCF4               0                  81             0.000000                        NaN        NaN         NaN     internal_control            lesion  2.516220e-49       5.648128e-02                           0.115326                           0.761261           17.202354
+  NR2F2               0                  81             0.000000                        NaN        NaN         NaN     internal_control            lesion  2.726045e-49       6.962069e-01                           0.391069                           0.034910           17.141420

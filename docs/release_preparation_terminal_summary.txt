@@ -1,0 +1,38 @@
+=== GitHub release preparation completed ===
+Release directory:
+- manuscript_output/github_release
+
+Included:
+- scripts: 93
+- result tables: 170
+- figures: 97
+- audit/provenance files: 24
+- documentation files: 52
+
+Excluded:
+- large raw data files: 76
+- third-party database files: 2
+- private/sensitive files: 0
+
+Manual review required:
+- yes
+- Replace GitHub URL placeholder and optional Zenodo DOI before public release.
+- Confirm final correspondence/contact placeholder.
+- Review whether to mention Docker Desktop/WSL host provenance outside audit notes.
+
+Files written:
+- README.md
+- LICENSE
+- CITATION.cff
+- .gitignore
+- requirements.txt
+- environment_notes.md
+- data_availability_statement.md
+- code_availability_statement.md
+- file_manifest.csv
+- file_manifest.md
+- excluded_files_manifest.csv
+- reproducibility_checklist.md
+- public_release_safety_report.md
+- init_git_and_push_template.sh
+- init_git_and_push_template.ps1

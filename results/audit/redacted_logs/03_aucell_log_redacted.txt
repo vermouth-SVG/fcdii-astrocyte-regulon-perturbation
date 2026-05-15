@@ -1,0 +1,10 @@
+
+2026-04-16 12:20:28,407 - pyscenic.cli.pyscenic - INFO - Loading expression matrix.
+
+2026-04-16 12:20:56,513 - pyscenic.cli.pyscenic - INFO - Loading gene signatures.
+
+2026-04-16 12:20:56,815 - pyscenic.cli.pyscenic - INFO - Calculating cellular enrichment.
+Create regulons from a dataframe of enriched features.
+Additional columns saved: []
+
+2026-04-16 12:21:08,473 - pyscenic.cli.pyscenic - INFO - Writing results to file.

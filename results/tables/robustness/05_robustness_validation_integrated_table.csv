@@ -1,0 +1,8 @@
+tf,full_data_expr_log2fc,full_data_expr_direction,full_data_regulon_diff,full_data_regulon_direction,loo_expr_consistency_rate,loo_regulon_consistency_rate,pseudobulk_direction,pseudobulk_effect_size,pseudobulk_regulon_direction,shortlist_retention_frequency,final_internal_robustness_level,recommended_priority_tier
+NFE2L2,0.6859897689279468,lesion,0.0088982287939654,lesion,1.0,1.0,lesion,0.7431756787812211,lesion,1.0,high,primary_lesion_axis
+THRB,-0.3616213197615259,internal_control,-0.2451540690346588,internal_control,1.0,1.0,internal_control,-0.3284125936720059,internal_control,0.6666666666666666,high,primary_internal_control_axis
+BHLHE40,1.1443191191864623,lesion,0.0202154966666537,lesion,1.0,1.0,lesion,1.17003437203683,lesion,1.0,high,second_tier_lesion_candidate
+SOX2,0.6719172641411649,lesion,0.0962344414532012,lesion,1.0,1.0,lesion,0.7024163706576501,lesion,1.0,high,reserved_candidate_not_main_axis
+HMGA1,0.7575026196052784,lesion,0.0154330608166063,lesion,1.0,1.0,lesion,0.7860405533920718,lesion,0.6666666666666666,high,supporting_lesion_candidate
+SATB2,-0.7068483432200912,internal_control,-0.0705325673696943,internal_control,1.0,1.0,internal_control,-0.749517794316656,internal_control,1.0,high,supporting_internal_control_candidate
+RARB,-0.6347310051122514,internal_control,-0.0461046099896761,internal_control,1.0,1.0,internal_control,-0.6827456781086058,internal_control,1.0,high,supporting_internal_control_candidate

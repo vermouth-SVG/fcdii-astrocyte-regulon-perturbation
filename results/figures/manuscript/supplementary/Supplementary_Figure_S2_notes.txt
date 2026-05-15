@@ -1,0 +1,43 @@
+FigS2_full_differential_regulon_landscape_revised_v2 notes
+
+Input files:
+- analysis_outputs/group_compare/regulon_group_statistics.csv
+- final_exports/auc_mtx_matched_to_h5ad.csv
+- celloracle_run/prepared_data/celloracle_round1_metadata.csv
+- final_exports/regulon_names.txt
+- manuscript_output/tables_supplementary/TableS2_candidate_tf_shortlist_extended_submission.csv
+
+Data sources:
+- Regulon AUC matrix was read from final_exports/auc_mtx_matched_to_h5ad.csv and matched to celloracle_round1_metadata.csv by cell_id.
+- Differential regulon statistics were read from analysis_outputs/group_compare/regulon_group_statistics.csv.
+- The regulon list contains 105 pySCENIC regulons.
+
+Panel A:
+- Top 40 differential regulons were selected by ascending FDR and then descending absolute mean AUC difference.
+- Heatmap values are sample-level mean regulon AUC values, transformed to row z-scores across the four discovery samples.
+- Columns are ordered as G120_N.1, G133_N.2, G120_D.3, and G133_D.2.
+
+Panel B:
+- Mean AUC difference is defined as mean regulon AUC in lesion astrocytes minus mean regulon AUC in internal-control astrocytes.
+- The x-axis direction is lesion − internal-control.
+- FDR values were read from the fdr_bh column in the differential regulon statistics table.
+- Negative values indicate internal-control-associated regulons; positive values indicate lesion-associated regulons.
+- Panel B retains all 105 regulons as the all-regulon differential summary.
+
+Panel C and Panel D:
+- Panel C ranks the 15 most negative regulons by Mean AUC difference: lesion − internal-control.
+- Panel D ranks positive regulons by the same direction and retains lesion-side shortlist/context regulons if they are not among the 15 largest positive values.
+- Original regulon AUC values and differential statistics were not changed.
+
+Labeled shortlist/context regulons:
+- THRB(+): present in statistics=True; present in top 40 heatmap=True
+- SATB2(+): present in statistics=True; present in top 40 heatmap=True
+- RARB(+): present in statistics=True; present in top 40 heatmap=True
+- NFE2L2(+): present in statistics=True; present in top 40 heatmap=True
+- BHLHE40(+): present in statistics=True; present in top 40 heatmap=True
+- SOX2(+): present in statistics=True; present in top 40 heatmap=True
+- HMGA1(+): present in statistics=True; present in top 40 heatmap=True
+
+Boundary:
+- FigS2 provides all-regulon context for selected main-analysis regulon programs and is not a separate confirmation analysis.
+- No CellOracle perturbation, cross-dataset support, functional enrichment, or drug repositioning content was added.

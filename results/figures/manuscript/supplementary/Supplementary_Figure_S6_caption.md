@@ -1,0 +1,3 @@
+Supplementary Fig. S6. Full functional enrichment landscape and program convergence.
+
+(A-D) Top GO/KEGG terms for NFE2L2, THRB, BHLHE40, and SOX2, respectively. Enrichment results were used to support program-level interpretation rather than pathway validation. (E) Regulon-DEG program convergence summary showing overlap genes and overlap ratios for the four candidate TFs. NFE2L2 was interpreted as a lesion-associated stress-adaptation program, THRB as a compact homeostatic-supportive program, BHLHE40 as a secondary lesion-supportive candidate, and SOX2 as a target-limited retained candidate. (F) Significant GO/KEGG term counts. Term counts summarize enrichment breadth and should not be interpreted as integrated TF priority.

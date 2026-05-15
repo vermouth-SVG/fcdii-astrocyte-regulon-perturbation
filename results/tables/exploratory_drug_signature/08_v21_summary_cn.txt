@@ -1,0 +1,77 @@
+﻿drug repositioning v2.1 pre-BBB 轻量收敛版总结
+==============================================================
+科学定位:
+- 结果仅作为 program-guided exploratory drug repositioning / mechanism-direction clues。
+- 不解释为 FCD II 特异治疗药发现、直接靶点验证或临床治疗推荐。
+- NFE2L2 / THRB 是主轴；BHLHE40 仅作补充支持；SOX2 不进入主药物查询主线。
+
+最佳配置:
+- config_id: translational_high__conservative_high__primary4__support2__thrbtrans0.75
+- objective_score: 7.785009
+- 权重:
+  - enrichment_support_score: 0.2
+  - cross_signature_score: 0.18
+  - axis_relevance_score: 0.16
+  - mechanism_interpretability_score: 0.08
+  - translational_suitability_score: 0.26
+  - axis_assignment_confidence_score: 0.12
+- penalty:
+  - weak_fdr_penalty: 0.12
+  - single_signature_penalty: 0.1
+  - tool_compound_penalty: 0.2
+  - low_cns_epilepsy_relevance_penalty: 0.18
+- primary_target_count: 4
+- primary_min_support: 2
+- THRB supportive min translational_suitability: 0.75
+
+为什么选择这一版:
+- primary 数量落在 4-6 的目标范围内。
+- primary 层没有 weak-FDR、tool-like 或 low-context 候选。
+- THRB weak-FDR 候选被保留为 supportive/manual-review，而不是和 NFE2L2 强证据候选混为同一层。
+- primary/supportive 均限制在原 v2 top-priority 候选内，避免 v2.1 变成扩展药名清单。
+- 当 objective 并列时，优先选择 conservative_high penalty profile，并保持 primary/supportive 数量更收敛。
+- 相比 v2 的 12 个大主表，v2.1 更强调可解释性、转化适配性、轴线清晰和显式 penalty。
+
+次优配置对比前 5:
+                                                               config_id  objective_score  primary_count  supportive_count  primary_translational_mean  primary_axis_confidence_mean  supportive_thrb_count  tool_like_primary_count  weak_fdr_primary_count
+translational_high__conservative_high__primary5__support2__thrbtrans0.75         7.785009              4                 8                        0.85                      0.902765                      5                        0                       0
+translational_high__conservative_high__primary6__support2__thrbtrans0.75         7.785009              4                 8                        0.85                      0.902765                      5                        0                       0
+      translational_high__lenient_low__primary4__support2__thrbtrans0.75         7.785009              4                 8                        0.85                      0.902765                      5                        0                       0
+      translational_high__lenient_low__primary5__support2__thrbtrans0.75         7.785009              4                 8                        0.85                      0.902765                      5                        0                       0
+      translational_high__lenient_low__primary6__support2__thrbtrans0.75         7.785009              4                 8                        0.85                      0.902765                      5                        0                       0
+
+primary_mechanism_direction_clues 数量: 4
+                    compound associated_axis  support_count  best_adjusted_p  final_score_v21 v21_penalty_reasons                                 v21_layer_reason
+               VALPROIC ACID          NFE2L2              4     6.386993e-42         0.947316                none NFE2L2 strict-FDR、多集合/清晰轴线支持，且未被工具化合物或低转化语境标签排除。
+                    lobeline          NFE2L2              3     2.304977e-16         0.792271                none NFE2L2 strict-FDR、多集合/清晰轴线支持，且未被工具化合物或低转化语境标签排除。
+(-)-Epigallocatechin gallate          NFE2L2              3     5.327430e-17         0.790111                none NFE2L2 strict-FDR、多集合/清晰轴线支持，且未被工具化合物或低转化语境标签排除。
+                   quercetin          NFE2L2              2     7.351214e-08         0.717066                none NFE2L2 strict-FDR、多集合/清晰轴线支持，且未被工具化合物或低转化语境标签排除。
+
+supportive_manual_review_clues 数量: 8
+            compound associated_axis  support_count  best_adjusted_p  final_score_v21      v21_evidence_tier      v21_penalty_reasons
+Gabapentin enacarbil            THRB              2     1.520217e-01         0.697780 manual_review_weak_fdr                 weak_fdr
+      S-(+)-Rolipram            THRB              2     1.520217e-01         0.686896 manual_review_weak_fdr                 weak_fdr
+         Roflumilast            THRB              2     1.520217e-01         0.679757 manual_review_weak_fdr                 weak_fdr
+           zaprinast            THRB              2     1.520217e-01         0.679757 manual_review_weak_fdr                 weak_fdr
+          papaverine            THRB              2     1.520217e-01         0.673791 manual_review_weak_fdr                 weak_fdr
+      trichostatin A          NFE2L2              5     2.365225e-30         0.617800      supportive_prebbb tool_or_broad_epigenetic
+              MS-275          NFE2L2              2     1.304677e-07         0.523934      supportive_prebbb tool_or_broad_epigenetic
+           scriptaid          NFE2L2              2     2.296311e-07         0.521287      supportive_prebbb tool_or_broad_epigenetic
+
+相对 v2 主表被降级/后移的候选:
+            compound associated_axis                 lead_layer_v21      v21_evidence_tier  final_score_v21      v21_penalty_reasons                                                     v21_layer_reason
+Gabapentin enacarbil            THRB supportive_manual_review_clues manual_review_weak_fdr         0.697780                 weak_fdr THRB weak-FDR 候选；保留为 supportive/manual-review，不与 NFE2L2 强证据候选混为同一层级。
+      S-(+)-Rolipram            THRB supportive_manual_review_clues manual_review_weak_fdr         0.686896                 weak_fdr THRB weak-FDR 候选；保留为 supportive/manual-review，不与 NFE2L2 强证据候选混为同一层级。
+         Roflumilast            THRB supportive_manual_review_clues manual_review_weak_fdr         0.679757                 weak_fdr THRB weak-FDR 候选；保留为 supportive/manual-review，不与 NFE2L2 强证据候选混为同一层级。
+           zaprinast            THRB supportive_manual_review_clues manual_review_weak_fdr         0.679757                 weak_fdr THRB weak-FDR 候选；保留为 supportive/manual-review，不与 NFE2L2 强证据候选混为同一层级。
+          papaverine            THRB supportive_manual_review_clues manual_review_weak_fdr         0.673791                 weak_fdr THRB weak-FDR 候选；保留为 supportive/manual-review，不与 NFE2L2 强证据候选混为同一层级。
+      trichostatin A          NFE2L2 supportive_manual_review_clues      supportive_prebbb         0.617800 tool_or_broad_epigenetic                           NFE2L2 候选具一定支持，但因工具/机制/语境标签或排序未进入 primary。
+              MS-275          NFE2L2 supportive_manual_review_clues      supportive_prebbb         0.523934 tool_or_broad_epigenetic                           NFE2L2 候选具一定支持，但因工具/机制/语境标签或排序未进入 primary。
+           scriptaid          NFE2L2 supportive_manual_review_clues      supportive_prebbb         0.521287 tool_or_broad_epigenetic                           NFE2L2 候选具一定支持，但因工具/机制/语境标签或排序未进入 primary。
+
+retained_full_list / supplementary 总数: 109
+
+BBB 状态:
+- v2.1 未使用 BBB 作为评分输入。
+- 已生成 09_manual_bbb_template_v21.tsv，供后续人工搜索和整理。
+- 手动 BBB 后应另行运行 after-BBB 继续整合，不应回写本轮 pre-BBB 评分逻辑。

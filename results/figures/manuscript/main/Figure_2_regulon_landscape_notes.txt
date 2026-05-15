@@ -1,0 +1,72 @@
+﻿Fig. 2. Differential regulon landscape identifies opposing lesion- and internal-control-associated TF programs
+================================================================
+
+Script:
+- scripts/manuscript_figures/build_fig2_main_v32_regulon_landscape.py
+
+Revision note:
+- v3.2 is a small revision of v3.1 and does not change data inputs, axis definitions, or scientific interpretation.
+- Panel A donor annotation was removed; only the group annotation strip is retained because sample labels already encode G120/G133.
+- Panel C uses marker-shape legend for donors and shows y-axis tick values for both NFE2L2 and THRB.
+- Panel C uses separate y-axis ranges for NFE2L2 and THRB because their absolute regulon AUC ranges differ.
+- Panel D column names were clarified to "Regulon ΔAUC / FDR" and "TF expr. log2FC"; positive fraction remains recorded below but is not shown as a main-figure column.
+
+Output files:
+- manuscript_output/figures_main/Figure2_regulon_landscape.png
+- manuscript_output/figures_main/Figure2_regulon_landscape.pdf
+- manuscript_output/figures_main/Figure2_regulon_landscape.svg
+- manuscript_output/figures_main/Figure2_regulon_landscape_notes.txt
+
+Input files:
+- regulon statistics: analysis_outputs/group_compare/regulon_group_statistics.csv
+- TF shortlist: analysis_outputs/celloracle_candidates/celloracle_tf_shortlist.csv
+- AUCell matched matrix: final_exports/auc_mtx_matched_to_h5ad.csv
+- metadata: celloracle_run/prepared_data/celloracle_round1_metadata.csv
+- main Table 2 reviewed as compatible shortlist reference: manuscript_output/tables_main/Table2_shortlist_main_submission.csv
+- Supplementary Table ST01/S2 reviewed as compatible fallback references.
+
+Metadata / obs-equivalent fields used:
+- group: group
+- sample: clinical_sample_label
+- donor: donor_id
+- h5ad was not read because matched AUCell CSV plus metadata already contained the required cell/sample/group/donor mapping.
+
+Regulons:
+- All-regulon Panel B background: 105 regulons.
+- Panel A selected regulons: 18.
+- Panel A internal-control-associated regulons:
+  THRB(+), SATB2(+), RARB(+), TCF4(+), NR2F2(+), SMAD3(+), SKI(+), HSF2(+)
+- Panel A lesion-associated regulons:
+  NFE2L2(+), BHLHE40(+), SOX2(+), HMGA1(+), CEBPD(+), IRF9(+), ATF7(+), GABPB1(+), JUNB(+), DBX2(+)
+
+Panel B x-axis definition:
+- Mean AUC difference = mean AUC in lesion - mean AUC in internal_control.
+- Negative values indicate internal-control-associated regulon activity; positive values indicate lesion-associated activity.
+- Horizontal dashed line marks FDR = 0.05.
+
+Panel C sample-level mean AUC table:
+      sample donor            group   regulon mean_auc
+G120_N.1  G120 internal_control NFE2L2(+)   0.1163
+G120_D.3  G120           lesion NFE2L2(+)   0.1224
+G133_N.2  G133 internal_control NFE2L2(+)   0.1234
+G133_D.2  G133           lesion NFE2L2(+)   0.1365
+G120_N.1  G120 internal_control   THRB(+)   0.7737
+G120_D.3  G120           lesion   THRB(+)   0.3789
+G133_N.2  G133 internal_control   THRB(+)   0.5323
+G133_D.2  G133           lesion   THRB(+)   0.3718
+
+Panel D TF prioritization table:
+         tf    regulon       axis_display dauc_lesion_minus_control regulon_fdr neg_log10_regulon_fdr expr_log2fc positive_fraction priority_class
+ NFE2L2  NFE2L2(+)             lesion                  0.008898   1.638e-19                 18.79      0.6845            0.3626      dual-axis
+   THRB    THRB(+)   internal-control                   -0.2452  4.053e-114                 113.4     -0.3614            0.6416      dual-axis
+BHLHE40 BHLHE40(+) lesion / secondary                   0.02022   1.276e-34                 33.89       1.136            0.1588      secondary
+   SOX2    SOX2(+)  lesion / retained                   0.09623   9.389e-66                 65.03      0.6693            0.2523       retained
+  SATB2   SATB2(+)   internal-control                  -0.07053   5.548e-99                 98.26     -0.7059            0.4107     supportive
+   RARB    RARB(+)   internal-control                   -0.0461   1.967e-81                 80.71     -0.6325            0.2315     supportive
+  HMGA1   HMGA1(+)             lesion                   0.01543   1.688e-19                 18.77      0.7445           0.07207        context
+
+Missing columns / replacements / warnings:
+    - None.
+
+Figure 2 v3.2 uses existing pySCENIC/AUCell outputs only; no pySCENIC or CellOracle rerun was performed.
+

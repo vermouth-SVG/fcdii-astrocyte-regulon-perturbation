@@ -1,0 +1,177 @@
+{
+  "input_h5ad": "/work/external_validation_round2/input/external_validation_round2.h5ad",
+  "cells": 69968,
+  "genes": 34915,
+  "obs_columns": [
+    "cell_barcode",
+    "sample_id",
+    "title",
+    "diagnosis_raw",
+    "group",
+    "disease",
+    "sample",
+    "donor",
+    "tissue",
+    "molecule_subtype",
+    "geo_series",
+    "source_dataset",
+    "input_batch",
+    "n_counts",
+    "n_genes_by_counts",
+    "cluster",
+    "celltype",
+    "cluster_source"
+  ],
+  "var_columns": [
+    "gene_id",
+    "gene_symbol",
+    "feature_type",
+    "n_counts"
+  ],
+  "obsm_keys": [
+    "X_pca",
+    "X_umap"
+  ],
+  "uns_keys": [
+    "cluster_generation",
+    "log1p"
+  ],
+  "layers": [
+    "counts"
+  ],
+  "has_raw": false,
+  "x_info": {
+    "type": "csr_matrix",
+    "dtype": "float32",
+    "is_sparse": true,
+    "shape": [
+      69968,
+      34915
+    ],
+    "nonzero": 187318924,
+    "min_nonzero": 0.04160385951399803,
+    "max_nonzero": 8.607943534851074,
+    "sample_integerish": false
+  },
+  "x_representation": "normalized_or_log_like",
+  "counts_source": "layers['counts']",
+  "counts_info": {
+    "type": "csr_matrix",
+    "dtype": "int64",
+    "is_sparse": true,
+    "shape": [
+      69968,
+      34915
+    ],
+    "nonzero": 187318924,
+    "min_nonzero": 1.0,
+    "max_nonzero": 7080.0,
+    "sample_integerish": true
+  },
+  "metadata_columns": {
+    "group": 2,
+    "sample": 8,
+    "donor": 8,
+    "cluster": 33,
+    "celltype": 33
+  },
+  "metadata_counts": {
+    "group": {
+      "internal_control": 44782,
+      "lesion": 25186
+    },
+    "sample": {
+      "Normal_1": 15391,
+      "Normal_2": 11762,
+      "Normal_3": 9186,
+      "Normal_4": 8443,
+      "TLE_3": 7527,
+      "TLE_4": 6646,
+      "TLE_1": 6281,
+      "TLE_2": 4732
+    },
+    "donor": {
+      "Normal_1": 15391,
+      "Normal_2": 11762,
+      "Normal_3": 9186,
+      "Normal_4": 8443,
+      "TLE_3": 7527,
+      "TLE_4": 6646,
+      "TLE_1": 6281,
+      "TLE_2": 4732
+    },
+    "cluster": {
+      "cluster_0": 4826,
+      "cluster_1": 4682,
+      "cluster_2": 4277,
+      "cluster_3": 3862,
+      "cluster_4": 3810,
+      "cluster_5": 3465,
+      "cluster_6": 3419,
+      "cluster_7": 3240,
+      "cluster_8": 3200,
+      "cluster_9": 2796,
+      "cluster_10": 2451,
+      "cluster_11": 2418,
+      "cluster_12": 2351,
+      "cluster_13": 2324,
+      "cluster_14": 2123,
+      "cluster_15": 2089,
+      "cluster_16": 1758,
+      "cluster_17": 1664,
+      "cluster_18": 1599,
+      "cluster_19": 1448,
+      "cluster_20": 1446,
+      "cluster_21": 1434,
+      "cluster_22": 1409,
+      "cluster_23": 1310,
+      "cluster_24": 1270,
+      "cluster_25": 1136,
+      "cluster_26": 1003,
+      "cluster_27": 795,
+      "cluster_28": 778,
+      "cluster_29": 578,
+      "cluster_30": 499,
+      "cluster_31": 296,
+      "cluster_32": 212
+    },
+    "celltype": {
+      "cluster_0": 4826,
+      "cluster_1": 4682,
+      "cluster_2": 4277,
+      "cluster_3": 3862,
+      "cluster_4": 3810,
+      "cluster_5": 3465,
+      "cluster_6": 3419,
+      "cluster_7": 3240,
+      "cluster_8": 3200,
+      "cluster_9": 2796,
+      "cluster_10": 2451,
+      "cluster_11": 2418,
+      "cluster_12": 2351,
+      "cluster_13": 2324,
+      "cluster_14": 2123,
+      "cluster_15": 2089,
+      "cluster_16": 1758,
+      "cluster_17": 1664,
+      "cluster_18": 1599,
+      "cluster_19": 1448,
+      "cluster_20": 1446,
+      "cluster_21": 1434,
+      "cluster_22": 1409,
+      "cluster_23": 1310,
+      "cluster_24": 1270,
+      "cluster_25": 1136,
+      "cluster_26": 1003,
+      "cluster_27": 795,
+      "cluster_28": 778,
+      "cluster_29": 578,
+      "cluster_30": 499,
+      "cluster_31": 296,
+      "cluster_32": 212
+    }
+  },
+  "suitable_for_pyscenic": true,
+  "issues": [],
+  "recommendation": "当前对象可用于 round2 支持性队列 pySCENIC 复算。建议从 layers['counts'] 导出表达矩阵，并保持 group/sample/donor/cluster 信息用于后续 projected regulon-level supportive analysis。"
+}

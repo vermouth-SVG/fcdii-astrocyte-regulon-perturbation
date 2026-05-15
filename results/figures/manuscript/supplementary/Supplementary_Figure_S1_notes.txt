@@ -1,0 +1,45 @@
+FigS1_discovery_object_qc_revised_v2 notes
+
+Input files:
+- celloracle_run/prepared_data/celloracle_round1_metadata.csv
+- analysis_outputs/gse268807_astrocyte_pilot/qc_metrics/qc_metrics_GSE268807_G120_D_FL_max3000.csv
+- analysis_outputs/gse268807_astrocyte_pilot/qc_metrics/qc_metrics_GSE268807_G120_F1_N_max3000.csv
+- analysis_outputs/gse268807_astrocyte_pilot/qc_metrics/qc_metrics_GSE268807_G133_D_FL_max3000.csv
+- analysis_outputs/gse268807_astrocyte_pilot/qc_metrics/qc_metrics_GSE268807_G133_N_FL_max3000.csv
+- analysis_outputs/structure_check/structure_summary.json
+- analysis_outputs/structure_check/obs_columns_overview.csv
+- analysis_outputs/structure_check/selected_group_counts.csv
+- final_exports/merge_report.txt
+- final_exports/regulon_names.txt
+- final_exports/auc_mtx_matched_to_h5ad.csv
+- final_exports/astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+
+Final analysis object source:
+- Final analysis object was read from the GSE268807 astrocyte pilot metadata and final_exports merge report.
+- The merged RNA object path recorded in the merge report is final_exports/astrocyte_pilot_rna_with_pyscenic_auc.h5ad.
+- Final object size: 2,322 cells and 36,601 genes.
+- pySCENIC regulon count: 105 regulons.
+- AUCell-matched export: 2,322 AUCell rows, 2,322 shared cells, 0 missing matched cells.
+
+Sample-level cell counts:
+- G120_N.1: 523 cells (internal-control)
+- G133_N.2: 911 cells (internal-control)
+- G120_D.3: 426 cells (lesion)
+- G133_D.2: 462 cells (lesion)
+
+Group totals:
+- internal-control astrocytes: 1,434
+- lesion astrocytes: 888
+- total astrocytes: 2,322
+
+Panel definitions:
+- Panel A shows the final four-sample composition of the discovery object.
+- Panel B shows upstream source-level QC and subsampling. These values reflect source-level processing before final object assembly and should not be read as the final 2,322-cell object distribution.
+- Panel C was computed by cross-tabulating clinical_sample_label and group in the final metadata. Matrix total = 2,322.
+- Panel D traces Raw pilot input -> QC / subsampling -> Merged RNA object -> AUCell-matched export.
+
+Sample ID check:
+- G130_D.3 was not found in metadata or QC trace; G120_D.3 was confirmed as the lesion sample.
+
+Interpretation boundary:
+- FigS1 is an object provenance / QC overview for the discovery object, not an inferential confirmation figure.

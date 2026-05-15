@@ -1,0 +1,38 @@
+{
+  "h5ad_path": "/work/final_exports/astrocyte_pilot_rna_with_pyscenic_auc.h5ad",
+  "n_cells": 2322,
+  "n_genes": 36601,
+  "obs_columns": [
+    "barcode",
+    "sample_prefix",
+    "sample_id",
+    "donor_id",
+    "clinical_sample_label",
+    "group",
+    "subtype",
+    "celltype_for_scenicplus",
+    "join_key",
+    "pilot_batch"
+  ],
+  "obsm_keys": [
+    "X_pyscenic_auc"
+  ],
+  "uns_keys": [
+    "pyscenic_info",
+    "pyscenic_regulon_names"
+  ],
+  "layer_keys": [],
+  "selected_group_column": "group",
+  "selected_group_levels": [
+    {
+      "group": "internal_control",
+      "n_cells": 1434
+    },
+    {
+      "group": "lesion",
+      "n_cells": 888
+    }
+  ],
+  "umap_key": null,
+  "n_regulons": 105
+}

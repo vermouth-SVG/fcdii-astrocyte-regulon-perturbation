@@ -1,0 +1,96 @@
+﻿Figure5_program_model
+==============================
+
+Version note:
+v4 is a layout-level reconstruction, not an upstream analysis update. It keeps the same existing
+functional interpretation, program convergence, and schematic inputs.
+
+Caption title:
+Fig. 5. Program-level interpretation and working model of the NFE2L2-THRB dual-axis architecture
+
+Input enrichment files:
+- functional_interpretation/03_go_enrichment_all.csv
+- functional_interpretation/03_kegg_enrichment_all.csv
+- functional_interpretation/03_nfe2l2_top_terms.csv
+- functional_interpretation/03_thrb_top_terms.csv
+
+Enrichment column mapping:
+- {'tf': 'tf', 'term': 'term', 'fdr': 'fdr_bh', 'overlap_count': 'overlap_count', 'overlap_ratio': 'overlap_ratio', 'source': 'source', 'gene_set_type': 'gene_set_type'}
+
+Panel A selected functional programs:
+- NFE2L2 terms selected for the lesion-associated program:
+    term_clean,display_label,neg_log10_fdr,overlap_count_value,overlap_ratio_value,fdr_value
+
+Regulation Of Transcription By RNA Polymerase II,"RNA polymerase II
+transcription",21.95,89,0.1943,1.12e-22
+
+Positive Regulation Of DNA-templated Transcription,"DNA-templated
+transcription",17.62,63,0.1376,2.413e-18
+
+MAPK signaling pathway,MAPK signaling,8.476,22,0.04803,3.345e-09
+
+Regulation Of Intracellular Signal Transduction,Intracellular signaling,7.964,22,0.04803,1.087e-08
+
+Protein Phosphorylation,Protein phosphorylation,7.183,27,0.05895,6.554e-08
+
+- THRB terms selected for the homeostatic-supportive program:
+    term_clean,display_label,neg_log10_fdr,overlap_count_value,overlap_ratio_value,fdr_value
+
+Regulation Of Dendrite Extension,Dendrite extension,5.821,3,0.2308,1.511e-06
+
+Calcium Ion-Regulated Exocytosis Of Neurotransmitter,"Ca²⁺-regulated
+neurotransmitter exocytosis",5.821,3,0.2308,1.511e-06
+
+Calcium-Ion Regulated Exocytosis,Ca²⁺-regulated exocytosis,5.461,3,0.2308,3.46e-06
+
+Modulation Of Chemical Synaptic Transmission,"Chemical synaptic
+transmission",5.461,4,0.3077,3.46e-06
+
+Synaptic Vesicle Exocytosis,"Synaptic vesicle
+exocytosis",5.105,3,0.2308,7.857e-06
+- NFE2L2 terms removed during selected-term curation/de-duplication: 1
+- THRB terms removed during selected-term curation/de-duplication: 1
+- THRB term de-duplication successful: True
+- Panel A uses independent x-axis ranges for NFE2L2 and THRB facets: True
+
+Panel B convergence scorecard:
+- Table and columns: {'convergence_table': 'functional_interpretation/04_program_convergence_table.csv', 'TF': 'tf', 'overlap_count': 'overlap_count', 'overlap_ratio': 'overlap_ratio', 'gene_summary': 'functional_interpretation/02_tf_gene_sets_summary.csv', 'regulon_targets': 'regulon_target_count'}
+- Metrics: regulon targets, overlap genes, overlap ratio, and short interpretation class.
+- Values:
+    tf,overlap_count,overlap_ratio,interpretation,regulon_targets
+
+NFE2L2,245.0000,0.5349,stress-adaptation,458.0000
+
+THRB,13.0000,0.7647,compact homeostatic program,17.0000
+
+BHLHE40,143.0000,0.6471,secondary,221.0000
+
+SOX2,10.0000,1.0000,target-limited retained,10.0000
+
+Panel C schematic:
+- Schematic PNG path at build time: temporary clean schematic PNG used before final figures_main cleanup
+- Current retained schematic-containing output: manuscript_output/figures_main/Figure5_program_model.png / .pdf / .svg
+- Figure5_model_clean.png found at build time: True
+- Note: the intermediate schematic staging folder was removed during final figures_main cleanup after Figure5_program_model.* was generated.
+- Automatic white-border crop performed: True
+- Crop note: automatic white-border crop; bbox=(0,18)-(1442,993)
+- No GPT image regeneration was performed.
+- If schematic-internal text remains too small after journal sizing, regenerate a cleaner model with larger text and fewer internal labels in a later design pass.
+
+Term-label mapping:
+- Unmatched selected term labels: None.
+
+Required interpretation notes:
+Figure 5 v4 uses existing functional interpretation and schematic image outputs only; no upstream analysis was rerun.
+Drug repositioning clues were not included in main Figure 5 and remain supplementary.
+No pySCENIC, CellOracle, enrichment, exploratory drug-signature, robustness, or supportive external/contextual analysis was rerun.
+
+Warnings / missing data:
+    None.
+
+Output files:
+- manuscript_output/figures_main/Figure5_program_model.png
+- manuscript_output/figures_main/Figure5_program_model.pdf
+- manuscript_output/figures_main/Figure5_program_model.svg
+- manuscript_output/figures_main/Figure5_program_model_notes.txt
+

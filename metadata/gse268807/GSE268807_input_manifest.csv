@@ -1,0 +1,75 @@
+﻿sample_id,donor_id,clinical_sample_label,group,subtype,assay,local_path,file_type,use_for_kaggle,required_or_optional,notes
+,,,,,,05_results/current_env_proxy/top_tf_candidates_proxy.csv,csv,yes,optional,proxy top TF 候选，仅作为正式 CellOracle 候选初始参考
+,,,,,,03_processed/GSE268807/GSE268807_all_samples_qc_max3000_proxy_annotated.h5ad,h5ad,yes,optional,带 proxy cell_type 的 h5ad，可用于 CellOracle 骨架路径检查；正式注释后需替换
+GSM8299716,G120,G120_D.3,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_FL_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299714,G120,G120_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_TL_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_F1_N_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299732,G129,G129_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G129_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299720,G133,G133_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_D_FL_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299718,G133,G133_N.2,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_N_FL_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G150_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299728,G159,G159_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G159_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299726,G171,G171_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G171_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299722,G187,G187_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G187_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299730,G210,G210_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G210_D_barcodes.tsv.gz,barcodes.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+,,,,,,01_metadata/dataset_registry.csv,csv,yes,required,metadata，用于样本/donor/group/subtype 对齐
+,,,,,,01_metadata/sample_metadata.csv,csv,yes,required,metadata，用于样本/donor/group/subtype 对齐
+GSM8299716,G120,G120_D.3,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_FL_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299714,G120,G120_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_TL_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_F1_N_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299732,G129,G129_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G129_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299720,G133,G133_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_D_FL_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299718,G133,G133_N.2,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_N_FL_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G150_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299728,G159,G159_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G159_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299726,G171,G171_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G171_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299722,G187,G187_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G187_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299730,G210,G210_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G210_D_features.tsv.gz,features.tsv.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+,,,,,,03_processed/GSE268807/GSE268807_all_samples_qc_max3000.h5ad,h5ad,yes,required,合并 RNA h5ad，用于 Kaggle 输入检查与正式分析初始输入
+GSM8299716,G120,G120_D.3,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_FL_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299714,G120,G120_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_D_TL_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G120_F1_N_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299732,G129,G129_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G129_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299720,G133,G133_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_D_FL_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299718,G133,G133_N.2,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G133_N_FL_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G150_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299728,G159,G159_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G159_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299726,G171,G171_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G171_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299722,G187,G187_D,lesion,FCD IIa,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G187_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+GSM8299730,G210,G210_D,lesion,FCD IIb,10x Multiome snRNA (GEX),02_raw/GSE268807/suppl/GSE268807_G210_D_matrix.mtx.gz,matrix.mtx.gz,yes,required,GEO ARC MTX 三联；用于云端重建 Gene Expression 与 Peaks 输入
+,,,,,,03_processed/export_for_cloud/GSE268807_G120_F1_N_test/obs_export.csv,csv,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_G150_D_test/obs_export.csv,csv,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_all_samples_qc_max3000/obs_export.csv,csv,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_all_samples_qc_max3000_proxy_annotated/obs_export.csv,csv,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_smoke_control_lesion/obs_export.csv,csv,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+GSM8299716,G120,G120_D.3,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G120_D_FL_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299716,G120,G120_D.3,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G120_D_FL_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299714,G120,G120_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G120_D_TL_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299714,G120,G120_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G120_D_TL_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G120_F1_N_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G120_F1_N_qc_test500.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G120_F1_N_raw_peaks.h5ad,h5ad,no,optional,单样本 Peaks 测试文件，不代表 GSE268807 全量 ATAC
+GSM8299712,G120,G120_N.1,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G120_F1_N_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299732,G129,G129_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G129_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299732,G129,G129_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G129_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299720,G133,G133_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G133_D_FL_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299720,G133,G133_D.2,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G133_D_FL_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299718,G133,G133_N.2,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G133_N_FL_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299718,G133,G133_N.2,internal_control,"non_lesion (histology Normal, Table 1)",10x Multiome snRNA (GEX),03_processed/GSE268807/G133_N_FL_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G150_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G150_D_qc_test500.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299724,G150,G150_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G150_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299728,G159,G159_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G159_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299728,G159,G159_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G159_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299726,G171,G171_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G171_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299726,G171,G171_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G171_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299722,G187,G187_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G187_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299722,G187,G187_D,lesion,FCD IIa,10x Multiome snRNA (GEX),03_processed/GSE268807/G187_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299730,G210,G210_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G210_D_qc_max3000.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+GSM8299730,G210,G210_D,lesion,FCD IIb,10x Multiome snRNA (GEX),03_processed/GSE268807/G210_D_raw_rna.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+,,,,,,03_processed/GSE268807/GSE268807_smoke_control_lesion.h5ad,h5ad,no,optional,中间/测试 h5ad；Kaggle 输入包优先使用合并 h5ad 与原始 MTX 三联
+,,,,,,03_processed/export_for_cloud/GSE268807_G120_F1_N_test/export.h5ad,h5ad,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_G150_D_test/export.h5ad,h5ad,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_all_samples_qc_max3000/export.h5ad,h5ad,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_all_samples_qc_max3000_proxy_annotated/export.h5ad,h5ad,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件
+,,,,,,03_processed/export_for_cloud/GSE268807_smoke_control_lesion/export.h5ad,h5ad,no,optional,待核对：未自动判定为本次 Kaggle 输入包必需文件

@@ -1,0 +1,20 @@
+term,status,action
+full differential regulon landscape,present,required
+all-regulon differential summary,present,required
+top 40 differential regulon heatmap,present,required
+internal-control-associated,present,required
+lesion-associated,present,required
+Mean AUC difference: lesion − internal-control,present,required
+pySCENIC regulons,present,required
+regulon AUC,present,required
+internal-control,present,required
+internal_control,absent from figure-facing text,replaced by internal-control
+validation,absent,required absent
+external validation,absent,required absent
+formal validation,absent,required absent
+independent validation,absent,required absent
+donor-level robustness,absent,required absent
+experimental KO,absent,required absent
+therapeutic target,absent,required absent
+SCENIC+,absent,required absent
+docking,absent,required absent

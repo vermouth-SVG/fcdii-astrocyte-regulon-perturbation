@@ -1,0 +1,31 @@
+tf,candidate_tier,gene_set_type,query_label,source,term,query_size,term_size,overlap_count,overlap_ratio,fold_enrichment,p_value,overlap_genes,fdr_bh
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Neuron Differentiation (GO:0045665),10,23,2,0.2,318.26956521739135,1.6945712822633928e-05,SOX2;SOX9,0.0020147056599219195
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Cysteine-Type Endopeptidase Activity (GO:2000116),10,24,2,0.2,305.0083333333333,1.848353816442128e-05,CST3;SOX2,0.0020147056599219195
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Glial Cell Differentiation (GO:0010001),10,34,2,0.2,215.3,3.7515085002242755e-05,SOX2;SOX9,0.0027260961768296402
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Epithelial Cell Proliferation (GO:0050680),10,70,2,0.2,104.57428571428572,0.00016065027078503987,SOX2;SOX9,0.00782928667026068
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Gland Development (GO:0048732),10,74,2,0.2,98.92162162162164,0.00017957079518946513,SOX2;SOX9,0.00782928667026068
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Epithelial Cell Proliferation (GO:0050678),10,88,2,0.2,83.18409090909091,0.00025397841894871765,SOX2;SOX9,0.00922788255513674
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Developmental Process (GO:0051093),10,108,2,0.2,67.77962962962962,0.00038224017116283087,CST3;SOX9,0.011399222582786927
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Canonical Wnt Signaling Pathway (GO:0090090),10,113,2,0.2,64.78053097345133,0.00041832009478117165,SOX2;SOX9,0.011399222582786927
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Wnt Signaling Pathway (GO:0030178),10,139,2,0.2,52.66330935251799,0.0006316261824966323,SOX2;SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Canonical Wnt Signaling Pathway (GO:0060828),10,202,2,0.2,36.23861386138614,0.0013247223320292476,SOX2;SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Cell Differentiation (GO:0045596),10,204,2,0.2,35.88333333333333,0.0013507562914990019,SOX2;SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Chondrocyte Development (GO:0002063),10,5,1,0.1,732.0200000000001,0.0013654111967049435,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Epithelial Tube Formation (GO:0072175),10,5,1,0.1,732.0200000000001,0.0013654111967049435,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Positive Regulation Of Gonad Development (GO:1905941),10,5,1,0.1,732.0200000000001,0.0013654111967049435,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Positive Regulation Of Male Gonad Development (GO:2000020),10,5,1,0.1,732.0200000000001,0.0013654111967049435,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Blood Vessel Remodeling (GO:0060312),10,5,1,0.1,732.0200000000001,0.0013654111967049435,CST3,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Circadian Sleep/Wake Cycle (GO:0042749),10,5,1,0.1,732.0200000000001,0.0013654111967049435,PTGDS,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,"Regulation Of Circadian Sleep/Wake Cycle, Sleep (GO:0045187)",10,5,1,0.1,732.0200000000001,0.0013654111967049435,PTGDS,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Response To Heparin (GO:0071503),10,5,1,0.1,732.0200000000001,0.0013654111967049435,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Pituitary Gland Development (GO:0021983),10,6,1,0.1,610.0166666666667,0.001638292000290935,SOX2,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Positive Regulation Of Kidney Development (GO:0090184),10,6,1,0.1,610.0166666666667,0.001638292000290935,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Axon Guidance (GO:1902667),10,6,1,0.1,610.0166666666667,0.001638292000290935,TUBB2B,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Male Gonad Development (GO:2000018),10,6,1,0.1,610.0166666666667,0.001638292000290935,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Retinal Rod Cell Differentiation (GO:0060221),10,6,1,0.1,610.0166666666667,0.001638292000290935,SOX9,0.014881152335975992
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Negative Regulation Of Fatty Acid Oxidation (GO:0046322),10,7,1,0.1,522.8714285714286,0.0019111056928718098,SOX9,0.015300683805911009
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Mesenchymal Stem Cell Differentiation (GO:2000739),10,7,1,0.1,522.8714285714286,0.0019111056928718098,SOX9,0.015300683805911009
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Chromatin Organization (GO:0006325),10,244,2,0.2,30.00081967213115,0.0019227111620914981,SOX2;SOX9,0.015300683805911009
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Cyclooxygenase Pathway (GO:0019371),10,8,1,0.1,457.51250000000005,0.002183852289119043,PTGDS,0.015300683805911009
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Mesodermal Cell Differentiation (GO:0048333),10,8,1,0.1,457.51250000000005,0.002183852289119043,ITGB4,0.015300683805911009
+SOX2,reserved_lightweight,regulon_targets,SOX2_regulon_targets,go,Regulation Of Intrinsic Apoptotic Signaling Pathway By P53 Class Mediator (GO:1902253),10,8,1,0.1,457.51250000000005,0.002183852289119043,PTTG1IP,0.015300683805911009

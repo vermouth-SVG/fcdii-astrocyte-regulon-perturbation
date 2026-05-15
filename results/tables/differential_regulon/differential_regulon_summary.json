@@ -1,0 +1,16 @@
+{
+  "input_dir": "/work/analysis_outputs/group_compare",
+  "selected_group_column": "group",
+  "group_1": "lesion",
+  "group_2": "internal_control",
+  "top_n_each_direction": 10,
+  "top_total": 20,
+  "outputs": [
+    "top10_up_in_lesion.csv",
+    "top10_up_in_internal_control.csv",
+    "top20_differential_regulons.csv",
+    "differential_regulons_volcano.png",
+    "top20_differential_regulons_barplot.png",
+    "differential_regulon_summary_cn.txt"
+  ]
+}

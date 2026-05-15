@@ -1,0 +1,150 @@
+第二个正式外部验证队列候选评估报告
+
+[GSE275302]
+source_path: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275302
+source_type: geo_remote
+available: no
+has_group: no
+has_sample_or_donor: no
+has_celltype: no
+can_generate_cluster: no
+recommended: no
+summary: GSE275302 当前不可用于正式外部验证：该 GEO accession 处于 private 状态，计划公开日期为 Sep 12, 2026。
+extra:
+{
+  "accession": "GSE275302",
+  "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE275302",
+  "reachable": true,
+  "status": "private",
+  "release_date": "Sep 12, 2026"
+}
+
+[GSE140393-derived external_validation.h5ad]
+source_path: /work/external_validation/input/external_validation.h5ad
+source_type: h5ad
+available: yes
+has_group: no
+has_sample_or_donor: yes
+has_celltype: no
+can_generate_cluster: no
+recommended: no
+summary: GSE140393-derived external_validation.h5ad: 已存在标准 h5ad；group=group，sample/donor=sample，celltype/cluster=celltype。
+extra:
+{
+  "shape": [
+    11399,
+    33538
+  ],
+  "obs_columns": [
+    "cell_barcode",
+    "sample_id",
+    "title",
+    "condition",
+    "group",
+    "disease",
+    "tissue",
+    "celltype",
+    "sorting_strategy",
+    "sample",
+    "donor",
+    "platform_id",
+    "chemistry",
+    "supp_files",
+    "raw_descriptions",
+    "n_counts",
+    "n_genes_by_counts",
+    "source_dataset",
+    "geo_series",
+    "is_external_validation",
+    "input_batch"
+  ],
+  "obsm_keys": [],
+  "uns_keys": [
+    "external_validation_source"
+  ],
+  "group_column": "group",
+  "group_levels": [
+    "lesion"
+  ],
+  "sample_or_donor_column": "sample",
+  "sample_or_donor_nunique": 5,
+  "celltype_or_cluster_column": "celltype",
+  "celltype_or_cluster_nunique": 1
+}
+
+[GSE190452]
+source_path: /work/external_validation_round2/source_gse190452
+source_type: geo_raw
+available: yes
+has_group: yes
+has_sample_or_donor: yes
+has_celltype: no
+can_generate_cluster: yes
+recommended: yes
+summary: GSE190452: 样本数=8；group=yes；sample/donor=yes；原始 celltype 注释=no；可自动生成 cluster=yes。
+extra:
+{
+  "soft_exists": true,
+  "raw_tar_exists": true,
+  "extracted_matrix_files": [
+    "GSM5724021_Normal1_matrix.mtx.gz",
+    "GSM5724022_Normal2_matrix.mtx.gz",
+    "GSM5724023_Normal_3_matrix.mtx.gz",
+    "GSM5724024_TLE_1_matrix.mtx.gz",
+    "GSM5724025_TLE_2_matrix.mtx.gz",
+    "GSM5724026_TLE_3_matrix.mtx.gz",
+    "GSM6893724_Normal_4_matrix.mtx.gz",
+    "GSM6893725_TLE_4_matrix.mtx.gz"
+  ],
+  "sample_metadata": [
+    {
+      "sample": "Normal_1",
+      "group": "internal_control",
+      "disease": "control"
+    },
+    {
+      "sample": "Normal_2",
+      "group": "internal_control",
+      "disease": "control"
+    },
+    {
+      "sample": "Normal_3",
+      "group": "internal_control",
+      "disease": "control"
+    },
+    {
+      "sample": "TLE_1",
+      "group": "lesion",
+      "disease": "TLE"
+    },
+    {
+      "sample": "TLE_2",
+      "group": "lesion",
+      "disease": "TLE"
+    },
+    {
+      "sample": "TLE_3",
+      "group": "lesion",
+      "disease": "TLE"
+    },
+    {
+      "sample": "Normal_4",
+      "group": "unknown",
+      "disease": ""
+    },
+    {
+      "sample": "TLE_4",
+      "group": "unknown",
+      "disease": ""
+    }
+  ],
+  "group_levels": [
+    "internal_control",
+    "lesion",
+    "unknown"
+  ]
+}
+
+[结论]
+推荐将 GSE190452 作为第二个正式外部验证队列。
+推荐理由：该队列在当前工作区已具备可直接读取的 filtered 10x matrix，同时包含 Normal 与 TLE 双组样本，样本层面可保留 sample/donor 信息；虽然原始数据没有现成 celltype 注释，但可以通过最小 Scanpy 流程自动生成 cluster，用于后续 group/celltype 双层验证。

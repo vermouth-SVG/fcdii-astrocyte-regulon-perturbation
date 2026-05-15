@@ -1,0 +1,67 @@
+﻿drug repositioning v2.1 after-BBB 更新总结
+==========================================================
+生成时间: 2026-04-22 14:43:01
+SwissADME 输入: <PROJECT_ROOT_WINDOWS>\drug_repositioning\swissadme.csv
+pre-BBB 输入: <PROJECT_ROOT_WINDOWS>\drug_repositioning\03_integrated_rescored_v21.csv
+
+流程边界:
+- 只导入本地 SwissADME CSV，完成 BBB 分层与 after-BBB 排序。
+- 未重跑 pySCENIC、CellOracle、robustness、GO/KEGG、外部验证、Enrichr/DSigDB。
+- 未联网，未下载资源，未做 docking。
+- 结果仍为 exploratory / mechanism-direction module，不是治疗推荐或直接靶点验证。
+
+匹配结果:
+- 匹配成功: 12 / 12
+- matching_method 计数:
+matching_method
+smiles_exact    12
+- matching_confidence 计数:
+matching_confidence
+1.0    12
+- 结论: 12/12 均为 SMILES 精确匹配。
+- matching_method = smiles_exact
+- matching_confidence = 1.0
+
+BBB 分层计数:
+manual_final_bbb_layer
+peripheral/program-modulating clues    7
+possible CNS-directed clues            3
+CNS-directed clues                     2
+
+after-BBB headline 候选:
+     compound associated_axis                  prebbb_layer_v21  manual_final_bbb_layer  final_score_prebbb_v21  final_score_after_bbb                                                              after_bbb_interpretation_note
+VALPROIC ACID          NFE2L2 primary_mechanism_direction_clues CNS-directed clues                0.947316               0.953639 pre-BBB primary 且 SwissADME 支持 CNS-directed；适合 after-BBB headline 展示，但仍为 exploratory clue。
+     lobeline          NFE2L2 primary_mechanism_direction_clues CNS-directed clues                0.792271               0.817199 pre-BBB primary 且 SwissADME 支持 CNS-directed；适合 after-BBB headline 展示，但仍为 exploratory clue。
+
+pre-BBB primary 中 after-BBB 降为 peripheral/program-modulating clue 的候选:
+                    compound associated_axis                   manual_final_bbb_layer swissadme_bbb_prediction swissadme_gi_absorption                                                      after_bbb_interpretation_note
+(-)-Epigallocatechin gallate          NFE2L2 peripheral/program-modulating clues                       No                     Low pre-BBB 程序证据较强，但 BBB=No；after-BBB 降为 peripheral/program-modulating mechanism clue。
+                   quercetin          NFE2L2 peripheral/program-modulating clues                       No                    High pre-BBB 程序证据较强，但 BBB=No；after-BBB 降为 peripheral/program-modulating mechanism clue。
+
+supportive / peripheral after-BBB 候选:
+                    compound associated_axis                  prebbb_layer_v21                   manual_final_bbb_layer  final_score_after_bbb               after_bbb_final_layer      v21_penalty_reasons
+(-)-Epigallocatechin gallate          NFE2L2 primary_mechanism_direction_clues peripheral/program-modulating clues               0.743297 peripheral_program_modulating_clues                     none
+                   quercetin          NFE2L2 primary_mechanism_direction_clues peripheral/program-modulating clues               0.679018 peripheral_program_modulating_clues                     none
+        Gabapentin enacarbil            THRB    supportive_manual_review_clues peripheral/program-modulating clues               0.662046 peripheral_program_modulating_clues                 weak_fdr
+                 Roflumilast            THRB    supportive_manual_review_clues peripheral/program-modulating clues               0.646186 peripheral_program_modulating_clues                 weak_fdr
+                   zaprinast            THRB    supportive_manual_review_clues peripheral/program-modulating clues               0.646186 peripheral_program_modulating_clues                 weak_fdr
+                      MS-275          NFE2L2    supportive_manual_review_clues peripheral/program-modulating clues               0.509062 peripheral_program_modulating_clues tool_or_broad_epigenetic
+                   scriptaid          NFE2L2    supportive_manual_review_clues peripheral/program-modulating clues               0.506733 peripheral_program_modulating_clues tool_or_broad_epigenetic
+              S-(+)-Rolipram            THRB    supportive_manual_review_clues         possible CNS-directed clues               0.694468          supportive_after_bbb_clues                 weak_fdr
+                  papaverine            THRB    supportive_manual_review_clues         possible CNS-directed clues               0.682936          supportive_after_bbb_clues                 weak_fdr
+              trichostatin A          NFE2L2    supportive_manual_review_clues         possible CNS-directed clues               0.633664          supportive_after_bbb_clues tool_or_broad_epigenetic
+
+如何进入论文/汇报:
+- 主文或图中只建议突出 after-BBB headline CNS-directed mechanism-direction clues。
+- pre-BBB primary 但 BBB=No 的候选放入 supplementary 或机制方向讨论，表述为 peripheral/program-modulating clues。
+- THRB weak-FDR 候选继续放在 supportive/manual-review 层，不与 NFE2L2 强证据主线混写。
+
+输出文件:
+- 11_swissadme_parsed_and_matched_v21.csv
+- 12_bbb_annotation_manual_review_v21.csv
+- 13_integrated_after_bbb_v21.csv
+- 14_primary_clues_after_bbb_v21.csv
+- 15_supportive_after_bbb_v21.csv
+- 16_paper_ready_table_after_bbb_v21.csv
+- 17_after_bbb_summary_cn.txt
+- 18_after_bbb_transition_note_cn.txt

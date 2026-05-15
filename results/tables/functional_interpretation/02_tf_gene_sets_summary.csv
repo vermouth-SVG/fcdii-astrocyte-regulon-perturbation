@@ -1,0 +1,5 @@
+tf,candidate_tier,main_direction,regulon_target_count,directional_deg_count,intersection_count,intersection_ratio_of_regulon,deg_log2fc_threshold,deg_positive_fraction_threshold,size_note,summary_cn
+NFE2L2,primary_lesion_axis,lesion,458,4440,245,0.5349344978165939,0.25,0.05,基因集大小适中,NFE2L2 主方向为 lesion；discovery regulon target=458，方向一致 DEG 交集=245，交集比例=0.535。基因集大小适中。
+THRB,primary_internal_control_axis,internal_control,17,3249,13,0.7647058823529411,0.25,0.05,基因集大小适中,THRB 主方向为 internal_control；discovery regulon target=17，方向一致 DEG 交集=13，交集比例=0.765。基因集大小适中。
+BHLHE40,second_tier,lesion,221,4440,143,0.6470588235294118,0.25,0.05,基因集大小适中,BHLHE40 主方向为 lesion；discovery regulon target=221，方向一致 DEG 交集=143，交集比例=0.647。基因集大小适中。
+SOX2,reserved_lightweight,lesion,10,4440,10,1.0,0.25,0.05,regulon target 较小，富集结果需谨慎,SOX2 主方向为 lesion；discovery regulon target=10，方向一致 DEG 交集=10，交集比例=1.000。regulon target 较小，富集结果需谨慎。

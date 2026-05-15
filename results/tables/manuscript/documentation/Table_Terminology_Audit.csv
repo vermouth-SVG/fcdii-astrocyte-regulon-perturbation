@@ -1,0 +1,16 @@
+term,status,action,file(s) affected
+internal_control,absent,required absent,-
+internal-control,present,required,Main_Table1_analytical_datasets_and_object_roles_v3_minorfix.csv; Main_Table2_integrated_TF_prioritization_v3_minorfix.csv; ST01_dataset_role_and_excluded_resource_audit_v3_minorfix.csv; ST02_discovery_TF_shortlist_v3_minorfix.csv; ST03_integrated_TF_prioritization_metrics_v3_minorfix.csv; ST04_full_differential_regulon_statistics_v3_minorfix.csv; ST05_celloracle_perturbation_metrics_v3_minorfix.csv; ST06_sample_level_robustness_and_threshold_sensitivity_v3_minorfix.csv; ST07_supportive_external_evidence_summary_v3_minorfix.csv; ST08_functional_enrichment_and_program_convergence_v3_minorfix.csv; supplementary_table_legends_v3_minorfix.md; main_and_supplementary_tables_revision_log_v3_minorfix.md
+validation,absent,required absent,-
+formal validation,absent,required absent,-
+external validation,absent,required absent,-
+validated drug,absent,required absent,-
+clinical candidate,absent,required absent,-
+treatment lead,absent,required absent,-
+lead,absent in ST09 drug-status wording,replace drug-status wording with clues,-
+leads,absent in ST09 drug-status wording,replace drug-status wording with clues,-
+candidate,absent in ST09 drug-status wording; allowed for TF candidate wording,replace drug-status wording with clues,-
+candidates,absent in ST09 drug-status wording; allowed for TF candidate wording,replace drug-status wording with clues,-
+not a therapeutic recommendation,present as boundary phrase,required boundary phrase,ST09_exploratory_drug_signature_enrichment_v3_minorfix.csv; supplementary_table_legends_v3_minorfix.md; main_and_supplementary_tables_revision_log_v3_minorfix.md; README_tables_revised_v3_minorfix.md
+exploratory drug-signature enrichment,present,required,ST09_exploratory_drug_signature_enrichment_v3_minorfix.csv; main_and_supplementary_tables_index_v3_minorfix.csv; supplementary_table_legends_v3_minorfix.md
+hypothesis-generating clues only,present,required,supplementary_table_legends_v3_minorfix.md

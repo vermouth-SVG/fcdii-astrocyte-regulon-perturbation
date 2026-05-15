@@ -1,0 +1,19 @@
+{
+  "project_root": "/work",
+  "prepared_h5ad": "/work/celloracle_run/prepared_data/astrocyte_pilot_celloracle_round1_input.h5ad",
+  "oracle_path": "/work/celloracle_run/network/oracle_round1_base.celloracle.oracle",
+  "links_raw_path": "/work/celloracle_run/network/links_round1_raw.celloracle.links",
+  "links_filtered_path": "/work/celloracle_run/network/links_round1_filtered.celloracle.links",
+  "base_grn_edges_csv": "/work/celloracle_run/prepared_data/celloracle_round1_base_grn_edges.csv",
+  "base_grn_tg_to_tf_json": "/work/celloracle_run/prepared_data/celloracle_round1_tg_to_tf.json",
+  "shortlist_tfs_csv": "/work/celloracle_run/prepared_data/celloracle_round1_shortlist_tfs.csv",
+  "ko_tfs_csv": "/work/celloracle_run/prepared_data/celloracle_round1_ko_tfs.csv",
+  "cluster_column": "celloracle_cluster",
+  "embedding_key": "X_umap",
+  "alpha": 10.0,
+  "bagging_number": 20,
+  "edge_threshold": 2000,
+  "edge_pvalue": 0.001,
+  "n_pcs": 30,
+  "knn_k": 58
+}

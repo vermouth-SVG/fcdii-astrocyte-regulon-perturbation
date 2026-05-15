@@ -1,0 +1,20 @@
+term,status,action
+therapeutic recommendation,present only in required negated disclaimer; absent as positive claim,required absent as positive claim; required as negated disclaimer
+treatment recommendation,present only in required negated interpretation strip; absent as positive claim,required absent as positive claim; required as negated interpretation
+validated drug,absent from figure text; negated boundary-only in caption,required absent as positive claim
+clinical candidate,absent from figure text; negated boundary-only in caption,required absent as positive claim
+therapeutic candidate,absent,required absent
+treatment lead,absent,required absent
+drug validation,absent,required absent
+FCD II treatment,absent,required absent
+docking,absent from figure and caption; negated boundary-only in notes,required absent as analysis claim
+target-based discovery,absent,required absent
+Paper-ready,replaced,replaced by exploratory
+headline,replaced,replaced by mechanism-direction clues
+supportive clues,present,required
+peripheral/program-modulating clues,present,required
+exploratory,present,required
+drug-signature enrichment,present,required
+mechanism-direction clues,present,required
+not therapeutic recommendation,present,required
+not validated therapy,present,required

@@ -1,0 +1,6 @@
+Dataset,Role,Cells,Object,Comparison,Current manuscript status,Reason / boundary statement
+GSE268807 astrocyte pilot,Discovery cohort,"2,322",AUCell-matched astrocyte pilot,Lesion vs internal-control,Included discovery cohort,"Used for pySCENIC discovery, CellOracle in silico KO, and sample-level robustness."
+GSE140393,Single-group supportive analysis,"11,399",Lesion-only expression object,Single-group lesion object,Included supportive dataset,Used for single-group expression-level supportive evidence only.
+GSE190452,Cross-syndrome supportive analysis,"69,968",TLE/control expression object,TLE vs non-epileptic control,Included supportive dataset,Used for cross-syndrome expression-level and target-set supportive evidence only.
+GSE275302,Not included,-,Unavailable route,Not used,Not included,Not used in the current analysis.
+SCENIC+/Kaggle old exploration route,Archived exploration,-,Legacy proxy/cloud exploration,Not applicable,Archived route,Archived route; not part of the current main workflow.

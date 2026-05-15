@@ -1,0 +1,5 @@
+TF,Axis,Discovery evidence,In silico perturbation evidence,Robustness / supportive evidence,Program interpretation,Final priority
+NFE2L2,Lesion-associated,Lesion-side expression and regulon activity,Highest mean shift; Approx. RI rank 2,Stable sample-level direction; disease-side support,Stress-adaptation / transcriptional reprogramming,Primary lesion-associated axis
+THRB,Internal-control-associated,Internal-control-side expression and regulon activity,Highest Approx. RI; mean shift rank 2,Stable sample-level direction; partial internal-control-like support,Compact homeostatic / synaptic-calcium support,Primary internal-control-associated axis
+BHLHE40,Lesion-associated,Lesion-side expression and regulon activity,Intermediate perturbation effect,Stable internal evidence; attenuated external support,Secondary lesion-supportive program,Secondary candidate
+SOX2,Lesion-associated,Lesion-side expression and regulon activity,Lower perturbation priority,Stable internal evidence; partial / retained support,Target-limited retained program,Retained / lower-priority

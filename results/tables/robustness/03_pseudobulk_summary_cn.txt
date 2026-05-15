@@ -1,0 +1,18 @@
+pseudobulk / donor-level supporting evidence 总结
+==================================================
+本轮以 sample_id 为 donor/sample-level 分析单位，对每个单位内细胞表达取平均，作为描述性 pseudobulk 信号。
+由于当前 discovery pilot 约为 4 个 sample-level 单位，本部分不假装进行复杂组学统计，重点解释方向一致性、效应量和样本级支持。
+
+候选 TF 表达层面:
+- NFE2L2: lesion，log2FC=0.743，diff=0.2399
+- THRB: internal_control，log2FC=-0.328，diff=-0.3912
+- BHLHE40: lesion，log2FC=1.170，diff=0.1207
+- SOX2: lesion，log2FC=0.702，diff=0.1266
+
+regulon AUC donor/sample-level 层面:
+- NFE2L2: lesion，log2FC=0.111，diff=0.009568
+- THRB: internal_control，log2FC=-0.799，diff=-0.2777
+- BHLHE40: lesion，log2FC=0.303，diff=0.02287
+- SOX2: lesion，log2FC=0.755，diff=0.1113
+
+结论: 该部分应作为 donor-level supporting evidence，而不是替代 full cell-level 检验。

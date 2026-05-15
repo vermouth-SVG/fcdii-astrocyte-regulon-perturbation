@@ -1,0 +1,8 @@
+TF,Axis,Expression_log2FC,Regulon_deltaAUC,Regulon_FDR,Positive_fraction_high_group,Evidence_tier
+NFE2L2,lesion-associated,0.685,0.009,1.64e-19,0.363,Primary lesion-associated
+THRB,internal-control-associated,-0.361,-0.245,4.05e-114,0.642,Primary internal-control-associated
+BHLHE40,lesion-associated,1.136,0.02,1.28e-34,0.159,Secondary lesion-associated
+SOX2,lesion-associated,0.669,0.096,9.39e-66,0.252,Retained / lower-priority
+SATB2,internal-control-associated,-0.706,-0.071,5.55e-99,0.411,Supportive internal-control-associated
+RARB,internal-control-associated,-0.633,-0.046,1.97e-81,0.232,Supportive internal-control-associated
+HMGA1,lesion-associated,0.745,0.015,1.69e-19,0.072,Lesion-side context

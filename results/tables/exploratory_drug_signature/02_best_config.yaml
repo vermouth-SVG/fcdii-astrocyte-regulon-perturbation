@@ -1,0 +1,32 @@
+﻿v21_best_config:
+  config_id: translational_high__conservative_high__primary4__support2__thrbtrans0.75
+  selected_at: "2026-04-22T14:26:19"
+  source_table: "<PROJECT_ROOT_WINDOWS>\drug_repositioning\archive\v2_pre_v21_process\03_compound_aggregated_table.csv"
+  output_dir: "<PROJECT_ROOT_WINDOWS>\drug_repositioning"
+  objective:
+    objective_score: 7.785009
+    priority: primary quality, conservative penalties, supportive THRB kept separate
+  weights:
+    enrichment_support_score: 0.2
+    cross_signature_score: 0.18
+    axis_relevance_score: 0.16
+    mechanism_interpretability_score: 0.08
+    translational_suitability_score: 0.26
+    axis_assignment_confidence_score: 0.12
+  penalties:
+    weak_fdr_penalty: 0.12
+    single_signature_penalty: 0.1
+    tool_compound_penalty: 0.2
+    low_cns_epilepsy_relevance_penalty: 0.18
+  thresholds:
+    strict_fdr: 0.05
+    thrb_weak_fdr: 0.25
+    primary_target_count: 4
+    primary_min_support: 2
+    primary_min_score: 0.48
+    supportive_min_score: 0.42
+    thrb_supportive_min_translational: 0.75
+  constraints:
+    - BBB is not used in v2.1 pre-BBB scoring.
+    - THRB weak-FDR candidates cannot enter primary; they are supportive/manual-review only.
+    - BHLHE40 is supplementary support only; SOX2 is not used for drug-query mainline.

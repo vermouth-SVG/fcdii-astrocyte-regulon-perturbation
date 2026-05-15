@@ -1,0 +1,48 @@
+GSE190452 round2 pySCENIC readiness report
+input_h5ad: /work/external_validation_round2/input/external_validation_round2.h5ad
+cells: 69968
+genes: 34915
+x_representation: normalized_or_log_like
+counts_source: layers['counts']
+suitable_for_pyscenic: True
+
+[metadata_columns]
+group	2
+sample	8
+donor	8
+cluster	33
+celltype	33
+
+[obsm_keys]
+X_pca
+X_umap
+
+[uns_keys]
+cluster_generation
+log1p
+
+[layers]
+counts
+
+[x_info]
+type: csr_matrix
+dtype: float32
+is_sparse: True
+shape: (69968, 34915)
+nonzero: 187318924
+min_nonzero: 0.04160385951399803
+max_nonzero: 8.607943534851074
+sample_integerish: False
+
+[counts_info]
+type: csr_matrix
+dtype: int64
+is_sparse: True
+shape: (69968, 34915)
+nonzero: 187318924
+min_nonzero: 1.0
+max_nonzero: 7080.0
+sample_integerish: True
+
+[recommendation]
+当前对象可用于 round2 支持性队列 pySCENIC 复算。建议从 layers['counts'] 导出表达矩阵，并保持 group/sample/donor/cluster 信息用于后续 projected regulon-level supportive analysis。

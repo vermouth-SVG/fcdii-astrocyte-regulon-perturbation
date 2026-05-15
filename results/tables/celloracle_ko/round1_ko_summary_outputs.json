@@ -1,0 +1,25 @@
+{
+  "ko_dir": "<PROJECT_ROOT_WINDOWS>\\celloracle_run\\ko_round1",
+  "candidate_dir": "<PROJECT_ROOT_WINDOWS>\\analysis_outputs\\celloracle_candidates",
+  "tf_list": [
+    "BHLHE40",
+    "NFE2L2",
+    "SOX2",
+    "THRB"
+  ],
+  "outputs": [
+    "round1_ko_master_table.csv",
+    "round1_ko_tf_strength_ranking.csv",
+    "round1_ko_tf_strength_ranking_lesion.csv",
+    "round1_ko_tf_strength_ranking_internal_control.csv",
+    "round1_recovery_index_ranking.csv",
+    "round1_recovery_index_by_group.csv",
+    "round1_recovery_index_definition.txt",
+    "round1_ko_summary_cn.txt",
+    "next_step_recommendations.txt",
+    "summary_plots/round1_mean_shift_length_ranking.png",
+    "summary_plots/round1_group_shift_comparison.png",
+    "summary_plots/round1_recovery_index_ranking.png",
+    "summary_plots/round1_recovery_index_bubble.png"
+  ]
+}

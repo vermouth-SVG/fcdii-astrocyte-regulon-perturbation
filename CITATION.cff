@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated manuscript."
+title: "FCD II astrocyte TF-regulon and in silico perturbation analysis"
+authors:
+  - family-names: "Ye"
+    given-names: "Xinyuan"
+version: "0.1.0"
+date-released: "2026-05-15"
+url: "https://github.com/vermouth-SVG/fcdii-astrocyte-regulon-perturbation"

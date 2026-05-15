@@ -1,0 +1,26 @@
+GO/KEGG 富集分析总结
+===================================
+数据库状态:
+- GO_Biological_Process_2023: 可用；使用本地缓存；<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\GO_Biological_Process_2023.gmt
+- KEGG_2021_Human: 可用；使用本地缓存；<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\KEGG_2021_Human.gmt
+
+NFE2L2:
+- Top terms: Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Positive Regulation Of Transcription By RNA Polymerase II (GO:0045944); Regulation Of DNA-templated Transcription (GO:0006355); Negative Regulation Of DNA-templated Transcription (GO:0045892); Pathways in cancer; Negative Regulation Of Transcription By RNA Polymerase II (GO:0000122); Regulation Of Transcription By RNA Polymerase II (GO:0006357)
+- 程序主题计数: transcriptional_regulatory:11; metabolic_supportive:11
+- 解释重点: 优先观察 oxidative stress / stress response / inflammatory-reactive / metabolic adaptation 相关主题。
+
+THRB:
+- Top terms: Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859); Modulation Of Chemical Synaptic Transmission (GO:0050804); Calcium-Ion Regulated Exocytosis (GO:0017156); Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859)
+- 程序主题计数: metabolic_supportive:11; thyroid_hormone_neuro:5
+- 解释重点: 优先观察 thyroid hormone / neuronal-supportive / metabolic-homeostatic / synaptic support 相关主题。
+
+BHLHE40:
+- Top terms: Regulation Of Platelet Aggregation (GO:0090330); Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Vascular smooth muscle contraction; Signaling pathways regulating pluripotency of stem cells; Regulation of actin cytoskeleton; Platelet activation; Long-term depression
+- 程序主题计数: transcriptional_regulatory:5; metabolic_supportive:11; differentiation_development:1
+- 解释重点: 作为第二梯队，观察 hypoxia/stress/reactive 或代谢调节相关主题。
+
+SOX2:
+- Top terms: Negative Regulation Of Neuron Differentiation (GO:0045665); Regulation Of Cysteine-Type Endopeptidase Activity (GO:2000116); Glial Cell Differentiation (GO:0010001); Negative Regulation Of Epithelial Cell Proliferation (GO:0050680); Gland Development (GO:0048732); Regulation Of Epithelial Cell Proliferation (GO:0050678); Negative Regulation Of Developmental Process (GO:0051093); Negative Regulation Of Canonical Wnt Signaling Pathway (GO:0090090)
+- 程序主题计数: metabolic_supportive:10; thyroid_hormone_neuro:1; differentiation_development:6; cell_cycle_growth:2
+- 解释重点: SOX2 target 较少，富集结果只作轻量保留解释。
+

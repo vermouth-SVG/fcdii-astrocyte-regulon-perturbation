@@ -1,0 +1,5 @@
+本次共检查 11 个候选 TF，其中 7 个进入最终 shortlist，其中高置信度 7 个。
+shortlist 的判定标准为：regulon FDR 显著、TF 表达 Wilcoxon FDR 显著、在高表达组中具有足够阳性细胞比例，且 TF 表达方向与 regulon 活性方向一致。
+lesion 侧优先候选包括：BHLHE40(lesion, log2FC=1.14, exprFDR=1.53e-07, regulonFDR=1.28e-34)、NFE2L2(lesion, log2FC=0.68, exprFDR=4.49e-06, regulonFDR=1.64e-19)、SOX2(lesion, log2FC=0.67, exprFDR=6.36e-06, regulonFDR=9.39e-66)、HMGA1(lesion, log2FC=0.74, exprFDR=2.01e-03, regulonFDR=1.69e-19)。
+internal_control 侧优先候选包括：SATB2(internal_control, log2FC=-0.71, exprFDR=2.34e-31, regulonFDR=5.55e-99)、THRB(internal_control, log2FC=-0.36, exprFDR=7.48e-21, regulonFDR=4.05e-114)、RARB(internal_control, log2FC=-0.63, exprFDR=9.60e-12, regulonFDR=1.97e-81)。
+这些 TF 可以作为后续 CellOracle GRN 方向性验证和扰动模拟的优先起点。

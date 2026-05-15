@@ -1,0 +1,71 @@
+内部稳健性验证 - 输入对象检查
+========================================
+输入对象: <PROJECT_ROOT_WINDOWS>\final_exports\astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+维度: 2322 cells x 36601 genes
+表达矩阵来源: raw/X
+
+obs 字段:
+barcode, sample_prefix, sample_id, donor_id, clinical_sample_label, group, subtype, celltype_for_scenicplus, join_key, pilot_batch
+
+var 字段:
+feature_id, feature_name, feature_type, chrom, start, end
+var_names 前 20 个:
+MIR1302-2HG, FAM138A, OR4F5, AL627309.1, AL627309.3, AL627309.2, AL627309.5, AL627309.4, AP006222.2, AL732372.1, OR4F29, AC114498.1, OR4F16, AL669831.2, LINC01409, FAM87B, LINC01128, LINC00115, FAM41C, AL645608.6
+
+自动识别分组字段: group
+lesion 标签: lesion
+internal_control 标签: internal_control
+分组计数: internal_control:1434 | lesion:888
+
+donor 字段: donor_id，唯一值数: 2
+sample 字段: sample_id，唯一值数: 4
+本轮 leave-one-out / pseudobulk 分析单位: sample_id
+字段选择说明: 检测到 donor_id=2 个 donor，同时 sample_id=4 个样本；本项目为 4-sample astrocyte pilot，因此 leave-one-out/pseudobulk 默认使用样本级单位。
+
+analysis unit x group 细胞数:
+group       internal_control  lesion
+sample_id                           
+GSM8299712               523       0
+GSM8299716                 0     426
+GSM8299718               911       0
+GSM8299720                 0     462
+
+donor x group 细胞数:
+group     internal_control  lesion
+donor_id                          
+G120                   523     426
+G133                   911     462
+
+sample x group 细胞数:
+group       internal_control  lesion
+sample_id                           
+GSM8299712               523       0
+GSM8299716                 0     426
+GSM8299718               911       0
+GSM8299720                 0     462
+
+提示: 以下分析单位缺少某个分组，说明该字段更接近 sample-level，而不是同一 donor 内成对两组。
+sample_id=GSM8299712 缺少分组: lesion
+sample_id=GSM8299716 缺少分组: internal_control
+sample_id=GSM8299718 缺少分组: lesion
+sample_id=GSM8299720 缺少分组: internal_control
+
+obsm keys: X_pyscenic_auc
+uns keys: pyscenic_info, pyscenic_regulon_names
+layers keys: 无
+pySCENIC AUC 是否存在: 是
+regulon 数量: 105
+候选 TF regulon 匹配:
+- NFE2L2: NFE2L2(+)
+- THRB: THRB(+)
+- BHLHE40: BHLHE40(+)
+- SOX2: SOX2(+)
+- HMGA1: HMGA1(+)
+- SATB2: SATB2(+)
+- RARB: RARB(+)
+
+输出文件:
+- 01_input_object_summary.txt
+- 01_obs_columns.csv
+- 01_group_sample_distribution.csv
+- 01_detected_fields.json

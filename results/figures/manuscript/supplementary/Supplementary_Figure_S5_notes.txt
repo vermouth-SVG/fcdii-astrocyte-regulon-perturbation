@@ -1,0 +1,34 @@
+FigS5 supportive external evidence revised_v2 minorfix notes
+
+Output stem:
+- manuscript_output/figures_supplementary_revised_v2/FigS5_supportive_external_evidence_revised_v2_minorfix
+
+Input files used:
+- external_validation/single_group_support/donor_level_summary.csv
+- external_validation/single_group_support/external_support_ranking.csv
+- external_validation/input/input_build_report.txt
+- external_validation_round2/round2_expression_and_regulon_master_table.csv
+- external_validation_round2/external_round2_tf_expression_celltype_stats.csv
+- external_validation_round2/external_round2_support_ranking.csv
+- external_validation_round2/input/build_report.txt
+
+Minor fixes applied:
+- Panel C legend was removed because all points have direct TF labels.
+- Panel C xlim was set to -0.05 to 1.08 and ylim was set to -0.05 to 1.08.
+- Panel C NFE2L2 label was moved to the upper-left side of its point to avoid boundary crowding.
+- Panel C THRB, BHLHE40, and SOX2 labels were manually offset to avoid overlap.
+- Panel C title and axis labels were kept unchanged.
+- Panel D title, data source, and colorbar label were kept unchanged.
+- Panel E title was changed to "Conservative interpretation of supportive evidence".
+- Panel E candidate interpretation text was kept unchanged.
+
+Forbidden-term check against figure text:
+- validation: NO
+- formal validation: NO
+- independent validation: NO
+- external validation: NO
+- validated: NO
+- confirmed: NO
+- regulon replication: NO
+- projected regulon support: NO
+- internal_control: NO

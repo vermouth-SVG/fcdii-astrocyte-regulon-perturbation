@@ -1,0 +1,17 @@
+term,status,action
+"2,322",present,required
+2322,formatted,"replaced by 2,322 in figure-facing text"
+"2,332",absent,required absent
+"36,601",present,required
+36601,formatted,"replaced by 36,601 in figure-facing text"
+105 regulons,present,required
+internal-control,present,required
+internal_control,absent from figure-facing text,replaced by internal-control
+G130_D.3,absent from metadata and figure text,correct sample_id if erroneous
+G120_D.3,present,metadata confirms
+validation,absent from figure/caption/notes/log text,required absent
+external validation,absent,required absent
+formal validation,absent,required absent
+donor-level robustness,absent,required absent
+SCENIC+,absent,required absent
+docking,absent,required absent

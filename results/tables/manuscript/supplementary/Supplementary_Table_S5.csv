@@ -1,0 +1,5 @@
+TF,Mean_shift,Approx_RI,Net_shift,Lesion_shift,Internal-control_shift,Direction_agreement,Interpretation
+NFE2L2,0.699,0.608,0.521,0.606,0.757,1.0,Primary lesion-associated axis; highest mean shift.
+THRB,0.689,0.689,0.487,0.591,0.75,1.0,Primary internal-control-associated axis; highest Approx. RI.
+BHLHE40,0.567,0.456,0.347,0.514,0.6,1.0,Secondary lesion-associated candidate.
+SOX2,0.522,0.399,0.296,0.463,0.559,1.0,Retained / lower-priority candidate.

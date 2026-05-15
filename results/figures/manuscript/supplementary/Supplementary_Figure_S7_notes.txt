@@ -1,0 +1,31 @@
+FigS7 drug repositioning exploratory revised_v2 minorfix notes
+
+Output stem:
+- manuscript_output/figures_supplementary_revised_v2/FigS7_drug_repositioning_exploratory_revised_v2_minorfix
+
+Input files used:
+- drug_repositioning/16_paper_ready_table_after_bbb_v21.csv
+- drug_repositioning/13_integrated_after_bbb_v21.csv
+- drug_repositioning/03_integrated_rescored_v21.csv
+- drug_repositioning/11_swissadme_parsed_and_matched_v21.csv
+- drug_repositioning/12_bbb_annotation_manual_review_v21.csv
+
+Minor fixes applied:
+- Panel C retains only four direct labels: VALPROIC ACID, lobeline, S-(+)-Rolipram, and EGCG.
+- EGCG = (-)-Epigallocatechin gallate.
+- Panel C labels were manually offset with leader lines to avoid overlap and stay inside the plotting region.
+- Panel C title and axis labels were kept unchanged.
+- Panel D x-axis labels were shortened to mechanism-direction, supportive, and peripheral/program-modulating.
+- Panel D title was kept unchanged.
+- The top disclaimer strip was retained.
+- Panel E was retained, including the final boundary sentence.
+
+Forbidden-term check against figure text:
+- therapeutic candidate: NO
+- clinical candidate: NO
+- validated drug: NO
+- treatment lead: NO
+- candidate therapy: NO
+- drug validation: NO
+- fcd ii treatment: NO
+- docking: NO

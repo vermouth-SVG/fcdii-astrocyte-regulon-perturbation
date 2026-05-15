@@ -1,0 +1,20 @@
+term,status,action
+functional enrichment,present,required
+GO,present,required
+KEGG,present,required
+program convergence,present,required
+regulon-DEG overlap,present,required
+overlap genes,present,required
+overlap ratio,present,required
+stress-adaptation,present,required
+compact homeostatic-supportive,present,required
+secondary lesion-supportive,present,required
+target-limited retained,present,required
+internal-control,present,required if used
+internal_control,absent from figure text,replaced by internal-control in figure-facing labels
+metabolic_supportive,not used as universal label,replaced by TF-specific interpretation labels in Panel E
+validated pathway,absent,required absent
+confirmed mechanism,absent,required absent
+therapeutic target,absent,required absent
+formal validation,absent exact phrase,boundary phrased as formal-validation analysis
+external validation,absent,required absent

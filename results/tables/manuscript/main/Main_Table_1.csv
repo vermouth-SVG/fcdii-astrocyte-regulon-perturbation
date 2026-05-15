@@ -1,0 +1,4 @@
+Dataset,Role,Analytical object,Cells,Comparison,Use in manuscript
+GSE268807 astrocyte pilot,Discovery cohort,AUCell-matched astrocyte pilot,"2,322",Lesion vs internal-control,pySCENIC discovery; CellOracle in silico KO; sample-level robustness
+GSE140393,Single-group supportive analysis,Lesion-only expression object,"11,399",Single-group lesion object,Expression-level supportive evidence only
+GSE190452,Cross-syndrome supportive analysis,TLE/control expression object,"69,968",TLE vs non-epileptic control,Cross-syndrome supportive evidence only

@@ -1,0 +1,33 @@
+Round-1 Recovery Index (approximate) definition
+
+This is a pragmatic score built only from existing CellOracle state-shift outputs.
+
+For each TF and group g:
+1. mean_shift_g = mean(shift_length)
+2. mean_random_shift_g = mean(shift_length_random)
+3. net_shift_g = mean_shift_g - mean_random_shift_g
+4. vector_strength_g = sqrt(mean_delta_x_g^2 + mean_delta_y_g^2)
+5. coherence_g = vector_strength_g / (mean_shift_g + 1e-9)
+6. recovery_index_group_g = net_shift_g * (1 + coherence_g)
+
+For each TF overall:
+1. target_group = expected_regulon_effect_group
+2. other_group = the opposite group
+3. matched_net = net_shift_target_group
+4. unmatched_net = net_shift_other_group
+5. group_selectivity = (matched_net - unmatched_net) / (abs(matched_net) + abs(unmatched_net) + 1e-9)
+6. direction_agreement_factor = 1.0 if expected_regulon_effect_group == expected_expr_higher_group else 0.75
+7. recovery_index =
+   mean_net_shift_overall
+   * (1 + group_selectivity)
+   * (1 + coherence_target_group)
+   * direction_agreement_factor
+
+Interpretation:
+- Higher mean_shift_length means stronger KO perturbation.
+- Higher net_shift means the perturbation exceeds randomized control.
+- Higher coherence means the average vector shift is more directional and less diffuse.
+- Higher group_selectivity means the KO perturbs its expected group more than the opposite group.
+
+This is not a literal rescue probability. It is an executable proxy for group-matched state-rewiring potency
+using the currently available CellOracle KO outputs.

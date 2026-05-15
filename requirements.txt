@@ -1,0 +1,14 @@
+anndata
+celloracle
+h5py
+matplotlib
+numpy
+openpyxl
+pandas
+pillow
+pyscenic
+pyyaml
+scanpy
+scipy
+seaborn
+statsmodels

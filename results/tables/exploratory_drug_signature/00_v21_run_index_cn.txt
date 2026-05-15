@@ -1,0 +1,36 @@
+﻿drug repositioning v2.1 pre-BBB 轻量收敛版运行索引
+============================================================
+生成时间: 2026-04-22 14:26:19
+输入 pre-BBB 聚合表: <PROJECT_ROOT_WINDOWS>\drug_repositioning\archive\v2_pre_v21_process\03_compound_aggregated_table.csv
+输出目录: <PROJECT_ROOT_WINDOWS>\drug_repositioning
+
+本轮做了什么:
+- 复用现有 v2 aggregated/integrated 结果，在本地重算 pre-BBB 分数。
+- 新增显式 penalty: weak-FDR、single-signature、tool/broad-epigenetic、low-CNS/epilepsy-context。
+- 将结果收敛为 primary / supportive / retained full list 三层。
+- primary/supportive 层仅从原 v2 top-priority 候选中收敛产生，避免把 retained 中的新药名升入主展示层。
+- 运行 120 组确定性有限参数搜索，并按 objective 自动选择最佳配置。
+
+本轮没做什么:
+- 未重跑 pySCENIC、CellOracle、KO、外部验证、robustness、GO/KEGG。
+- 未重跑 Enrichr/DSigDB 原始检索，未下载新资源。
+- 未执行 docking，未调用任何 docking 脚本。
+- BBB 仍为后续手动搜索与整理，本轮只生成 pre-BBB 结果和手动 BBB 模板。
+
+最佳配置:
+- config_id: translational_high__conservative_high__primary4__support2__thrbtrans0.75
+- objective_score: 7.785009
+- primary clues: 4
+- supportive clues: 8
+
+关键输出:
+- 01_parameter_search_summary.csv
+- 02_best_config.yaml
+- 03_integrated_rescored_v21.csv
+- 04_primary_mechanism_direction_clues.csv
+- 05_supportive_manual_review_clues.csv
+- 06_retained_full_list_v21.csv
+- 07_paper_ready_table_v21.csv
+- 08_v21_summary_cn.txt
+- 09_manual_bbb_template_v21.tsv
+- 10_compound_tag_template_v21.csv

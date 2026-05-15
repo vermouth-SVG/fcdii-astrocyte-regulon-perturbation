@@ -1,0 +1,5 @@
+TF,Axis,Expression_log2FC,Regulon_deltaAUC,KO_rank,Approx_RI_rank,Retention_frequency,LOSO_expression,LOSO_regulon,GSE140393_support,GSE190452_cross_syndrome_support,Sample_level_robustness,Final_priority
+NFE2L2,lesion-associated,0.685,0.009,1,2,1.0,1.0,1.0,1.0,1.0,Stable,Primary lesion-associated axis
+THRB,internal-control-associated,-0.361,-0.245,2,1,0.667,1.0,1.0,0.8,0.204,Stable with threshold sensitivity,Primary internal-control-associated axis
+BHLHE40,lesion-associated,1.136,0.02,3,3,1.0,1.0,1.0,0.231,0.091,Stable,Secondary lesion-associated candidate
+SOX2,lesion-associated,0.669,0.096,4,4,1.0,1.0,1.0,0.35,0.731,Stable but target-limited,Retained / lower-priority

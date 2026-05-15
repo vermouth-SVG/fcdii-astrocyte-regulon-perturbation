@@ -1,0 +1,13 @@
+h5ad_in=/in/astrocyte_pilot_rna_merged_with_raw.h5ad
+auc_csv=/work/output/auc_mtx.csv
+h5ad_cells=2322
+h5ad_genes=36601
+auc_cells=2322
+auc_regulons=105
+shared_cells=2322
+missing_in_auc=0
+missing_in_h5ad=0
+out_h5ad=/work/final_exports/astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+out_auc_matched=/work/final_exports/auc_mtx_matched_to_h5ad.csv
+out_regulon_txt=/work/final_exports/regulon_names.txt
+out_auc_mean=/work/final_exports/regulon_auc_mean.csv

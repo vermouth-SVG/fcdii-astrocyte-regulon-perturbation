@@ -1,0 +1,5 @@
+基于 `regulon_group_statistics.csv` 的两组比较结果，在 lesion 与 internal_control 之间共有 76 个 regulon 达到 FDR < 0.05，提示两组 astrocyte 的转录调控活性存在较明显差异。
+按 FDR 和均值差综合排序，lesion 相对更高的代表性 regulon 主要包括 SOX2(+)(0.274)、CEBPD(+)(0.257)、BCLAF1(+)(0.087)、ELF1(+)(0.113)、BHLHE40(+)(0.121)；internal_control 相对更高的代表性 regulon 主要包括 THRB(+)(0.620)、SATB2(+)(0.192)、RARB(+)(0.172)、JUND(+)(0.058)、SKI(+)(0.067)。
+从 `group_mean_heatmap_raw.png` 可以看到，两组在多个核心 regulon 上呈现成簇的活性偏移，其中热图前列更偏向 lesion 的 regulon 包括 SOX2(+)、CEBPD(+)、PDLIM5(+)、DBX2(+)、FLI1(+)，更偏向 internal_control 的 regulon 包括 THRB(+)、TCF4(+)、SATB2(+)、PBX1(+)、NR5A2(+)。
+结合 `top_regulons_group_boxplots.png`，上述差异并非由个别离群细胞驱动，而是在两组细胞总体分布层面就已分开，说明 lesion 与 internal_control 在 regulon activity 上具有稳定且可重复的分组效应。
+综合来看，lesion 组对应一组在平均 AUC 上整体升高的 regulon 程序，而 internal_control 组则保留了另一组在平均 AUC 上更高、且 FDR 更显著的 regulon 特征，这些 regulon 可作为后续 CellOracle 或下游网络解释的优先候选。

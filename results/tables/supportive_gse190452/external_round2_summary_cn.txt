@@ -1,0 +1,9 @@
+第二个外部验证队列基于 GSE190452 构建，共纳入 69968 个细胞，包含 4 个 non-epileptic control 样本与 4 个 TLE 样本，并通过最小 Scanpy 流程生成 33 个 cluster。
+该外部对象未包含 pySCENIC AUC，因此本轮验证以 expression-level analysis 为主，并在 group 与 cluster 两个层级评估方向一致性。
+按综合支持度排序，结果为 NFE2L2 > SOX2 > THRB > BHLHE40，其中 NFE2L2 位列第 1，support_score=1.000。 第 2 位为 SOX2，support_score=0.731。
+NFE2L2 继续得到明确支持：其组间表达方向与主分析一致，cluster 支持比例为 0.82，说明这一信号并非仅由少数细胞群驱动。
+THRB 在 round2 外部队列中继续得到支持：其组间 log2FC 方向与主分析一致，且有 17/28 个 cluster 保持一致方向，提示其对照侧特征在独立队列中仍较稳定。
+BHLHE40 支持减弱：虽然仍可检测到一定表达差异，但 cluster 层面的支持比例仅为 0.54。
+SOX2 仍保留一定支持：其组间表达方向与主分析一致，cluster 支持比例为 0.68，说明这一信号并非仅由少数细胞群驱动。
+总体上，NFE2L2 与 THRB 在第二个外部验证队列中的表现与主分析最为一致；BHLHE40 与 SOX2 的支持度相对较弱。
+现阶段结果已能为成文提供较稳定的主结论框架，但若要进一步增强说服力，仍建议补充至少一个带明确细胞类型注释或可复算 regulon activity 的独立验证队列。

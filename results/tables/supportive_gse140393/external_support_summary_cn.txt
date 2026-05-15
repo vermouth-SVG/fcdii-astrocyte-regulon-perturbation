@@ -1,0 +1,8 @@
+本次外部验证基于单组 lesion 外部队列，共纳入 11399 个细胞、33538 个基因，覆盖 5 个样本。
+该外部对象未包含 pySCENIC AUC，因此本轮仅进行 expression-level support analysis，并在样本层面评估均值、阳性比例和稳定性。
+按单组支持度综合排序，NFE2L2 位居首位，support_score=1.000。 次强为 THRB，support_score=0.800。
+在主分析中偏 lesion 的候选 TF 中，NFE2L2 表现出最强的外部支持，其外部队列 mean_norm_expr=0.440，positive_fraction=0.258，样本间 CV=0.294。
+其余 lesion 方向 TF 的外部支持依次为：SOX2(score=0.350)，BHLHE40(score=0.231)。
+在主分析中偏 internal_control 的候选 TF 中，THRB 在 lesion-only 外部队列中保持较低表达，其 mean_norm_expr=0.014，positive_fraction=0.012，因此与主分析中的 internal_control 富集方向一致。
+总体上，这一外部队列更适合作为 lesion 方向候选 TF 的支持性验证，而不是独立的两组重复比较。
+从当前结果看，NFE2L2 的外部支持最完整；SOX2 与 BHLHE40 提供中等支持；THRB 更适合作为“lesion 中相对低表达、与 internal_control 方向一致”的反向支持证据。

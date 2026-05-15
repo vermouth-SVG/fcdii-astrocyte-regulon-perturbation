@@ -1,0 +1,3 @@
+library,source,path,available,message
+GO_Biological_Process_2023,go,<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\GO_Biological_Process_2023.gmt,True,使用本地缓存
+KEGG_2021_Human,kegg,<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\KEGG_2021_Human.gmt,True,使用本地缓存

@@ -1,0 +1,2 @@
+Markov simulation was skipped.
+AttributeError("'Oracle' object has no attribute 'markov_transition'")

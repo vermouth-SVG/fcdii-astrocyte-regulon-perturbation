@@ -1,0 +1,9 @@
+Dataset,Analysis,Support_type,TF,Expected_axis,Lesion_presence_score,Direction_score,Support_score,Support_rank,Group_log2FC,Cluster_expression_support_fraction,Boundary_statement
+GSE140393,single-group supportive,single-group expression support,NFE2L2,lesion,1.0,1.0,1.0,1,,,single-group supportive analysis; expression-level supportive evidence only
+GSE140393,single-group supportive,single-group expression support,THRB,internal-control,0.0,0.8,0.8,2,,,single-group supportive analysis; expression-level supportive evidence only
+GSE140393,single-group supportive,single-group expression support,SOX2,lesion,0.35,0.35,0.35,3,,,single-group supportive analysis; expression-level supportive evidence only
+GSE140393,single-group supportive,single-group expression support,BHLHE40,lesion,0.231,0.231,0.231,4,,,single-group supportive analysis; expression-level supportive evidence only
+GSE190452,cross-syndrome supportive,cross-syndrome expression / target-set support,NFE2L2,lesion,,,1.0,1,0.399,0.821,cross-syndrome supportive analysis; expression-level and target-set supportive evidence only
+GSE190452,cross-syndrome supportive,cross-syndrome expression / target-set support,SOX2,lesion,,,0.731,2,0.291,0.679,cross-syndrome supportive analysis; expression-level and target-set supportive evidence only
+GSE190452,cross-syndrome supportive,cross-syndrome expression / target-set support,THRB,internal-control,,,0.204,3,-0.231,0.607,cross-syndrome supportive analysis; expression-level and target-set supportive evidence only
+GSE190452,cross-syndrome supportive,cross-syndrome expression / target-set support,BHLHE40,lesion,,,0.091,4,-0.558,0.536,cross-syndrome supportive analysis; expression-level and target-set supportive evidence only

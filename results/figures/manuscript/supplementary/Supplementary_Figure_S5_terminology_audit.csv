@@ -1,0 +1,13 @@
+term,status,action
+formal validation,absent from figure text; boundary-only in caption/notes,required absent as a positive claim
+independent validation,absent,required absent
+external validation,absent from figure text; input paths and negated boundary only,avoid in figure text
+validated,absent,required absent
+confirmed,absent,required absent
+regulon replication,absent from figure text; boundary-only in caption,required absent as a positive claim
+regulon-level replication,absent from figure text; boundary-only in caption,required absent as a positive claim
+projected regulon support,replaced,replaced by target-set support or expression-support pattern
+internal_control,replaced,replaced by internal-control in figure text
+GSE140393 single-group support,present,required
+GSE190452 cross-syndrome support,present,required
+supportive evidence,present,required

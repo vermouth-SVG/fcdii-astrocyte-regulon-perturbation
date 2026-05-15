@@ -1,0 +1,16 @@
+term,status,action
+sample-level robustness,present,required
+leave-one-sample-out,present,required
+LOSO,present,required
+pseudobulk support,present,required
+threshold sensitivity,present,required
+shortlist retention,present,required
+internal-control,present,required
+internal_control,absent from figure text,replaced by internal-control in figure-facing labels
+donor-level robustness,absent from figure text,boundary-only note states not donor-level robustness
+donor-level validation,absent,required absent
+external validation,absent from figure text,appears only in required negated caption/notes boundary
+formal validation,absent from figure text,appears only in required negated notes boundary
+independent validation,absent,required absent
+validated,absent,required absent
+confirmed,absent,required absent

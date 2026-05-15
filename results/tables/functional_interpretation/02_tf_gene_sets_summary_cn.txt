@@ -1,0 +1,12 @@
+TF gene set 构建总结
+====================================
+表达对象: <PROJECT_ROOT_WINDOWS>\final_exports\astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+分组字段: group; lesion=lesion; internal_control=internal_control
+轻量 DEG 定义: |log2FC| >= 0.25, higher-group positive fraction >= 0.05
+
+NFE2L2 主方向为 lesion；discovery regulon target=458，方向一致 DEG 交集=245，交集比例=0.535。基因集大小适中。
+THRB 主方向为 internal_control；discovery regulon target=17，方向一致 DEG 交集=13，交集比例=0.765。基因集大小适中。
+BHLHE40 主方向为 lesion；discovery regulon target=221，方向一致 DEG 交集=143，交集比例=0.647。基因集大小适中。
+SOX2 主方向为 lesion；discovery regulon target=10，方向一致 DEG 交集=10，交集比例=1.000。regulon target 较小，富集结果需谨慎。
+
+说明: intersection gene set 表示 discovery regulon target 与主方向一致 DEG 的交集，是后续 program convergence 的核心输入。

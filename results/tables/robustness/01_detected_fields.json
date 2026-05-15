@@ -1,0 +1,54 @@
+{
+  "input_h5ad": "<PROJECT_ROOT_WINDOWS>\\final_exports\\astrocyte_pilot_rna_with_pyscenic_auc.h5ad",
+  "n_cells": 2322,
+  "n_genes": 36601,
+  "matrix_source": "raw/X",
+  "group_col": "group",
+  "lesion_label": "lesion",
+  "control_label": "internal_control",
+  "donor_col": "donor_id",
+  "sample_col": "sample_id",
+  "analysis_unit_col": "sample_id",
+  "donor_n": 2,
+  "sample_n": 4,
+  "obsm_keys": [
+    "X_pyscenic_auc"
+  ],
+  "uns_keys": [
+    "pyscenic_info",
+    "pyscenic_regulon_names"
+  ],
+  "layer_keys": [],
+  "auc_present": true,
+  "n_regulons": 105,
+  "candidate_regulon_hits": [
+    {
+      "tf": "NFE2L2",
+      "regulon_name": "NFE2L2(+)"
+    },
+    {
+      "tf": "THRB",
+      "regulon_name": "THRB(+)"
+    },
+    {
+      "tf": "BHLHE40",
+      "regulon_name": "BHLHE40(+)"
+    },
+    {
+      "tf": "SOX2",
+      "regulon_name": "SOX2(+)"
+    },
+    {
+      "tf": "HMGA1",
+      "regulon_name": "HMGA1(+)"
+    },
+    {
+      "tf": "SATB2",
+      "regulon_name": "SATB2(+)"
+    },
+    {
+      "tf": "RARB",
+      "regulon_name": "RARB(+)"
+    }
+  ]
+}

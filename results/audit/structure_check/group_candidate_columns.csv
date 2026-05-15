@@ -1,0 +1,8 @@
+column,dtype,n_missing,n_unique_non_na,n_unique_including_na,min_group_size,max_group_size,value_preview,group_candidate_score,is_group_candidate,score_reasons
+group,category,0,2,2,888,1434,internal_control:1434 | lesion:888,371.577,True,name:+group; dtype:categorical_like; levels:2; counts:min>=100; balance:0.619; missing:0
+subtype,category,0,2,2,888,1434,"non_lesion (histology Normal, Table 1):1434 | FCD IIb:888",311.577,True,name:+subtype; dtype:categorical_like; levels:2; counts:min>=100; balance:0.619; missing:0
+donor_id,category,0,2,2,949,1373,G133:1373 | G120:949,273.736,True,name:+donor; dtype:categorical_like; levels:2; counts:min>=100; balance:0.691; missing:0
+clinical_sample_label,category,0,4,4,426,911,G133_N.2:911 | G120_N.1:523 | G133_D.2:462 | G120_D.3:426,272.029,True,name:+sample; dtype:categorical_like; levels:3-4; counts:min>=100; balance:0.468; missing:0
+sample_id,category,0,4,4,426,911,GSM8299718:911 | GSM8299712:523 | GSM8299720:462 | GSM8299716:426,272.029,True,name:+sample; dtype:categorical_like; levels:3-4; counts:min>=100; balance:0.468; missing:0
+sample_prefix,category,0,4,4,426,911,GSE268807_G133_N_FL:911 | GSE268807_G120_F1_N:523 | GSE268807_G133_D_FL:462 | GSE268807_G120_D_FL:426,272.029,True,name:+sample; dtype:categorical_like; levels:3-4; counts:min>=100; balance:0.468; missing:0
+pilot_batch,category,0,4,4,426,911,GSE268807_G133_N_FL:911 | GSE268807_G120_F1_N:523 | GSE268807_G133_D_FL:462 | GSE268807_G120_D_FL:426,192.029,True,name:+batch; dtype:categorical_like; levels:3-4; counts:min>=100; balance:0.468; missing:0

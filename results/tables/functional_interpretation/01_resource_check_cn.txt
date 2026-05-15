@@ -1,0 +1,44 @@
+GO/KEGG + 转录程序汇聚分析资源检查
+================================================
+输出目录: <PROJECT_ROOT_WINDOWS>\functional_interpretation
+
+[发现队列 h5ad]
+路径: <PROJECT_ROOT_WINDOWS>\final_exports\astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+是否存在: 是
+大小(bytes): 150621728
+后续用途: 读取 raw/X 表达矩阵、obs 分组字段和 pySCENIC AUC 信息。
+
+[pySCENIC regulon 定义]
+路径: <PROJECT_ROOT_WINDOWS>\output\regulons.csv
+是否存在: 是
+大小(bytes): 1031262
+后续用途: 优先从多层表头 regulons.csv 解析 TF-target genes。
+
+[内部稳健性整合表]
+路径: <PROJECT_ROOT_WINDOWS>\robustness_validation\05_robustness_validation_integrated_table.csv
+是否存在: 是
+大小(bytes): 1453
+后续用途: 提供 sample-level robustness、pseudobulk 和 shortlist 稳定性证据。
+
+[候选 TF shortlist 指标表]
+路径: <PROJECT_ROOT_WINDOWS>\analysis_outputs\celloracle_candidates\celloracle_candidate_tf_metrics.csv
+是否存在: 是
+大小(bytes): 6274
+后续用途: 提供候选 TF 方向、regulon FDR、表达方向和阳性比例。
+
+[外部 round2 expression-level 支持表]
+路径: <PROJECT_ROOT_WINDOWS>\external_validation_round2\external_round2_support_ranking.csv
+是否存在: 是
+大小(bytes): 2144
+后续用途: 只作为背景参考，本轮不重新做外部验证。
+
+[外部 round2 regulon-level 支持表]
+路径: <PROJECT_ROOT_WINDOWS>\external_validation_round2\round2_regulon_support_ranking.csv
+是否存在: 是
+大小(bytes): 1675
+后续用途: 只作为背景参考，本轮不重新做外部验证。
+
+regulons.csv 解析策略: 使用 pandas 读取 3 层表头，识别 TF/MotifID/AUC/NES/Annotation/Context/TargetGenes 列，按 direct annotation + activating context + NES/AUC 选择代表性 target set。
+
+富集数据库策略:
+本地未发现 GO/KEGG gene set 文件时，03_run_go_kegg.py 会从 Enrichr 下载 GO_Biological_Process_2023 与 KEGG_2021_Human 并缓存到 D 盘。若联网失败，将保留基因集与汇聚分析结果，并在富集报告中明确说明。

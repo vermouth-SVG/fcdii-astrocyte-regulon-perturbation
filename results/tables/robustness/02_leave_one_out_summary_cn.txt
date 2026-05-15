@@ -1,0 +1,22 @@
+donor/sample leave-one-out 稳健性验证总结
+=============================================
+本轮 leave-one-out 使用的分析单位: sample_id
+说明: 当前对象有 4 个 sample-level 单位，结果用于评估候选 TF 是否被某个样本单独驱动。
+
+核心 TF 结论:
+- NFE2L2: 存在敏感性，overall consistency=1.00
+- THRB: 稳定，overall consistency=1.00
+- BHLHE40: 稳定，overall consistency=1.00
+- SOX2: 稳定，overall consistency=1.00
+
+完整 TF 稳定性表:
+     tf  n_leave_one_out_tests  full_data_expr_log2fc full_data_expr_direction  full_data_regulon_diff full_data_regulon_direction  expr_consistency_count  expr_consistency_rate  expr_significant_count_fdr05  regulon_consistency_count  regulon_consistency_rate  regulon_significant_count_fdr05  overall_consistency_count  overall_consistency_rate  min_abs_expr_ratio_vs_full  min_abs_regulon_ratio_vs_full  donor_sensitive_flag
+ NFE2L2                      4               0.685990                   lesion                0.008898                      lesion                       4                    1.0                             3                          4                       1.0                                3                          4                       1.0                    0.774120                       0.173463                  True
+   THRB                      4              -0.361621         internal_control               -0.245154            internal_control                       4                    1.0                             4                          4                       1.0                                4                          4                       1.0                    0.503180                       0.640857                 False
+BHLHE40                      4               1.144319                   lesion                0.020215                      lesion                       4                    1.0                             4                          4                       1.0                                4                          4                       1.0                    0.939213                       0.427440                 False
+   SOX2                      4               0.671917                   lesion                0.096234                      lesion                       4                    1.0                             3                          4                       1.0                                4                          4                       1.0                    0.504982                       0.555581                 False
+  HMGA1                      4               0.757503                   lesion                0.015433                      lesion                       4                    1.0                             3                          4                       1.0                                3                          4                       1.0                    0.034848                       0.096784                  True
+  SATB2                      4              -0.706848         internal_control               -0.070533            internal_control                       4                    1.0                             4                          4                       1.0                                4                          4                       1.0                    0.833526                       0.647283                 False
+   RARB                      4              -0.634731         internal_control               -0.046105            internal_control                       4                    1.0                             4                          4                       1.0                                4                          4                       1.0                    0.657519                       0.674760                 False
+
+判定规则: 任一 leave-one-out 后表达或 regulon 方向翻转、总体一致性低于 0.75、或效应量下降到 full-data 的 25% 以下，则标记为 donor/sample 敏感。

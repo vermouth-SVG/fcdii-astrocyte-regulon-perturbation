@@ -1,0 +1,11 @@
+column,dtype,n_unique,n_missing,top_values,is_detected_group,is_detected_donor,is_detected_sample,is_analysis_unit
+barcode,object,2318,0,TGGCCTTTCATGCCTC-1:3 | ATCCTGACAACACTTG-1:2 | GCTGCATCAGTAAGTA-1:2 | TTTGTCCCAGTTAGCC-1:1 | AAAGCAAGTTCCGCAC-1:1 | AAAGCTTGTTGTCATC-1:1 | AAAGGACGTGTTTGCT-1:1 | AAATCCGGTTGCTTCG-1:1,False,False,False,False
+sample_prefix,object,4,0,GSE268807_G133_N_FL:911 | GSE268807_G120_F1_N:523 | GSE268807_G133_D_FL:462 | GSE268807_G120_D_FL:426,False,False,False,False
+sample_id,object,4,0,GSM8299718:911 | GSM8299712:523 | GSM8299720:462 | GSM8299716:426,False,False,True,True
+donor_id,object,2,0,G133:1373 | G120:949,False,True,False,False
+clinical_sample_label,object,4,0,G133_N.2:911 | G120_N.1:523 | G133_D.2:462 | G120_D.3:426,False,False,False,False
+group,object,2,0,internal_control:1434 | lesion:888,True,False,False,False
+subtype,object,2,0,"non_lesion (histology Normal, Table 1):1434 | FCD IIb:888",False,False,False,False
+celltype_for_scenicplus,object,1,0,Astrocyte:2322,False,False,False,False
+join_key,object,2322,0,GSE268807_G133_N_FL::TTTGTCCCAGTTAGCC-1:1 | GSE268807_G120_D_FL::AAAGCAAGTTCCGCAC-1:1 | GSE268807_G120_D_FL::AAAGCTTGTTGTCATC-1:1 | GSE268807_G120_D_FL::AAAGGACGTGTTTGCT-1:1 | GSE268807_G120_D_FL::AAATCCGGTTGCTTCG-1:1 | GSE268807_G120_D_FL::AACATAGCATACCCGG-1:1 | GSE268807_G120_D_FL::AACATCATCACGCGGT-1:1 | GSE268807_G120_D_FL::AACCTCACACTGGCCA-1:1,False,False,False,False
+pilot_batch,object,4,0,GSE268807_G133_N_FL:911 | GSE268807_G120_F1_N:523 | GSE268807_G133_D_FL:462 | GSE268807_G120_D_FL:426,False,False,False,False

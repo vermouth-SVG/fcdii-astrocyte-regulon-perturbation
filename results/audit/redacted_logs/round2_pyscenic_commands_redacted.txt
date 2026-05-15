@@ -1,0 +1,13 @@
+round2 pySCENIC commands
+[01_grn]
+docker run --rm -v <PROJECT_ROOT_WSL>:/work -w /work aertslab/pyscenic:0.12.1 pyscenic grn /work/external_validation_round2/pyscenic_recalc/input/expression_for_pyscenic.csv /work/db/allTFs_hg38.txt -o /work/external_validation_round2/pyscenic_recalc/output/grn_adj.tsv --num_workers 4 --method grnboost2 --sparse
+expected_output: <PROJECT_ROOT_WSL>/external_validation_round2/pyscenic_recalc/output/grn_adj.tsv
+
+[02_ctx]
+docker run --rm -v <PROJECT_ROOT_WSL>:/work -w /work aertslab/pyscenic:0.12.1 pyscenic ctx /work/external_validation_round2/pyscenic_recalc/output/grn_adj.tsv /work/db/hg38_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather --annotations_fname /work/db/motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl --expression_mtx_fname /work/external_validation_round2/pyscenic_recalc/input/expression_for_pyscenic.csv --num_workers 4 --mode custom_multiprocessing -o /work/external_validation_round2/pyscenic_recalc/output/regulons.csv
+expected_output: <PROJECT_ROOT_WSL>/external_validation_round2/pyscenic_recalc/output/regulons.csv
+
+[03_aucell]
+docker run --rm -v <PROJECT_ROOT_WSL>:/work -w /work aertslab/pyscenic:0.12.1 pyscenic aucell /work/external_validation_round2/pyscenic_recalc/input/expression_for_pyscenic.csv /work/external_validation_round2/pyscenic_recalc/output/regulons.csv -o /work/external_validation_round2/pyscenic_recalc/output/auc_mtx.csv --num_workers 4
+expected_output: <PROJECT_ROOT_WSL>/external_validation_round2/pyscenic_recalc/output/auc_mtx.csv
+

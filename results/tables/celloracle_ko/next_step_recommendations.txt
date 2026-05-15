@@ -1,0 +1,19 @@
+Round-1 next-step recommendations
+
+1. Next priority TFs
+- Overall priority: THRB, NFE2L2, BHLHE40.
+- Lesion-focused priority: NFE2L2, BHLHE40, SOX2.
+- Internal-control-focused priority: THRB.
+
+2. Expand TFs or prioritize follow-up first
+- Recommendation: prioritize the current top round-1 TFs for follow-up consistency checks before expanding the TF list.
+- Practical order: NFE2L2 and THRB first, then BHLHE40, then SOX2 if extra bandwidth is available.
+- Follow-up can include expression/regulon consistency checks, supportive external/contextual dataset review, or targeted wet-lab experiments if available.
+
+3. Figure placement
+- Main figures: overall mean_shift_length ranking bar plot, group comparison bar plot, Recovery Index ranking plot, and representative quiver/grid-flow images for NFE2L2 and THRB.
+- Supplementary figures: all four TF-specific embedding shift plots, all boxplots, all grid-flow panels, and per-group summary tables.
+
+4. Interpretation guidance
+- If the next round stays lesion-centric, prioritize lesion-up TFs with high lesion Recovery Index.
+- If the next round aims to compare opposing programs, retain one lesion-side TF and one internal-control-side TF as matched contrasts.

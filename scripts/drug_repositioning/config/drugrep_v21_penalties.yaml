@@ -1,0 +1,8 @@
+v21_penalty_search:
+  weak_fdr_penalty: [0.05, 0.12]
+  single_signature_penalty: [0.05, 0.10]
+  tool_compound_penalty: [0.08, 0.20]
+  low_cns_epilepsy_relevance_penalty: [0.08, 0.18]
+  notes:
+    - tool_compound_penalty is applied to tool_compound_like or broad_epigenetic_modulator_like tags.
+    - BBB is not used in v2.1 pre-BBB scoring.

@@ -1,0 +1,43 @@
+FigS3_celloracle_perturbation_metrics_revised_v2_minorfix notes
+
+Input files:
+- celloracle_run/ko_round1/round1_ko_master_table.csv
+- celloracle_run/ko_round1/round1_recovery_index_by_group.csv
+- celloracle_run/ko_round1/round1_recovery_index_definition.txt
+- celloracle_run/ko_round1/NFE2L2/NFE2L2_state_shift_scores.csv
+- celloracle_run/ko_round1/THRB/THRB_state_shift_scores.csv
+- celloracle_run/ko_round1/BHLHE40/BHLHE40_state_shift_scores.csv
+- celloracle_run/ko_round1/SOX2/SOX2_state_shift_scores.csv
+
+Minorfix changes:
+- Panel A title was changed from Round1 CellOracle perturbation metric heatmap to Round 1 CellOracle perturbation metric heatmap.
+- Panels C-F retain the same data and two-column structure, with modestly increased point opacity, arrow opacity, arrow width, arrow length, and plotting area for readability.
+- The bottom method note now uses: not experimental knockout evidence.
+
+CellOracle round1 perturbation metrics:
+- Metrics were read from celloracle_run/ko_round1/round1_ko_master_table.csv without changing TF order or numeric values.
+- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico KO.
+- Approx. Recovery Index is the existing recovery_index column, treated as an approximate state-shift-derived summary metric.
+- Net shift is the observed mean shift after subtracting the randomized control shift baseline.
+- Lesion shift and internal-control shift are group-specific mean shift lengths from the lesion and internal-control cell groups.
+- Direction agreement is the existing direction_agreement_factor, indicating whether expected regulon-side and expression-side direction agreed in the current round1 table.
+
+Metric values used in the figure:
+- NFE2L2: mean_shift_length=0.699288; Approx. Recovery Index=0.608244; mean_net_shift=0.521181.
+- THRB: mean_shift_length=0.689357; Approx. Recovery Index=0.689272; mean_net_shift=0.486717.
+- BHLHE40: mean_shift_length=0.566927; Approx. Recovery Index=0.455881; mean_net_shift=0.347208.
+- SOX2: mean_shift_length=0.522271; Approx. Recovery Index=0.399194; mean_net_shift=0.296052.
+
+Representative perturbation vector fields:
+- Vector fields were redrawn from each TF-specific state_shift_scores.csv file using the existing embedding_x, embedding_y, delta_x, delta_y, delta_random_x, and delta_random_y columns.
+- Simulated KO shift panels show existing CellOracle in silico KO state-shift vectors.
+- Randomized control panels show existing randomized-control vectors and are used only as a negative-control assessment.
+- Arrows were downsampled deterministically for readability; no CellOracle model, pySCENIC output, metric value, TF ranking, or random-control value was recomputed.
+
+Interpretation boundaries:
+- These panels show in silico KO / simulated perturbation outputs, not an experimental knockout assay.
+- Approx. Recovery Index is a state-shift-derived summary metric; it is not a strict geometric projection model and is not a direct pathology-reversal measurement.
+- NFE2L2 is interpreted as the primary lesion-associated axis with the highest mean shift.
+- THRB is interpreted as the primary internal-control axis and Approx. Recovery Index anchor.
+- BHLHE40 is retained as a secondary candidate.
+- SOX2 is retained as a lower-priority candidate.

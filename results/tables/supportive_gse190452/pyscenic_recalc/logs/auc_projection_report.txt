@@ -1,0 +1,13 @@
+Expression input: <PROJECT_ROOT_WINDOWS>\external_validation_round2\pyscenic_recalc\input\expression_for_pyscenic_4tf_targets.csv
+GMT input: <PROJECT_ROOT_WINDOWS>\external_validation_round2\pyscenic_recalc\output\discovery_regulons_4tf.gmt
+Docker image: aertslab/pyscenic:0.12.1
+Workers: 1
+Return code: 0
+Output exists: True
+Output non-empty: True
+Output path: <PROJECT_ROOT_WINDOWS>\external_validation_round2\pyscenic_recalc\output\auc_mtx_4tf_from_discovery.csv
+Output size bytes: 7191332
+Output cells: 69968
+Output regulons: 4
+Log path: <PROJECT_ROOT_WINDOWS>\external_validation_round2\pyscenic_recalc\logs\03_aucell_4tf_from_discovery.log
+Projection success: True

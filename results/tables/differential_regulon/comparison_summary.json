@@ -1,0 +1,30 @@
+{
+  "h5ad_path": "/work/final_exports/astrocyte_pilot_rna_with_pyscenic_auc.h5ad",
+  "selected_group_column": "group",
+  "group_levels": [
+    {
+      "group": "internal_control",
+      "n_cells": 1434
+    },
+    {
+      "group": "lesion",
+      "n_cells": 888
+    }
+  ],
+  "stats_mode": "two_group_mann_whitney_u",
+  "n_regulons": 105,
+  "top_regulons_for_boxplot": [
+    "THRB(+)",
+    "SATB2(+)",
+    "RARB(+)",
+    "JUND(+)",
+    "SOX2(+)",
+    "SKI(+)",
+    "SMAD3(+)",
+    "TCF4(+)",
+    "NR2F2(+)",
+    "CEBPD(+)",
+    "FOXK2(+)",
+    "HSF2(+)"
+  ]
+}

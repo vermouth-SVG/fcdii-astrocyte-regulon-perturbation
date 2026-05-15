@@ -1,0 +1,23 @@
+sample_metadata.csv 使用说明（Phase 1：仅表头，勿编造样本行）
+
+本表每一行对应一个 GEO Sample（或文库/建库单位，与原文一致即可）。
+以下列需在下载 GEO 后按 Superseries/Sample 页面与论文补充表逐一填写，勿凭猜测填写。
+
+- sample_id：GEO Sample  accession（如 GSMxxxxxxx）或作者提供的唯一文库 ID。
+- donor_id：同一捐献者/生物学重复编号；跨 GSE 验证时需手工统一命名规则。
+- GSE_id：所属 Series（如 GSE268807），须与 dataset_registry.csv 中的 GSE_id 一致。
+- disease：疾病标签（与原文一致，如 TLE、FCD II、control 等）。
+- subtype：亚型或病理分型（如 FCD IIa/IIb、HS 等）；无则填 NA 或留空但需在 source_note 说明。
+- group：统计分析用分组（如 case / control、disease / healthy）；定义须在 notes 或单独文档中记录依据。
+- tissue：脑区或取材描述（以 GEO Characteristics 为准）。
+- assay：实验类型简述（如 scRNA-seq、snRNA-seq、10x Multiome）。
+- platform：测序/芯片平台（如 Illumina NovaSeq、10x 3' v3 等，来自 GEO）。
+- source_note：任意可追溯信息（论文附表编号、作者样本名、批次备注等）。
+
+从 GEO 批量导出时可使用 SRA Run Selector、GEOquery（R）或手工复制 Characteristics 字段。
+
+【GSE268807 定版说明】22 行 GSM 对应 11 个临床样本块（每块 GEX+ATAC）。
+- clinical_sample_label：与 PMC11617397 Table 1 第一列一致（如 G120_D.2），便于与原文/补充材料 join。
+- subtype：病灶行填「FCD IIa」或「FCD IIb」（Table 1 组织学列）；internal control 填「non_lesion (histology Normal, Table 1)」，非健康人群对照。
+- tissue / platform / source_note：综合 Table 1 与正文 Methods（Multiome + Illumina）。
+- 若个别 GSM 的 GEO Sample characteristics 与 Table 1 冲突，以作者勘误或 GEO 更新为准并改表。

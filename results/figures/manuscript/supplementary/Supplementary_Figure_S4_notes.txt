@@ -1,0 +1,60 @@
+FigS4_sample_level_robustness_revised_v2_minorfix notes
+
+Input files:
+- 02_leave_one_sample_out_master_results_revised.csv
+- 02_leave_one_sample_out_tf_summary_revised.csv
+- 03_pseudobulk_candidate_tf_table.csv
+- 03_pseudobulk_regulon_table.csv
+- 04_shortlist_sensitivity_long.csv
+- 04_shortlist_sensitivity_grid.csv
+- 04_shortlist_membership_frequency.csv
+- celloracle_run/prepared_data/celloracle_round1_metadata.csv
+
+Minorfix changes:
+- Panel B colorbar was changed from Regulon dAUC to Regulon ΔAUC.
+- Panel C y-axis was changed from Pseudobulk regulon dAUC to Pseudobulk regulon ΔAUC.
+- Panel C label offsets were adjusted for NFE2L2, HMGA1, and BHLHE40 without changing point positions.
+- Panel D not-retained cell labels were changed from not to NR.
+- Panel D legend now states NR = not retained and R# = retained rank under each threshold setting.
+- Panel D threshold rule was updated to: each column shows retention after varying the indicated threshold; direction agreement was required and the positive-fraction threshold was fixed at 0.
+
+LOSO expression effect:
+- Leave-one-sample-out expression effects were read from 02_leave_one_sample_out_master_results_revised.csv.
+- Full denotes the full GSE268807 astrocyte discovery object.
+- LOSO denotes a sample-excluded analysis, labeled as LOSO: clinical sample label.
+- Expression effect is the lesion-versus-internal-control expression log2FC.
+
+LOSO regulon effect:
+- Leave-one-sample-out regulon effects were read from 02_leave_one_sample_out_master_results_revised.csv.
+- Regulon effect is the lesion-minus-internal-control regulon AUC difference for the matched candidate regulon.
+- Positive values indicate lesion-side direction; negative values indicate internal-control-side direction.
+
+Pseudobulk support:
+- Pseudobulk expression log2FC was read from 03_pseudobulk_candidate_tf_table.csv.
+- Pseudobulk regulon difference was read from 03_pseudobulk_regulon_table.csv and represents lesion-minus-internal-control regulon ΔAUC at the sample level.
+- Panel C compares expression and regulon effects for NFE2L2, THRB, BHLHE40, SOX2, SATB2, RARB, and HMGA1 without changing values.
+
+Threshold sensitivity and shortlist retention:
+- Panel D was rebuilt from 04_shortlist_sensitivity_long.csv.
+- Retained / not retained was read from the retained column under the rule regulon_significant_plus_expression_significant_plus_direction.
+- For the three FDR columns, expression-effect threshold was fixed at |log2FC| >= 0 and positive-fraction threshold was fixed at 0.
+- For the three expression-effect columns, regulon FDR was fixed at 0.05 and positive-fraction threshold was fixed at 0.
+- NR indicates not retained for that threshold setting.
+- R# indicates retained rank under each threshold setting.
+
+Retention states shown in Panel D:
+- NFE2L2: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+- THRB: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: not retained
+- BHLHE40: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+- SOX2: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+- SATB2: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+- RARB: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+- HMGA1: FDR <= 0.01: retained, FDR <= 0.05: retained, FDR <= 0.10: retained, |log2FC| >= 0: retained, |log2FC| >= 0.25: retained, |log2FC| >= 0.50: retained
+
+Interpretation boundaries:
+- This figure shows sample-level robustness and leave-one-sample-out robustness within the GSE268807 astrocyte pilot.
+- It uses sample-excluded analyses because the discovery cohort has four samples but only two donors.
+- It is not a separate verification analysis.
+- NFE2L2 and THRB are treated as the primary lesion-associated and primary internal-control axes, respectively.
+- BHLHE40 is treated as a secondary candidate.
+- SOX2 is retained as a lower-priority candidate.

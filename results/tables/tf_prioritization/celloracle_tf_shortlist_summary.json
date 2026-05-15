@@ -1,0 +1,30 @@
+{
+  "group_1": "lesion",
+  "group_2": "internal_control",
+  "candidate_tfs": [
+    "SOX2",
+    "CEBPD",
+    "BHLHE40",
+    "ATF7",
+    "NFE2L2",
+    "HMGA1",
+    "THRB",
+    "TCF4",
+    "RARB",
+    "NR2F2",
+    "SATB2"
+  ],
+  "positive_fraction_threshold": 0.05,
+  "expr_fdr_threshold": 0.05,
+  "regulon_fdr_threshold": 0.05,
+  "logfc_threshold": 0.25,
+  "n_all_candidates": 11,
+  "n_shortlist": 7,
+  "n_high_confidence": 7,
+  "outputs": [
+    "celloracle_candidate_tf_metrics.csv",
+    "celloracle_tf_shortlist.csv",
+    "celloracle_tf_shortlist_high_confidence.csv",
+    "celloracle_tf_shortlist_summary_cn.txt"
+  ]
+}

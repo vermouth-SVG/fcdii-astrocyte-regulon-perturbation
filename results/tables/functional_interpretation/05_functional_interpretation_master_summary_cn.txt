@@ -1,0 +1,174 @@
+GO/KEGG + 转录程序汇聚分析主汇总
+====================================================
+
+1. 资源检查结果
+GO/KEGG + 转录程序汇聚分析资源检查
+================================================
+输出目录: <PROJECT_ROOT_WINDOWS>\functional_interpretation
+
+[发现队列 h5ad]
+路径: <PROJECT_ROOT_WINDOWS>\final_exports\astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+是否存在: 是
+大小(bytes): 150621728
+后续用途: 读取 raw/X 表达矩阵、obs 分组字段和 pySCENIC AUC 信息。
+
+[pySCENIC regulon 定义]
+路径: <PROJECT_ROOT_WINDOWS>\output\regulons.csv
+是否存在: 是
+大小(bytes): 1031262
+后续用途: 优先从多层表头 regulons.csv 解析 TF-target genes。
+
+[内部稳健性整合表]
+路径: <PROJECT_ROOT_WINDOWS>\robustness_validation\05_robustness_validation_integrated_table.csv
+是否存在: 是
+大小(bytes): 1453
+后续用途: 提供 sample-level robustness、pseudobulk 和 shortlist 稳定性证据。
+
+[候选 TF shortlist 指标表]
+路径: <PROJECT_ROOT_WINDOWS>\analysis_outputs\celloracle_candidates\celloracle_candidate_tf_metrics.csv
+是否存在: 是
+大小(bytes): 6274
+后续用途: 提供候选 TF 方向、regulon FDR、表达方向和阳性比例。
+
+[外部 round2 expression-level 支持表]
+路径: <PROJECT_ROOT_WINDOWS>\external_validation_round2\external_round2_support_ranking.csv
+是否存在: 是
+大小(bytes): 2144
+后续用途: 只作为背景参考，本轮不重新做外部验证。
+
+[外部 round2 regulon-level 支持表]
+路径: <PROJECT_ROOT_WINDOWS>\external_validation_round2\round2_regulon_support_ranking.csv
+是否存在: 是
+大小(bytes): 1675
+后续用途: 只作为背景参考，本轮不重新做外部验证。
+
+regulons.csv 解析策略: 使用 pandas 读取 3 层表头，识别 TF/MotifID/AUC/NES/Annotation/Context/TargetGenes 列，按 direct annotation + activating context + NES/AUC 选择代表性 target set。
+
+富集数据库策略:
+本地未发现 GO/KEGG gene set 文件时，03_run_go_kegg.py 会从 Enrichr 下载 GO_Biological_Process_2023 与 KEGG_2021_Human 并缓存到 D 盘。若联网失败，将保留基因集与汇聚分析结果，并在富集报告中明确说明。
+
+
+2. 术语修正说明
+内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=内部稳健性验证命名修正说明
+=
+1. 当前实际完成的是 leave-one-sample-out / 逐样本剔除稳健性分析。
+2. 原因：discovery 队列 donor_id 仅 2 个 donor，但 sample_id 有 4 个 sample；为了避免严格 donor-level LOO 的样本量不足，本轮默认采用 sample_id 作为剔除单位。
+3. 后续写作中建议使用 sample-level robustness / leave-one-sample-out robustness。
+4. pseudobulk 部分也建议表述为 sample-level supporting evidence；如需 donor-level 表述，必须明确 donor_id 只有 2 个，统计解释应非常谨慎。
+5. 本脚本不覆盖原始 robustness 结果，仅生成修正版说明文件。
+
+
+3. 每个重点 TF 的基因集构建情况
+TF gene set 构建总结
+====================================
+表达对象: <PROJECT_ROOT_WINDOWS>\final_exports\astrocyte_pilot_rna_with_pyscenic_auc.h5ad
+分组字段: group; lesion=lesion; internal_control=internal_control
+轻量 DEG 定义: |log2FC| >= 0.25, higher-group positive fraction >= 0.05
+
+NFE2L2 主方向为 lesion；discovery regulon target=458，方向一致 DEG 交集=245，交集比例=0.535。基因集大小适中。
+THRB 主方向为 internal_control；discovery regulon target=17，方向一致 DEG 交集=13，交集比例=0.765。基因集大小适中。
+BHLHE40 主方向为 lesion；discovery regulon target=221，方向一致 DEG 交集=143，交集比例=0.647。基因集大小适中。
+SOX2 主方向为 lesion；discovery regulon target=10，方向一致 DEG 交集=10，交集比例=1.000。regulon target 较小，富集结果需谨慎。
+
+说明: intersection gene set 表示 discovery regulon target 与主方向一致 DEG 的交集，是后续 program convergence 的核心输入。
+
+
+4. GO/KEGG 核心结论
+GO/KEGG 富集分析总结
+===================================
+数据库状态:
+- GO_Biological_Process_2023: 可用；使用本地缓存；<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\GO_Biological_Process_2023.gmt
+- KEGG_2021_Human: 可用；使用本地缓存；<PROJECT_ROOT_WINDOWS>\functional_interpretation\resources\gene_sets\KEGG_2021_Human.gmt
+
+NFE2L2:
+- Top terms: Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Positive Regulation Of Transcription By RNA Polymerase II (GO:0045944); Regulation Of DNA-templated Transcription (GO:0006355); Negative Regulation Of DNA-templated Transcription (GO:0045892); Pathways in cancer; Negative Regulation Of Transcription By RNA Polymerase II (GO:0000122); Regulation Of Transcription By RNA Polymerase II (GO:0006357)
+- 程序主题计数: transcriptional_regulatory:11; metabolic_supportive:11
+- 解释重点: 优先观察 oxidative stress / stress response / inflammatory-reactive / metabolic adaptation 相关主题。
+
+THRB:
+- Top terms: Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859); Modulation Of Chemical Synaptic Transmission (GO:0050804); Calcium-Ion Regulated Exocytosis (GO:0017156); Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859)
+- 程序主题计数: metabolic_supportive:11; thyroid_hormone_neuro:5
+- 解释重点: 优先观察 thyroid hormone / neuronal-supportive / metabolic-homeostatic / synaptic support 相关主题。
+
+BHLHE40:
+- Top terms: Regulation Of Platelet Aggregation (GO:0090330); Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Vascular smooth muscle contraction; Signaling pathways regulating pluripotency of stem cells; Regulation of actin cytoskeleton; Platelet activation; Long-term depression
+- 程序主题计数: transcriptional_regulatory:5; metabolic_supportive:11; differentiation_development:1
+- 解释重点: 作为第二梯队，观察 hypoxia/stress/reactive 或代谢调节相关主题。
+
+SOX2:
+- Top terms: Negative Regulation Of Neuron Differentiation (GO:0045665); Regulation Of Cysteine-Type Endopeptidase Activity (GO:2000116); Glial Cell Differentiation (GO:0010001); Negative Regulation Of Epithelial Cell Proliferation (GO:0050680); Gland Development (GO:0048732); Regulation Of Epithelial Cell Proliferation (GO:0050678); Negative Regulation Of Developmental Process (GO:0051093); Negative Regulation Of Canonical Wnt Signaling Pathway (GO:0090090)
+- 程序主题计数: metabolic_supportive:10; thyroid_hormone_neuro:1; differentiation_development:6; cell_cycle_growth:2
+- 解释重点: SOX2 target 较少，富集结果只作轻量保留解释。
+
+
+
+5. 转录程序汇聚核心结论
+转录程序汇聚分析总结
+========================================
+本轮将 expression direction、regulon direction、leave-one-sample-out robustness、pseudobulk support、shortlist stability 与 GO/KEGG program theme 合并解释。
+
+重点程序:
+- NFE2L2: NFE2L2 具有最强 sample-level 稳健性和较高 regulon-DEG 重叠；GO/KEGG 更偏广义转录调控/MAPK 等 lesion-associated regulatory program，可作为 stress-adaptation/reactive-compatible 主轴，但不应写成单一 oxidative-stress 通路已被完全验证。
+- THRB: THRB 汇聚于 internal_control-associated synaptic/calcium/homeostatic-supportive program；方向稳定，是对照侧核心主轴。
+- BHLHE40: BHLHE40 内部方向稳定，程序上偏 stress/reactive/hypoxia-like 调节，但综合证据仍适合第二梯队。
+- SOX2: SOX2 内部方向稳定但 target 较少，程序解释更偏发育/状态保留信号，不建议作为主文主轴。
+
+汇聚表:
+     tf                candidate_tier regulon_effect_group   expr_direction regulon_direction  leave_one_sample_out_consistency pseudobulk_direction  shortlist_retention_frequency  overlap_count  overlap_ratio      program_theme_1             program_theme_2                                                 representative_target_genes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  top_terms                                                                                                                                                                final_program_interpretation
+ NFE2L2           primary_lesion_axis               lesion           lesion            lesion                               1.0               lesion                       1.000000            245       0.534934 metabolic_supportive  transcriptional_regulatory   AASS;ABCA1;ABI1;ACAP2;ACTR3;ADAM12;ADRA1A;AFF1;AKAP13;AMOTL1;AMZ2;ANAPC10 Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Positive Regulation Of Transcription By RNA Polymerase II (GO:0045944); Regulation Of DNA-templated Transcription (GO:0006355); Negative Regulation Of DNA-templated Transcription (GO:0045892); Pathways in cancer; Negative Regulation Of Transcription By RNA Polymerase II (GO:0000122); Regulation Of Transcription By RNA Polymerase II (GO:0006357) NFE2L2 具有最强 sample-level 稳健性和较高 regulon-DEG 重叠；GO/KEGG 更偏广义转录调控/MAPK 等 lesion-associated regulatory program，可作为 stress-adaptation/reactive-compatible 主轴，但不应写成单一 oxidative-stress 通路已被完全验证。
+   THRB primary_internal_control_axis     internal_control internal_control  internal_control                               1.0     internal_control                       0.666667             13       0.764706 metabolic_supportive       thyroid_hormone_neuro ANKS1B;CACNA2D1;CNTNAP2;DLG2;FGF14;GRM5;LINGO2;LRFN5;MSRA;PDE4D;RIMS1;RIMS2                               Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859); Modulation Of Chemical Synaptic Transmission (GO:0050804); Calcium-Ion Regulated Exocytosis (GO:0017156); Calcium Ion-Regulated Exocytosis Of Neurotransmitter (GO:0048791); Positive Regulation Of Dendrite Extension (GO:1903861); Regulation Of Dendrite Extension (GO:1903859)                                                                                         THRB 汇聚于 internal_control-associated synaptic/calcium/homeostatic-supportive program；方向稳定，是对照侧核心主轴。
+BHLHE40                   second_tier               lesion           lesion            lesion                               1.0               lesion                       1.000000            143       0.647059 metabolic_supportive  transcriptional_regulatory   ABCA1;ACAP2;ACSL3;ACTR3;ADORA2B;AFF1;AKIRIN2;AP1S2;APC;API5;ARHGAP6;BMP2K                                                                                                                                 Regulation Of Platelet Aggregation (GO:0090330); Regulation Of Transcription By RNA Polymerase II (GO:0006357); Positive Regulation Of DNA-templated Transcription (GO:0045893); Vascular smooth muscle contraction; Signaling pathways regulating pluripotency of stem cells; Regulation of actin cytoskeleton; Platelet activation; Long-term depression                                                                                                                           BHLHE40 内部方向稳定，程序上偏 stress/reactive/hypoxia-like 调节，但综合证据仍适合第二梯队。
+   SOX2          reserved_lightweight               lesion           lesion            lesion                               1.0               lesion                       1.000000             10       1.000000 metabolic_supportive differentiation_development                 CST3;ITGB4;MT1X;NEAT1;PTGDS;PTTG1IP;SOX2;SOX9;TSPAN3;TUBB2B                          Negative Regulation Of Neuron Differentiation (GO:0045665); Regulation Of Cysteine-Type Endopeptidase Activity (GO:2000116); Glial Cell Differentiation (GO:0010001); Negative Regulation Of Epithelial Cell Proliferation (GO:0050680); Gland Development (GO:0048732); Regulation Of Epithelial Cell Proliferation (GO:0050678); Negative Regulation Of Developmental Process (GO:0051093); Negative Regulation Of Canonical Wnt Signaling Pathway (GO:0090090)                                                                                                                                           SOX2 内部方向稳定但 target 较少，程序解释更偏发育/状态保留信号，不建议作为主文主轴。
+
+
+6. 四个 TF 的一句话功能解释
+- NFE2L2: NFE2L2 具有最强 sample-level 稳健性和较高 regulon-DEG 重叠；GO/KEGG 更偏广义转录调控/MAPK 等 lesion-associated regulatory program，可作为 stress-adaptation/reactive-compatible 主轴，但不应写成单一 oxidative-stress 通路已被完全验证。
+- THRB: THRB 汇聚于 internal_control-associated synaptic/calcium/homeostatic-supportive program；方向稳定，是对照侧核心主轴。
+- BHLHE40: BHLHE40 内部方向稳定，程序上偏 stress/reactive/hypoxia-like 调节，但综合证据仍适合第二梯队。
+- SOX2: SOX2 内部方向稳定但 target 较少，程序解释更偏发育/状态保留信号，不建议作为主文主轴。
+
+7. 明确回答
+NFE2L2 是否可概括为 lesion-associated stress/reactive program 核心候选: 基本可以，但更稳妥的写法是 lesion-associated transcriptional/stress-adaptation program；GO/KEGG 未把结果单独收敛到纯 oxidative-stress 通路。
+THRB 是否可概括为 internal_control-associated homeostatic/supportive program 核心候选: 是，尤其体现为 synaptic/calcium/homeostatic-supportive program。
+BHLHE40 的程序层定位是否支持其作为第二梯队: 是，内部稳定且程序上有补充解释，但综合优先级低于 NFE2L2/THRB。
+SOX2 是否更适合作为保留候选而非主轴: 是，内部方向稳定但 target 较少，程序解释不宜作为主线核心。
+当前是否具备进入下一步轻量药物重定位条件: 是。已有 TF 优先级、target gene set、GO/KEGG program theme 与 sample-level robustness，可进入轻量药物重定位；本轮未实际执行药物重定位。

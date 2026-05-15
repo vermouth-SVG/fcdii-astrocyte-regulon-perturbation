@@ -1,0 +1,5 @@
+tf,main_direction,regulon_target_count,directional_deg_count,overlap_count,overlap_ratio_of_regulon,enrichment_direction_consistent
+NFE2L2,lesion,458,4440,245,0.5349344978165939,True
+THRB,internal_control,17,3249,13,0.7647058823529411,True
+BHLHE40,lesion,221,4440,143,0.6470588235294118,True
+SOX2,lesion,10,4440,10,1.0,True

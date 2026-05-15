@@ -1,0 +1,16 @@
+﻿v2.1 pre-BBB primary 与 after-BBB headline 的关系说明
+==============================================================
+pre-BBB primary 表示: 程序证据、轴线清晰度、转化适配性与 penalty 后仍较强。
+after-BBB headline 表示: 在 pre-BBB primary 基础上，同时获得 SwissADME CNS-directed 支持。
+
+因此二者不必完全相同:
+- pre-BBB primary 但 BBB=No: 保留为 mechanism-direction clue，但降低为 peripheral/program-modulating 解释。
+- supportive/THRB weak-FDR 即使 BBB 较好，也仍保持 supportive/manual-review 层级。
+- BBB=No 不删除候选，只改变展示层级与 CNS 可达性解释。
+
+pre-BBB primary 的 after-BBB 迁移:
+                    compound                  prebbb_layer_v21                   manual_final_bbb_layer                  after_bbb_final_layer  final_score_prebbb_v21  final_score_after_bbb                                                              after_bbb_interpretation_note
+               VALPROIC ACID primary_mechanism_direction_clues                  CNS-directed clues headline_cns_mechanism_direction_clues                0.947316               0.953639 pre-BBB primary 且 SwissADME 支持 CNS-directed；适合 after-BBB headline 展示，但仍为 exploratory clue。
+                    lobeline primary_mechanism_direction_clues                  CNS-directed clues headline_cns_mechanism_direction_clues                0.792271               0.817199 pre-BBB primary 且 SwissADME 支持 CNS-directed；适合 after-BBB headline 展示，但仍为 exploratory clue。
+(-)-Epigallocatechin gallate primary_mechanism_direction_clues peripheral/program-modulating clues    peripheral_program_modulating_clues                0.790111               0.743297         pre-BBB 程序证据较强，但 BBB=No；after-BBB 降为 peripheral/program-modulating mechanism clue。
+                   quercetin primary_mechanism_direction_clues peripheral/program-modulating clues    peripheral_program_modulating_clues                0.717066               0.679018         pre-BBB 程序证据较强，但 BBB=No；after-BBB 降为 peripheral/program-modulating mechanism clue。

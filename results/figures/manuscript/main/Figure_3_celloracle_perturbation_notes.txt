@@ -1,0 +1,76 @@
+﻿Figure3_celloracle_perturbation
+==============================
+
+Caption title:
+Fig. 3. In silico perturbation prioritizes NFE2L2 and THRB as complementary regulatory anchors
+
+Revision scope:
+- Main-text Fig. 3 v3.1 is a small pre-submission visual revision of v3.
+- The scientific structure and input data are unchanged from v3.
+- Robustness, supportive external/contextual evidence, exploratory drug-signature clues, and pySCENIC regulon landscape panels were not included.
+- No complete figure suptitle is drawn inside the graphic; panel titles only.
+
+Input files:
+- Metric table: celloracle_run/ko_round1/round1_ko_master_table.csv
+- NFE2L2 vector field scores: celloracle_run/ko_round1/NFE2L2/NFE2L2_state_shift_scores.csv
+- THRB vector field scores: celloracle_run/ko_round1/THRB/THRB_state_shift_scores.csv
+
+Metric columns used:
+- TF: tf
+- Overall shift / mean shift length: mean_shift_length
+- Approx. Recovery Index: recovery_index
+- Mean net shift: mean_net_shift
+- Lesion shift: lesion_mean_shift_length
+- Control shift: internal_control_mean_shift_length
+
+Metric table values used:
+    tf,overall_shift,approx_ri,net_shift,lesion_shift,control_shift
+
+NFE2L2,0.6993,0.6082,0.5212,0.6064,0.7568
+
+THRB,0.6894,0.6893,0.4867,0.5915,0.7500
+
+BHLHE40,0.5669,0.4559,0.3472,0.5135,0.6000
+
+SOX2,0.5223,0.3992,0.2961,0.4628,0.5591
+
+Panel A encoding:
+- x-axis = Mean shift length.
+- y-axis = Approx. Recovery Index.
+- point size = Mean net shift when available; otherwise uniform size.
+- NFE2L2 is highlighted as the highest mean shift, and THRB as the highest Approx. RI.
+
+Panel B scorecard:
+- Rows: NFE2L2, THRB, BHLHE40, SOX2.
+- Metrics: Overall shift, Approx. RI, Net shift, Lesion shift, Int-control shift.
+- Each metric column uses min-max normalization within the four TFs for horizontal mini-bar length; numeric values are printed beside bars.
+- Interpretation labels were shortened for v3.1: NFE2L2 = dominant shift; THRB = recovery anchor; BHLHE40 = secondary; SOX2 = retained.
+- Control shift refers to internal-control-specific mean shift.
+
+Panel C/D vector field sources:
+- Simulated KO shift columns are embedding_x/embedding_y and delta_x/delta_y from each TF state_shift_scores.csv.
+- Very light grey background cell points were added in v3.1 using the same embedding_x/embedding_y arrow start coordinates from each state_shift_scores.csv file.
+- Randomized-control columns were not plotted in the main figure.
+- Vector column mapping: {'NFE2L2': {'x': 'embedding_x', 'y': 'embedding_y', 'dx': 'delta_x', 'dy': 'delta_y', 'group': 'group', 'shift_length': 'shift_length'}, 'THRB': {'x': 'embedding_x', 'y': 'embedding_y', 'dx': 'delta_x', 'dy': 'delta_y', 'group': 'group', 'shift_length': 'shift_length'}}
+
+Arrow downsampling:
+- Background points include all available cells in each TF vector table.
+- Arrows are downsampled with a fixed random seed (7) to at most 800 arrows per panel and were made slightly darker/wider in v3.1.
+- Final arrow counts: {'NFE2L2': 800, 'THRB': 800}
+
+Required interpretation notes:
+Figure 3 v3.1 uses existing CellOracle outputs only; no CellOracle or pySCENIC rerun was performed.
+Approx. Recovery Index is treated as an approximate state-shift-derived metric, not a formal geometric projection model.
+
+Metric-selection notes:
+    Checked Table3 integrated priority table(s), but they did not contain CellOracle shift/Approx. RI metric columns; selected celloracle_run/ko_round1/round1_ko_master_table.csv instead.
+
+Warnings / missing data:
+    None.
+
+Output files:
+- manuscript_output/figures_main/Figure3_celloracle_perturbation.png
+- manuscript_output/figures_main/Figure3_celloracle_perturbation.pdf
+- manuscript_output/figures_main/Figure3_celloracle_perturbation.svg
+- manuscript_output/figures_main/Figure3_celloracle_perturbation_notes.txt
+

@@ -1,0 +1,14 @@
+
+2026-04-16 08:16:30,259 - pyscenic.cli.pyscenic - INFO - Loading expression matrix.
+
+2026-04-16 08:16:58,255 - pyscenic.cli.pyscenic - INFO - Inferring regulatory networks.
+2026-04-16 11:16:09,837 - distributed.nanny - WARNING - Worker process still alive after 3.1999987792968754 seconds, killing
+
+2026-04-16 11:16:09,883 - pyscenic.cli.pyscenic - INFO - Writing results to file.
+preparing dask client
+parsing input
+creating dask graph
+4 partitions
+computing dask graph
+not shutting down client, client was created externally
+finished

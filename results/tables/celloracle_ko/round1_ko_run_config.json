@@ -1,0 +1,16 @@
+{
+  "config": "/work/celloracle_run/prep_config_round1.json",
+  "simulation_ready_oracle": "/work/celloracle_run/ko_round1/simulation_ready/oracle_round1_simulation_ready.celloracle.oracle",
+  "tf_list": [
+    "BHLHE40",
+    "NFE2L2",
+    "SOX2",
+    "THRB"
+  ],
+  "n_propagation": 3,
+  "transition_neighbors": 200,
+  "sigma_corr": 0.05,
+  "markov_steps": 500,
+  "markov_duplication": 5,
+  "output_dir": "/work/celloracle_run/ko_round1"
+}

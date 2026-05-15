@@ -1,0 +1,8 @@
+tf,n_leave_one_out_tests,full_data_expr_log2fc,full_data_expr_direction,full_data_regulon_diff,full_data_regulon_direction,expr_consistency_count,expr_consistency_rate,expr_significant_count_fdr05,regulon_consistency_count,regulon_consistency_rate,regulon_significant_count_fdr05,overall_consistency_count,overall_consistency_rate,min_abs_expr_ratio_vs_full,min_abs_regulon_ratio_vs_full,sample_sensitive_flag
+NFE2L2,4,0.6859897689279468,lesion,0.0088982287939654,lesion,4,1.0,3,4,1.0,3,4,1.0,0.7741204565917369,0.173463345955102,True
+THRB,4,-0.3616213197615259,internal_control,-0.2451540690346588,internal_control,4,1.0,4,4,1.0,4,4,1.0,0.503179615301745,0.6408573750963873,False
+BHLHE40,4,1.1443191191864623,lesion,0.0202154966666537,lesion,4,1.0,4,4,1.0,4,4,1.0,0.9392131414559328,0.4274402822865594,False
+SOX2,4,0.6719172641411649,lesion,0.0962344414532012,lesion,4,1.0,3,4,1.0,4,4,1.0,0.504981946765801,0.555581261948857,False
+HMGA1,4,0.7575026196052784,lesion,0.0154330608166063,lesion,4,1.0,3,4,1.0,3,4,1.0,0.0348483143958233,0.0967840649063878,True
+SATB2,4,-0.7068483432200912,internal_control,-0.0705325673696943,internal_control,4,1.0,4,4,1.0,4,4,1.0,0.8335257917613862,0.6472830325651171,False
+RARB,4,-0.6347310051122514,internal_control,-0.0461046099896761,internal_control,4,1.0,4,4,1.0,4,4,1.0,0.6575194313055133,0.6747603248134745,False
