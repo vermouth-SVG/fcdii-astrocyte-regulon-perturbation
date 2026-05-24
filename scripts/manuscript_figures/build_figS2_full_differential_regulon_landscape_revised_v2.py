@@ -448,7 +448,7 @@ def terminology_audit_df() -> pd.DataFrame:
         ("formal validation", "absent", "required absent"),
         ("independent validation", "absent", "required absent"),
         ("donor-level robustness", "absent", "required absent"),
-        ("experimental KO", "absent", "required absent"),
+        ("experimental perturbation", "absent", "required absent"),
         ("therapeutic target", "absent", "required absent"),
         ("SCENIC+", "absent", "required absent"),
         ("docking", "absent", "required absent"),
@@ -498,7 +498,7 @@ def residual_forbidden(meta: dict[str, object]) -> dict[str, bool]:
         "donor-level robustness",
         "internal_control",
         "therapeutic target",
-        "experimental ko",
+        "experimental perturbation",
         "scenic+",
         "docking",
     ]
@@ -522,7 +522,7 @@ def print_summary(outputs: list[Path], companions: list[Path], meta: dict[str, o
     print("x-axis explicitly lesion − internal-control: yes")
     print("Labeled regulons: " + ", ".join(labels_present))
     print("Panel C/D title and panel-letter overlap fixed: yes")
-    print("Residual validation / internal_control / SCENIC+ / experimental KO / therapeutic target terms: " + ("; ".join(flagged) if flagged else "none"))
+    print("Residual validation / internal_control / SCENIC+ / experimental perturbation / therapeutic target terms: " + ("; ".join(flagged) if flagged else "none"))
     print("Caption, notes, revision log, terminology audit generated: " + ("yes" if all(path.exists() for path in companions) else "no"))
     print("Panels requiring manual review: none identified")
 

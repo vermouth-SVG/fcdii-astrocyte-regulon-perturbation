@@ -1,4 +1,4 @@
-﻿# File manifest
+# File manifest
 
 Generated on 2026-05-15. Updated after GitHub upload task.
 
@@ -8,7 +8,7 @@ Generated on 2026-05-15. Updated after GitHub upload task.
 | `CITATION.cff` | documentation | 0.000 | passed | Citation metadata |
 | `code_availability_statement.md` | documentation | 0.001 | passed | BMC-style code availability statement draft |
 | `configs/celloracle/prep_config_round1.json` | config | 0.001 | passed | CellOracle preparation configuration |
-| `configs/celloracle/round1_ko_run_config.json` | config | 0.000 | passed | CellOracle KO run configuration |
+| `configs/celloracle/round1_ko_run_config.json` | config | 0.000 | passed | CellOracle perturbation run configuration |
 | `configs/celloracle_environment_notes.md` | config | 0.001 | passed | CellOracle runtime interpretation notes |
 | `configs/drug_repositioning/02_best_config.yaml` | config | 0.001 | passed | Exploratory drug-signature scoring configuration |
 | `configs/pyscenic/allTFs_hg38.txt` | config | 0.013 | passed | AertsLab hg38 TF list used by pySCENIC |
@@ -60,30 +60,30 @@ Generated on 2026-05-15. Updated after GitHub upload task.
 | `results/audit/structure_check/uns_keys.csv` | result_table | 0.000 | passed | Object structure audit output |
 | `results/audit/structure_summary.json` | audit | 0.001 | passed | Final object structure summary |
 | `results/audit/SUPPLEMENTARY_PACKAGE_INDEX_SUBMISSION.md` | audit | 0.006 | passed | Supplementary package index |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow.png` | figure | 2.745 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow_with_clusters.png` | figure | 2.656 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_quiver.png` | figure | 1.240 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow.png` | figure | 2.622 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow_with_clusters.png` | figure | 2.616 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_quiver.png` | figure | 1.226 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow.png` | figure | 2.838 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow_with_clusters.png` | figure | 2.613 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_quiver.png` | figure | 1.230 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/summary_plots/round1_group_shift_comparison.png` | figure | 0.053 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/summary_plots/round1_mean_shift_length_ranking.png` | figure | 0.047 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_bubble.png` | figure | 0.076 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_ranking.png` | figure | 0.048 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/THRB/THRB_grid_flow.png` | figure | 2.777 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/THRB/THRB_grid_flow_with_clusters.png` | figure | 2.641 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/THRB/THRB_quiver.png` | figure | 1.257 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_boxplot.png` | figure | 0.047 | passed | CellOracle in silico KO figure |
-| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_embedding.png` | figure | 0.314 | passed | CellOracle in silico KO figure |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow.png` | figure | 2.745 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow_with_clusters.png` | figure | 2.656 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_quiver.png` | figure | 1.240 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow.png` | figure | 2.622 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow_with_clusters.png` | figure | 2.616 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_quiver.png` | figure | 1.226 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow.png` | figure | 2.838 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow_with_clusters.png` | figure | 2.613 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/SOX2/SOX2_quiver.png` | figure | 1.230 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/summary_plots/round1_group_shift_comparison.png` | figure | 0.053 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/summary_plots/round1_mean_shift_length_ranking.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_bubble.png` | figure | 0.076 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_ranking.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/THRB/THRB_grid_flow.png` | figure | 2.777 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/THRB/THRB_grid_flow_with_clusters.png` | figure | 2.641 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/THRB/THRB_quiver.png` | figure | 1.257 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_boxplot.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure |
+| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_embedding.png` | figure | 0.314 | passed | CellOracle in silico perturbation figure |
 | `results/figures/differential_regulon/differential_regulons_volcano.png` | figure | 0.112 | passed | Differential regulon analysis output |
 | `results/figures/differential_regulon/group_mean_heatmap_raw.png` | figure | 0.342 | passed | Differential regulon analysis output |
 | `results/figures/differential_regulon/group_mean_heatmap_row_zscore.png` | figure | 0.353 | passed | Differential regulon analysis output |
@@ -189,31 +189,31 @@ Generated on 2026-05-15. Updated after GitHub upload task.
 | `results/figures/supportive_gse190452/summary_plots/external_round2_group_mean_barplot.png` | figure | 0.051 | passed | Supportive/contextual external dataset figure |
 | `results/figures/supportive_gse190452/summary_plots/external_round2_priority_tfs_focus.png` | figure | 0.130 | passed | Supportive/contextual external dataset figure |
 | `results/figures/supportive_gse190452/summary_plots/external_round2_support_ranking_barplot.png` | figure | 0.035 | passed | Supportive/contextual external dataset figure |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/next_step_recommendations.txt` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_master_table.csv` | result_table | 0.004 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_run_config.json` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_summary_by_group.csv` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_summary_cn.txt` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_summary_outputs.json` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_summary_overall.csv` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_internal_control.csv` | result_table | 0.004 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_lesion.csv` | result_table | 0.004 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_recovery_index_by_group.csv` | result_table | 0.002 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_recovery_index_definition.txt` | result_table | 0.001 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/round1_recovery_index_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/THRB/THRB_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
-| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico KO summary |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/next_step_recommendations.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_master_table.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_run_config.json` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_summary_by_group.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_summary_cn.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_summary_outputs.json` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_summary_overall.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_internal_control.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_lesion.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_recovery_index_by_group.csv` | result_table | 0.002 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_recovery_index_definition.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/round1_recovery_index_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/SOX2/SOX2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/THRB/THRB_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
+| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
 | `results/tables/differential_regulon/comparison_summary.json` | result_table | 0.001 | passed | Differential regulon analysis output |
 | `results/tables/differential_regulon/differential_regulon_summary.json` | result_table | 0.000 | passed | Differential regulon analysis output |
 | `results/tables/differential_regulon/differential_regulon_summary_cn.txt` | audit | 0.001 | passed | Differential regulon analysis output |

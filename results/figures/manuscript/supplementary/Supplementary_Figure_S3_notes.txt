@@ -12,11 +12,11 @@ Input files:
 Minorfix changes:
 - Panel A title was changed from Round1 CellOracle perturbation metric heatmap to Round 1 CellOracle perturbation metric heatmap.
 - Panels C-F retain the same data and two-column structure, with modestly increased point opacity, arrow opacity, arrow width, arrow length, and plotting area for readability.
-- The bottom method note now uses: not experimental knockout evidence.
+- The bottom method note now uses: not experimental perturbation evidence.
 
 CellOracle round1 perturbation metrics:
 - Metrics were read from celloracle_run/ko_round1/round1_ko_master_table.csv without changing TF order or numeric values.
-- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico KO.
+- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico perturbation.
 - Approx. Recovery Index is the existing recovery_index column, treated as an approximate state-shift-derived summary metric.
 - Net shift is the observed mean shift after subtracting the randomized control shift baseline.
 - Lesion shift and internal-control shift are group-specific mean shift lengths from the lesion and internal-control cell groups.
@@ -30,12 +30,12 @@ Metric values used in the figure:
 
 Representative perturbation vector fields:
 - Vector fields were redrawn from each TF-specific state_shift_scores.csv file using the existing embedding_x, embedding_y, delta_x, delta_y, delta_random_x, and delta_random_y columns.
-- Simulated KO shift panels show existing CellOracle in silico KO state-shift vectors.
+- Simulated perturbation shift panels show existing CellOracle in silico perturbation state-shift vectors.
 - Randomized control panels show existing randomized-control vectors and are used only as a negative-control assessment.
 - Arrows were downsampled deterministically for readability; no CellOracle model, pySCENIC output, metric value, TF ranking, or random-control value was recomputed.
 
 Interpretation boundaries:
-- These panels show in silico KO / simulated perturbation outputs, not an experimental knockout assay.
+- These panels show in silico perturbation / simulated perturbation outputs, not an experimental perturbation assay.
 - Approx. Recovery Index is a state-shift-derived summary metric; it is not a strict geometric projection model and is not a direct pathology-reversal measurement.
 - NFE2L2 is interpreted as the primary lesion-associated axis with the highest mean shift.
 - THRB is interpreted as the primary internal-control axis and Approx. Recovery Index anchor.

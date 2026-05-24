@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the associated manuscript."
-title: "FCD II astrocyte TF-regulon and in silico perturbation analysis"
+title: "Regulon and in silico perturbation analysis identifies asymmetric NFE2L2–THRB programs in FCD II astrocytes"
 authors:
   - family-names: "Ye"
     given-names: "Xinyuan"
-version: "0.1.0"
-date-released: "2026-05-15"
+version: "0.2.0-manuscript-review"
+date-released: "2026-05-24"
 url: "https://github.com/vermouth-SVG/fcdii-astrocyte-regulon-perturbation"

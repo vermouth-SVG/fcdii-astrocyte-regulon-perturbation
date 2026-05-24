@@ -704,7 +704,7 @@ def build_fig3() -> dict[str, list[str]]:
     - Separate ranking bar charts were merged into one compact panel.
     - The grouped bar chart was replaced by a slope-style comparison to reduce dashboard-like appearance.
     - Recovery index is still presented as an approximate pathological reversal index derived from the current state-shift workflow, not as a newly re-derived strict geometric model.
-    - BHLHE40 was retained in the ranking panels but not given a dedicated vector-field panel to keep the figure focused on the dual-core NFE2L2-THRB axis.
+    - BHLHE40 was retained in the ranking panels but not given a dedicated vector-field panel to keep the figure focused on the dual-core NFE2L2–THRB axis.
     """
     write_text(out_dir / "Fig3_notes_v2.txt", notes)
     return {"Fig3_v2": inputs}
@@ -840,7 +840,7 @@ def build_fig4() -> dict[str, list[str]]:
     panel_label(ax_d, "D")
 
     fig.suptitle(
-        "Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2-THRB dual-axis model",
+        "Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2–THRB dual-axis model",
         y=1.01,
     )
     save_figure(fig, out_dir, "Fig4_main_v2")

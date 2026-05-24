@@ -48,7 +48,7 @@ Directory:
 
 Role:
 
-- Prepared CellOracle input, network files, and round-1 KO outputs for BHLHE40, NFE2L2, SOX2, and THRB.
+- Prepared CellOracle input, network files, and round-1 perturbation outputs for BHLHE40, NFE2L2, SOX2, and THRB.
 
 ## 5. Sample-Level Robustness
 

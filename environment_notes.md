@@ -1,47 +1,53 @@
 # Environment notes
 
-These notes summarize the runtime information recovered from the project and the local audit environment. Package versions are not pinned unless they were explicitly recoverable from files or command records.
+These notes summarize runtime information recovered from project records and retained outputs. Package versions are listed only when they were recoverable from existing project records or verified container metadata.
 
-## Detected audit workstation runtimes
+## Reproducibility model
 
-- Windows Python detected during package preparation: Python 3.10.4.
-- Ubuntu-D WSL Python detected during package preparation: Python 3.12.3.
-- Windows R detected during package preparation: R 4.5.2.
-
-These detected versions describe the audit workstation, not necessarily every original analysis environment.
+This repository supports layered manuscript-level reproducibility. Lightweight reproduction uses processed summary tables and figure/table scripts. Full upstream reruns require external raw data, cisTarget resources, motif annotation files, Docker images, and additional disk/memory.
 
 ## pySCENIC/AUCell runtime
 
-- Container image used for the retained discovery pySCENIC outputs: `aertslab/pyscenic:0.12.1`.
-- Commands were recovered from the Ubuntu-D WSL shell history and used Docker bind mounts under `<PROJECT_ROOT_WSL>`.
-- Docker Desktop with Ubuntu-D WSL integration is supported by local provenance logs and configuration, but no retained per-command daemon event was recovered.
-- GRN command used `--num_workers 4`.
-- ctx command used `--mode custom_multiprocessing` and `--num_workers 4`.
-- AUCell command used `--num_workers 4`.
-- The recovered retained discovery commands did not include `--seed`; pySCENIC 0.12.1 CLI defaults to `seed=None` for GRN and AUCell when omitted. Exact bitwise reproducibility should therefore not be assumed for those stochastic steps.
+- Docker image: `aertslab/pyscenic:0.12.1`.
+- GRN inference: GRNBoost2.
+- Workers: 4 for GRN, ctx, and AUCell in the retained discovery run.
+- Input expression matrix: 2,322 astrocytes by 36,601 genes.
+- AUCell output: matched to 2,322 astrocytes.
+- Final downstream regulons: 105 pySCENIC regulons.
+- Fixed seed: no fixed `--seed` argument was recovered for the retained GRN or AUCell commands; bitwise-identical reruns should not be assumed.
 
 ## pySCENIC resources
 
-- TF list: `allTFs_hg38.txt`, AertsLab cisTarget TF list, 1,892 entries.
-- Ranking database: `hg38_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather`.
-- Motif annotation: `motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl`.
-- Large ranking and motif resources are not redistributed in this GitHub release. Retrieve them from AertsLab/cisTarget resources before full reruns.
+The retained run used an AertsLab cisTarget hg38 gene-based ranking database with 10 kb upstream/downstream of transcription start sites and v10 motif annotation.
 
-## Key Python packages
+Full retained resource filenames are listed in `configs/pyscenic_runtime_and_resources.md`. These large third-party resources are not redistributed in this repository.
 
-The scripts use the following packages across the workflow: `anndata`, `celloracle`, `h5py`, `matplotlib`, `numpy`, `pandas`, `pyscenic`, `scanpy`, `scipy`, `seaborn`, and `statsmodels`. See `requirements.txt` for an unpinned package list.
+## CellOracle runtime
 
-## R notes
+- Docker image: `kenjikamimoto126/celloracle_ubuntu:0.18.0`.
+- CellOracle version: 0.18.0.
+- Verified Python version in the retained CellOracle container: Python 3.10.11.
+- Verified container package versions include `celloracle==0.18.0`, `scanpy==1.10.0`, `anndata==0.10.6`, `numpy==1.26.4`, `pandas==1.5.3`, `scipy==1.12.0`, `h5py==3.10.0`, `scikit-learn==1.3.0`, `matplotlib==3.6.3`, `seaborn==0.13.2`, and `statsmodels==0.14.0`.
+- CellOracle outputs are in silico perturbation simulations and should be interpreted as candidate-prioritization evidence only.
 
-R is not required for the included Python-based figure/table regeneration route unless users extend the workflow. R 4.5.2 was detected on the audit workstation, but no R package lockfile was found.
+Approx. Recovery Index / Approx. RI is a study-defined cosine-similarity-based alignment metric. It is not a CellOracle official standard metric and is not a clinical recovery metric.
 
-## Large external data and database requirements
+## Python package notes
 
-Full computational reproduction requires downloading public raw matrices from GEO and large third-party databases from AertsLab/cisTarget. These files are intentionally excluded from this repository and are listed in `excluded_files_manifest.csv` when present locally.
+The workflow uses `pandas`, `numpy`, `scipy`, `scanpy`, `anndata`, `h5py`, `matplotlib`, `seaborn`, `scikit-learn`, `celloracle`, `pyscenic`, `statsmodels`, and `openpyxl`.
 
-## Known limitations
+Version status:
 
-- This release emphasizes reproducibility of the manuscript-supporting processed outputs and code audit trail, not one-command rerun of all raw-data processing.
-- Some original steps were run through Docker/WSL and are represented by recovered command records and redacted logs.
-- Steps without fixed seeds or with multiprocessing may not be bitwise reproducible.
-- CellOracle perturbation outputs are in silico simulations and should not be interpreted as experimental validation.
+- Recovered from the CellOracle container: `pandas`, `numpy`, `scipy`, `scanpy`, `anndata`, `h5py`, `matplotlib`, `seaborn`, `scikit-learn`, `celloracle`, and `statsmodels`.
+- Recovered from the pySCENIC Docker image tag: `pyscenic==0.12.1`.
+- `openpyxl`: not pinned / not recovered for the original analysis runtime.
+
+`requirements.lock.txt` records the recovered package pins and marks unrecovered packages explicitly.
+
+## Enrichr / DSigDB / SwissADME
+
+Functional enrichment used Enrichr web API calls for GO/KEGG analyses. Exploratory drug-signature annotation used Enrichr DSigDB results and SwissADME blood-brain barrier annotations. No official Enrichr API version or DSigDB database release number was recovered from retained outputs.
+
+## Excluded resources
+
+The repository intentionally excludes large raw single-cell matrices, controlled-access raw matrices, cisTarget ranking databases, motif annotation files, Docker image layers, and large intermediate objects. See `MANIFEST.md` and `results/audit/repository_release_audit.md` for the release audit.

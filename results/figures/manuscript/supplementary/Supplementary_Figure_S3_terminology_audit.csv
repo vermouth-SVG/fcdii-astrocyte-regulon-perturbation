@@ -3,13 +3,13 @@ Recovery Index,replaced,standalone wording replaced by Approx. Recovery Index or
 Recovery index,replaced,standalone wording replaced by Approx. Recovery Index or Approx. RI
 Approx. Recovery Index,present,required
 Approx. RI,present,required
-in silico KO,present,required
+in silico perturbation,present,required
 simulated perturbation,present,required
 randomized control,present,required
-experimental KO,absent,required absent
-validated KO,absent,required absent
-validated knockout,absent,required absent
-experimental knockout,absent,required absent; hyphenated boundary wording used in caption
+experimental perturbation,absent,required absent
+validated perturbation,absent,required absent
+validated perturbation,absent,required absent
+experimental perturbation,absent,required absent; hyphenated boundary wording used in caption
 therapeutic target,absent,required absent
 treatment target,absent,required absent
 drug target,absent,required absent

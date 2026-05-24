@@ -1,8 +1,8 @@
-﻿Figure4_robustness_support
+Figure4_robustness_support
 ==============================
 
 Caption title:
-Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2-THRB dual-axis model
+Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2–THRB dual-axis model
 
 Revision scope:
 - Figure 4 v3.1 is a layout and graphical-language revision of v3.

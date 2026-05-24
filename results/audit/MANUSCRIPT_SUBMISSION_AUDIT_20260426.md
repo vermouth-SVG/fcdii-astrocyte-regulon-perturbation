@@ -15,7 +15,7 @@ Updated after the 2026-05-03 `figures_main` cleanup to point to the current reta
 
 - Figure 1 is the user-supplied Image 2.0 study-design / analytical-framework schematic retained as `Figure1_study_design.png`.
 - Figure 2 is the current regulon-landscape main figure, centered on differential AUCell activity and TF prioritization.
-- Figure 3 is the current CellOracle in silico KO perturbation prioritization figure, retaining NFE2L2 and THRB representative vector fields.
+- Figure 3 is the current CellOracle in silico perturbation perturbation prioritization figure, retaining NFE2L2 and THRB representative vector fields.
 - Figure 4 is the current sample-level robustness and supportive external-evidence figure.
 - Figure 5 is the current functional-program / convergence / working-model figure.
 - Current main figures avoid drug repositioning, SCENIC+, docking, wet-lab validation, and formal external-validation language.

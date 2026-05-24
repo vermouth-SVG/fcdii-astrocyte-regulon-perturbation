@@ -14,5 +14,5 @@
 - [x] No h5ad, loom, h5, raw mtx, feather, or CellOracle binary object files are included.
 - [x] Public safety scan was performed and documented in `public_release_safety_report.md`.
 - [x] Manuscript claims are supported by included processed tables and audit files: 4 samples, 2 lesion / 2 internal-control samples, 2 donors, 2,322 astrocytes, 36,601 genes, and 105 pySCENIC regulons.
-- [ ] Manual review before public upload: replace GitHub URL and optional Zenodo DOI placeholders.
+- [ ] Manual review before public upload: confirm GitHub URL and decide whether Zenodo archival is needed.
 - [ ] Manual review before public upload: confirm final author/contact information before submission.

@@ -47,7 +47,7 @@ git remote remove origin
 git remote add origin https://github.com/vermouth-SVG/fcdii-astrocyte-regulon-perturbation.git
 git remote -v
 git add .
-git commit -m "Initial reproducibility release for FCD II astrocyte TF-regulon analysis"
+git commit -m "Initial reproducibility release for FCD II astrocyte regulon perturbation analysis"
 git push -u origin main
 git remote -v
 git status

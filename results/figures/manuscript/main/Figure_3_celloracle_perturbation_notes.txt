@@ -1,4 +1,4 @@
-﻿Figure3_celloracle_perturbation
+Figure3_celloracle_perturbation
 ==============================
 
 Caption title:
@@ -48,7 +48,7 @@ Panel B scorecard:
 - Control shift refers to internal-control-specific mean shift.
 
 Panel C/D vector field sources:
-- Simulated KO shift columns are embedding_x/embedding_y and delta_x/delta_y from each TF state_shift_scores.csv.
+- Simulated perturbation shift columns are embedding_x/embedding_y and delta_x/delta_y from each TF state_shift_scores.csv.
 - Very light grey background cell points were added in v3.1 using the same embedding_x/embedding_y arrow start coordinates from each state_shift_scores.csv file.
 - Randomized-control columns were not plotted in the main figure.
 - Vector column mapping: {'NFE2L2': {'x': 'embedding_x', 'y': 'embedding_y', 'dx': 'delta_x', 'dy': 'delta_y', 'group': 'group', 'shift_length': 'shift_length'}, 'THRB': {'x': 'embedding_x', 'y': 'embedding_y', 'dx': 'delta_x', 'dy': 'delta_y', 'group': 'group', 'shift_length': 'shift_length'}}

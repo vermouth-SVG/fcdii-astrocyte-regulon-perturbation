@@ -46,14 +46,14 @@ WORKFLOW_NODES = [
     ("cells", "Astrocyte\npilot object", ""),
     ("GRN", "pySCENIC\nregulon activity", "GRN -> motif pruning -> AUCell"),
     ("diff", "Differential\nregulon landscape", "Fig. 2"),
-    ("KO", "CellOracle\nin silico KO", "Fig. 3"),
+    ("Perturbation", "CellOracle\nin silico perturbation", "Fig. 3"),
     ("LOSO", "Sample-level\nrobustness", "LOSO; Fig. 4"),
     ("GO", "Program\ninterpretation", "GO/KEGG + convergence; Fig. 5"),
 ]
 
 EVIDENCE_LAYERS = [
     ("Discovery", "regulon landscape + TF shortlist"),
-    ("Perturbation", "CellOracle in silico KO"),
+    ("Perturbation", "CellOracle in silico perturbation"),
     ("Robustness/support", "sample-level LOSO + supportive datasets"),
     ("Interpretation", "program convergence + working model"),
 ]

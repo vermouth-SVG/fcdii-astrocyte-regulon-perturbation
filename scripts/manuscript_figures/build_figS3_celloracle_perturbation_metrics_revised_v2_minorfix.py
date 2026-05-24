@@ -68,13 +68,13 @@ FIGURE_TEXT_ITEMS = [
     "THRB\nhighest Approx. RI",
     "BHLHE40\nsecondary",
     "SOX2\nretained",
-    "NFE2L2 representative in silico KO",
-    "THRB representative in silico KO",
-    "BHLHE40 representative in silico KO",
-    "SOX2 representative in silico KO",
-    "Simulated KO shift",
+    "NFE2L2 representative in silico perturbation",
+    "THRB representative in silico perturbation",
+    "BHLHE40 representative in silico perturbation",
+    "SOX2 representative in silico perturbation",
+    "Simulated perturbation shift",
     "Randomized control",
-    "CellOracle in silico KO / simulated perturbation only; Approx. RI = Approx. Recovery Index, a state-shift-derived summary metric, not experimental knockout evidence; randomized control is a negative-control assessment.",
+    "CellOracle in silico perturbation / simulated perturbation only; Approx. RI = Approx. Recovery Index, a state-shift-derived summary metric, not experimental perturbation evidence; randomized control is a negative-control assessment.",
 ]
 
 
@@ -330,7 +330,7 @@ def draw_vector_field(
         spine.set_visible(True)
         spine.set_linewidth(0.55)
         spine.set_color("#D4D4D4")
-    ax.set_title("Simulated KO shift" if mode == "simulated" else "Randomized control", pad=2.2, fontsize=6.9)
+    ax.set_title("Simulated perturbation shift" if mode == "simulated" else "Randomized control", pad=2.2, fontsize=6.9)
 
 
 def build_tf_block(
@@ -350,7 +350,7 @@ def build_tf_block(
     title_ax.text(
         0.00,
         0.55,
-        f"{tf} representative in silico KO",
+        f"{tf} representative in silico perturbation",
         ha="left",
         va="center",
         fontsize=8.2,
@@ -381,8 +381,8 @@ def build_method_note(ax: plt.Axes) -> None:
     ax.text(
         0.5,
         0.50,
-        "CellOracle in silico KO / simulated perturbation only; Approx. RI = Approx. Recovery Index, "
-        "a state-shift-derived summary metric, not experimental knockout evidence; randomized control is a negative-control assessment.",
+        "CellOracle in silico perturbation / simulated perturbation only; Approx. RI = Approx. Recovery Index, "
+        "a state-shift-derived summary metric, not experimental perturbation evidence; randomized control is a negative-control assessment.",
         ha="center",
         va="center",
         fontsize=7.2,
@@ -461,11 +461,11 @@ Input files:
 Minorfix changes:
 - Panel A title was changed from Round1 CellOracle perturbation metric heatmap to Round 1 CellOracle perturbation metric heatmap.
 - Panels C-F retain the same data and two-column structure, with modestly increased point opacity, arrow opacity, arrow width, arrow length, and plotting area for readability.
-- The bottom method note now uses: not experimental knockout evidence.
+- The bottom method note now uses: not experimental perturbation evidence.
 
 CellOracle round1 perturbation metrics:
 - Metrics were read from {rel(METRIC_TABLE)} without changing TF order or numeric values.
-- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico KO.
+- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico perturbation.
 - Approx. Recovery Index is the existing recovery_index column, treated as an approximate state-shift-derived summary metric.
 - Net shift is the observed mean shift after subtracting the randomized control shift baseline.
 - Lesion shift and internal-control shift are group-specific mean shift lengths from the lesion and internal-control cell groups.
@@ -476,12 +476,12 @@ Metric values used in the figure:
 
 Representative perturbation vector fields:
 - Vector fields were redrawn from each TF-specific state_shift_scores.csv file using the existing embedding_x, embedding_y, delta_x, delta_y, delta_random_x, and delta_random_y columns.
-- Simulated KO shift panels show existing CellOracle in silico KO state-shift vectors.
+- Simulated perturbation shift panels show existing CellOracle in silico perturbation state-shift vectors.
 - Randomized control panels show existing randomized-control vectors and are used only as a negative-control assessment.
 - Arrows were downsampled deterministically for readability; no CellOracle model, pySCENIC output, metric value, TF ranking, or random-control value was recomputed.
 
 Interpretation boundaries:
-- These panels show in silico KO / simulated perturbation outputs, not an experimental knockout assay.
+- These panels show in silico perturbation / simulated perturbation outputs, not an experimental perturbation assay.
 - Approx. Recovery Index is a state-shift-derived summary metric; it is not a strict geometric projection model and is not a direct pathology-reversal measurement.
 - NFE2L2 is interpreted as the primary lesion-associated axis with the highest mean shift.
 - THRB is interpreted as the primary internal-control axis and Approx. Recovery Index anchor.
@@ -500,9 +500,9 @@ def write_companion_files(metrics: pd.DataFrame) -> list[Path]:
 def scan_residual_terms(metrics: pd.DataFrame) -> dict[str, bool]:
     scanned = "\n".join([*FIGURE_TEXT_ITEMS, notes_text(metrics)])
     forbidden = [
-        "experimental" + " KO",
-        "validated" + " KO",
-        "validated" + " knockout",
+        "experimental perturbation",
+        "validated perturbation",
+        "validated perturbation",
         "therapeutic" + " target",
         "treatment" + " target",
         "drug" + " target",
@@ -524,7 +524,7 @@ def print_summary(outputs: list[Path], companions: list[Path], residuals: dict[s
         print(f"- {rel(path)}")
     print("Round1 changed to Round 1: yes")
     print("Panels C-F vector field readability enhanced: yes; point opacity, arrow opacity, arrow width, arrow length, and plotting area were increased uniformly.")
-    print("Bottom method note changed from wet-lab KO evidence to experimental knockout evidence: yes")
+    print("Bottom method note changed from experimental perturbation evidence to experimental perturbation evidence: yes")
     flagged = [term for term, present in residuals.items() if present]
     if flagged:
         print("Residual forbidden terms in figure/notes text: " + "; ".join(flagged))

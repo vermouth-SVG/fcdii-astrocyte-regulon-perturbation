@@ -445,7 +445,7 @@ def build_fig4() -> dict[str, list[str]]:
         ax_d.annotate(tf, (float(x.loc[tf]), float(y.loc[tf])), xytext=(4, 3), textcoords="offset points", fontsize=7, fontweight="bold" if tf in {"NFE2L2", "THRB"} else "normal")
     panel_label(ax_d, "D")
 
-    fig.suptitle("Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2-THRB dual-axis model", y=1.02)
+    fig.suptitle("Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2–THRB dual-axis model", y=1.02)
     save_figure(fig, out_dir, "Fig4_main")
 
     notes = """

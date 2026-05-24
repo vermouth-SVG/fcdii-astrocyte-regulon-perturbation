@@ -20,7 +20,7 @@ def project_root_from_file(script_file: str | Path) -> Path:
 def parse_args() -> argparse.Namespace:
     root = project_root_from_file(__file__)
     parser = argparse.ArgumentParser(
-        description="Run first-round CellOracle in silico knockout for four prioritized TFs."
+        description="Run first-round CellOracle in silico perturbation for four prioritized TFs."
     )
     parser.add_argument(
         "--config",
@@ -30,7 +30,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         default=str(root / "celloracle_run" / "ko_round1"),
-        help="Output directory for round-1 KO results.",
+        help="Output directory for round-1 perturbation results.",
     )
     parser.add_argument(
         "--candidate-dir",
@@ -236,9 +236,9 @@ def summarize_score_table(score_df: pd.DataFrame, tf: str) -> tuple[pd.DataFrame
 def save_quiver_plots(oracle, tf: str, tf_dir: Path, quiver_scale: float) -> None:
     fig, ax = plt.subplots(1, 2, figsize=(13, 6))
     oracle.plot_quiver(scale=quiver_scale, ax=ax[0])
-    ax[0].set_title(f"{tf} KO: simulated shift")
+    ax[0].set_title(f"{tf} perturbation: simulated shift")
     oracle.plot_quiver_random(scale=quiver_scale, ax=ax[1])
-    ax[1].set_title(f"{tf} KO: randomized control")
+    ax[1].set_title(f"{tf} perturbation: randomized control")
     fig.tight_layout()
     fig.savefig(tf_dir / f"{tf}_quiver.png", dpi=200, bbox_inches="tight")
     plt.close(fig)
@@ -254,7 +254,7 @@ def save_shift_scatter(score_df: pd.DataFrame, tf: str, tf_dir: Path) -> None:
         cmap="viridis",
         linewidths=0,
     )
-    ax.set_title(f"{tf} KO: shift magnitude on embedding")
+    ax.set_title(f"{tf} perturbation: shift magnitude on embedding")
     ax.set_xlabel("UMAP1")
     ax.set_ylabel("UMAP2")
     cbar = fig.colorbar(sc, ax=ax, fraction=0.04, pad=0.03)
@@ -275,7 +275,7 @@ def save_shift_boxplot(score_df: pd.DataFrame, tf: str, tf_dir: Path) -> None:
         patch.set_facecolor(color)
         patch.set_alpha(0.85)
     ax.set_ylabel("Shift length")
-    ax.set_title(f"{tf} KO: shift magnitude by {group_col}")
+    ax.set_title(f"{tf} perturbation: shift magnitude by {group_col}")
     ax.tick_params(axis="x", rotation=30)
     fig.tight_layout()
     fig.savefig(tf_dir / f"{tf}_shift_magnitude_boxplot.png", dpi=200, bbox_inches="tight")
@@ -288,9 +288,9 @@ def save_grid_flow_plot(oracle, tf: str, tf_dir: Path, n_grid: int, min_mass: fl
         oracle.calculate_mass_filter(min_mass=min_mass, plot=False)
         fig, ax = plt.subplots(1, 2, figsize=(13, 6))
         oracle.plot_simulation_flow_on_grid(scale=grid_scale, ax=ax[0])
-        ax[0].set_title(f"{tf} KO: flow on grid")
+        ax[0].set_title(f"{tf} perturbation: flow on grid")
         oracle.plot_simulation_flow_random_on_grid(scale=grid_scale, ax=ax[1])
-        ax[1].set_title(f"{tf} KO: randomized flow")
+        ax[1].set_title(f"{tf} perturbation: randomized flow")
         fig.tight_layout()
         fig.savefig(tf_dir / f"{tf}_grid_flow.png", dpi=200, bbox_inches="tight")
         plt.close(fig)
@@ -298,7 +298,7 @@ def save_grid_flow_plot(oracle, tf: str, tf_dir: Path, n_grid: int, min_mass: fl
         fig2, ax2 = plt.subplots(figsize=(8, 8))
         oracle.plot_cluster_whole(ax=ax2, s=10)
         oracle.plot_simulation_flow_on_grid(scale=grid_scale, ax=ax2, show_background=False)
-        ax2.set_title(f"{tf} KO: cluster background + flow")
+        ax2.set_title(f"{tf} perturbation: cluster background + flow")
         fig2.tight_layout()
         fig2.savefig(tf_dir / f"{tf}_grid_flow_with_clusters.png", dpi=200, bbox_inches="tight")
         plt.close(fig2)
@@ -381,7 +381,7 @@ def main() -> None:
     combined_overall_rows: list[pd.DataFrame] = []
     combined_group_rows: list[pd.DataFrame] = []
 
-    print("[3/6] Running in silico KO for prioritized TFs")
+    print("[3/6] Running in silico perturbation for prioritized TFs")
     for tf in tf_list:
         tf_dir = output_dir / safe_name(tf)
         tf_dir.mkdir(parents=True, exist_ok=True)

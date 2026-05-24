@@ -1,10 +1,5 @@
 # CellOracle environment notes
 
-The CellOracle component in this release is represented by analysis scripts, configuration summaries, and processed in silico KO outputs. Bulky CellOracle binary objects, merged link objects, and simulation-ready Oracle objects are intentionally excluded.
+See `celloracle_runtime_and_resources.md` for the manuscript-matched CellOracle runtime, inputs, outputs, and Approx. RI interpretation.
 
-Interpretation constraints:
-
-- CellOracle outputs are in silico simulated perturbations.
-- They are candidate-prioritization evidence only.
-- They are not wet-lab perturbation results.
-- They are not therapeutic recommendations.
+Current manuscript-facing terminology is `in silico perturbation`. Legacy file and folder names containing `ko` are retained for path compatibility only.

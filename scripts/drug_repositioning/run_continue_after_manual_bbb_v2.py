@@ -192,7 +192,7 @@ def make_master_summary() -> None:
     lines = [
         "药物重定位 v2 SwissADME 自动 BBB 后主汇总",
         "=" * 56,
-        "本轮仅导入 SwissADME CSV 并继续 v2 后续整合；未重跑 pySCENIC、CellOracle、KO、外部验证、robustness、GO/KEGG、Enrichr 或 compound aggregation。",
+        "本轮仅导入 SwissADME CSV 并继续 v2 后续整合；未重跑 pySCENIC、CellOracle、扰动、外部验证、robustness、GO/KEGG、Enrichr 或 compound aggregation。",
         "本轮未执行 docking，未调用任何 docking 脚本。",
         adopted_line,
         "",

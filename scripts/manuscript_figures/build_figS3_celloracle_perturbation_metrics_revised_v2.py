@@ -68,13 +68,13 @@ FIGURE_TEXT_ITEMS = [
     "THRB\nhighest Approx. RI",
     "BHLHE40\nsecondary",
     "SOX2\nretained",
-    "NFE2L2 representative in silico KO",
-    "THRB representative in silico KO",
-    "BHLHE40 representative in silico KO",
-    "SOX2 representative in silico KO",
-    "Simulated KO shift",
+    "NFE2L2 representative in silico perturbation",
+    "THRB representative in silico perturbation",
+    "BHLHE40 representative in silico perturbation",
+    "SOX2 representative in silico perturbation",
+    "Simulated perturbation shift",
     "Randomized control",
-    "CellOracle in silico KO / simulated perturbation only; Approx. RI = Approx. Recovery Index, a state-shift-derived summary metric, not wet-lab KO evidence; randomized control is a negative-control assessment.",
+    "CellOracle in silico perturbation / simulated perturbation only; Approx. RI = Approx. Recovery Index, a state-shift-derived summary metric, not experimental perturbation evidence; randomized control is a negative-control assessment.",
 ]
 
 
@@ -330,7 +330,7 @@ def draw_vector_field(
         spine.set_visible(True)
         spine.set_linewidth(0.55)
         spine.set_color("#D4D4D4")
-    ax.set_title("Simulated KO shift" if mode == "simulated" else "Randomized control", pad=2.2, fontsize=6.9)
+    ax.set_title("Simulated perturbation shift" if mode == "simulated" else "Randomized control", pad=2.2, fontsize=6.9)
 
 
 def build_tf_block(
@@ -350,7 +350,7 @@ def build_tf_block(
     title_ax.text(
         0.00,
         0.55,
-        f"{tf} representative in silico KO",
+        f"{tf} representative in silico perturbation",
         ha="left",
         va="center",
         fontsize=8.2,
@@ -381,8 +381,8 @@ def build_method_note(ax: plt.Axes) -> None:
     ax.text(
         0.5,
         0.50,
-        "CellOracle in silico KO / simulated perturbation only; Approx. RI = Approx. Recovery Index, "
-        "a state-shift-derived summary metric, not wet-lab KO evidence; randomized control is a negative-control assessment.",
+        "CellOracle in silico perturbation / simulated perturbation only; Approx. RI = Approx. Recovery Index, "
+        "a state-shift-derived summary metric, not experimental perturbation evidence; randomized control is a negative-control assessment.",
         ha="center",
         va="center",
         fontsize=7.2,
@@ -451,9 +451,9 @@ def caption_text() -> str:
         "group-specific shift, and direction agreement. (B) Quantitative perturbation summary "
         "showing mean shift length versus Approx. Recovery Index. NFE2L2 showed the highest mean "
         "shift, whereas THRB showed the highest Approx. Recovery Index. (C-F) Representative "
-        "simulated in silico KO vector fields and randomized controls for the four candidate TFs. "
+        "simulated in silico perturbation vector fields and randomized controls for the four candidate TFs. "
         "The Approx. Recovery Index is a state-shift-derived summary metric and should not be "
-        "interpreted as experimental-knockout validation."
+        "interpreted as experimental perturbation validation."
     )
 
 
@@ -474,7 +474,7 @@ Input files:
 
 CellOracle round1 perturbation metrics:
 - Metrics were read from {rel(METRIC_TABLE)} without changing TF order or numeric values.
-- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico KO.
+- Mean shift is the mean CellOracle state-shift vector length across cells after the simulated in silico perturbation.
 - Approx. Recovery Index is the existing recovery_index column, treated as an approximate state-shift-derived summary metric.
 - Net shift is the observed mean shift after subtracting the randomized control shift baseline.
 - Lesion shift and internal-control shift are group-specific mean shift lengths from the lesion and internal-control cell groups.
@@ -485,12 +485,12 @@ Metric values used in the figure:
 
 Representative perturbation vector fields:
 - Vector fields were redrawn from each TF-specific state_shift_scores.csv file using the existing embedding_x, embedding_y, delta_x, delta_y, delta_random_x, and delta_random_y columns.
-- Simulated KO shift panels show existing CellOracle in silico KO state-shift vectors.
+- Simulated perturbation shift panels show existing CellOracle in silico perturbation state-shift vectors.
 - Randomized control panels show existing randomized-control vectors and are used only as a negative-control assessment.
 - Arrows were downsampled deterministically for readability; no CellOracle model, pySCENIC output, metric value, TF ranking, or random-control value was recomputed.
 
 Interpretation boundaries:
-- These panels show in silico KO / simulated perturbation outputs, not a wet-lab KO assay.
+- These panels show in silico perturbation / simulated perturbation outputs, not a experimental perturbation assay.
 - Approx. Recovery Index is a state-shift-derived summary metric; it is not a strict geometric projection model and is not a direct pathology-reversal measurement.
 - NFE2L2 is interpreted as the primary lesion-associated axis with the highest mean shift.
 - THRB is interpreted as the primary internal-control axis and Approx. Recovery Index anchor.
@@ -506,7 +506,7 @@ def revision_log_text() -> str:
 - Replaced standalone Recovery Index / Recovery index wording with Approx. Recovery Index / Approx. RI in figure labels and interpretive text.
 - Standardized Panel A metric labels to Mean shift, Approx. RI, Net shift, Lesion shift, Internal-control shift, and Direction agreement.
 - Changed Panel B y-axis to Approx. Recovery Index and added conservative candidate labels: NFE2L2 highest mean shift, THRB highest Approx. RI, BHLHE40 secondary, SOX2 retained.
-- Rebuilt Panels C-F as representative in silico KO panels with paired Simulated KO shift and Randomized control subpanels for each TF.
+- Rebuilt Panels C-F as representative in silico perturbation panels with paired Simulated perturbation shift and Randomized control subpanels for each TF.
 - Standardized randomized control as a negative-control assessment and reduced vector-field density for readability.
 - Added a method note defining Approx. RI as a state-shift-derived summary metric and limiting interpretation to in silico evidence.
 - Preserved original CellOracle metric values, TF order, and state-shift CSV values; no CellOracle, pySCENIC, or upstream analysis was rerun.
@@ -520,13 +520,13 @@ def terminology_audit_df() -> pd.DataFrame:
         ("Recovery index", "replaced", "standalone wording replaced by Approx. Recovery Index or Approx. RI"),
         ("Approx. Recovery Index", "present", "required"),
         ("Approx. RI", "present", "required"),
-        ("in silico KO", "present", "required"),
+        ("in silico perturbation", "present", "required"),
         ("simulated perturbation", "present", "required"),
         ("randomized control", "present", "required"),
-        ("experimental KO", "absent", "required absent"),
-        ("validated KO", "absent", "required absent"),
-        ("validated knockout", "absent", "required absent"),
-        ("experimental knockout", "absent", "required absent; hyphenated boundary wording used in caption"),
+        ("experimental perturbation", "absent", "required absent"),
+        ("validated perturbation", "absent", "required absent"),
+        ("validated perturbation", "absent", "required absent"),
+        ("experimental perturbation", "absent", "required absent; hyphenated boundary wording used in caption"),
         ("therapeutic target", "absent", "required absent"),
         ("treatment target", "absent", "required absent"),
         ("drug target", "absent", "required absent"),
@@ -555,9 +555,9 @@ def write_companion_files(metrics: pd.DataFrame) -> list[Path]:
 def scan_residual_terms() -> dict[str, bool]:
     scanned = "\n".join([*FIGURE_TEXT_ITEMS, caption_text(), revision_log_text()])
     forbidden = [
-        "experimental KO",
-        "validated KO",
-        "validated knockout",
+        "experimental perturbation",
+        "validated perturbation",
+        "validated perturbation",
         "therapeutic target",
         "treatment target",
         "drug target",

@@ -1,0 +1,23 @@
+# Recovered / documented package versions for manuscript-level reproduction.
+# pySCENIC and CellOracle were run in separate Docker environments; this file is
+# not intended to replace those container notes.
+
+# CellOracle container runtime
+# Python: 3.10.11
+celloracle==0.18.0
+scanpy==1.10.0
+anndata==0.10.6
+numpy==1.26.4
+pandas==1.5.3
+scipy==1.12.0
+h5py==3.10.0
+scikit-learn==1.3.0
+matplotlib==3.6.3
+seaborn==0.13.2
+statsmodels==0.14.0
+
+# pySCENIC Docker image tag
+pyscenic==0.12.1
+
+# Used by table-export utilities; original analysis version not pinned / not recovered.
+openpyxl

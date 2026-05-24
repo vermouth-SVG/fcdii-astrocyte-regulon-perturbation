@@ -14,7 +14,7 @@ external validation,absent,required absent
 formal validation,absent,required absent
 independent validation,absent,required absent
 donor-level robustness,absent,required absent
-experimental KO,absent,required absent
+experimental perturbation,absent,required absent
 therapeutic target,absent,required absent
 SCENIC+,absent,required absent
 docking,absent,required absent

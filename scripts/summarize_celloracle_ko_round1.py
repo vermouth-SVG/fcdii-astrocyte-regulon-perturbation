@@ -21,12 +21,12 @@ def project_root_from_file(script_file: str | Path) -> Path:
 def parse_args() -> argparse.Namespace:
     root = project_root_from_file(__file__)
     parser = argparse.ArgumentParser(
-        description="Summarize CellOracle KO round-1 outputs and compute an approximate Recovery Index."
+        description="Summarize CellOracle perturbation round-1 outputs and compute an approximate Recovery Index."
     )
     parser.add_argument(
         "--ko-dir",
         default=str(root / "celloracle_run" / "ko_round1"),
-        help="Round-1 KO result directory.",
+        help="Round-1 perturbation result directory.",
     )
     parser.add_argument(
         "--candidate-dir",
@@ -259,13 +259,13 @@ For each TF overall:
    * direction_agreement_factor
 
 Interpretation:
-- Higher mean_shift_length means stronger KO perturbation.
+- Higher mean_shift_length means stronger perturbation.
 - Higher net_shift means the perturbation exceeds randomized control.
 - Higher coherence means the average vector shift is more directional and less diffuse.
-- Higher group_selectivity means the KO perturbs its expected group more than the opposite group.
+- Higher group_selectivity means the perturbation perturbs its expected group more than the opposite group.
 
 This is not a literal rescue probability. It is an executable proxy for group-matched state-rewiring potency
-using the currently available CellOracle KO outputs.
+using the currently available CellOracle perturbation outputs.
 """
     with open(ko_dir / "round1_recovery_index_definition.txt", "w", encoding="utf-8") as handle:
         handle.write(text)
@@ -302,7 +302,7 @@ def plot_group_compare(master_df: pd.DataFrame, output_png: Path) -> None:
     ax.set_xticks(x)
     ax.set_xticklabels(labels, rotation=30, ha="right")
     ax.set_ylabel("Mean shift length")
-    ax.set_title("CellOracle KO shift by group")
+    ax.set_title("CellOracle perturbation shift by group")
     ax.legend(frameon=False)
     fig.tight_layout()
     fig.savefig(output_png, dpi=200, bbox_inches="tight")
@@ -329,7 +329,7 @@ def plot_recovery_bubble(master_df: pd.DataFrame, output_png: Path) -> None:
         ax.text(row["mean_shift_length"], row["recovery_index"], row["tf"], fontsize=9, ha="left", va="bottom")
     ax.set_xlabel("Overall mean shift length")
     ax.set_ylabel("Recovery Index")
-    ax.set_title("Round-1 KO potency vs Recovery Index")
+    ax.set_title("Round-1 perturbation potency vs Recovery Index")
     legend_handles = [
         plt.Line2D([0], [0], marker="o", color="w", markerfacecolor="#d95f02", markeredgecolor="black", label="target group: lesion", markersize=9),
         plt.Line2D([0], [0], marker="o", color="w", markerfacecolor="#1b7fb8", markeredgecolor="black", label="target group: internal_control", markersize=9),
@@ -354,7 +354,7 @@ def build_chinese_summary(master_df: pd.DataFrame) -> str:
             recommended.append(str(tf))
 
     line1 = (
-        f"CellOracle 第一轮 in silico KO 结果显示，4 个候选 TF 均能诱导可观的状态偏移，但总体扰动强度存在明显层级。"
+        f"CellOracle 第一轮 in silico perturbation 结果显示，4 个候选 TF 均能诱导可观的状态偏移，但总体扰动强度存在明显层级。"
         f"按 overall mean_shift_length 排序，{strongest['tf']} 最强，其后为 {second['tf']}，"
         f"{ordered.iloc[2]['tf']} 居中，{weakest['tf']} 最弱。"
     )
@@ -364,7 +364,7 @@ def build_chinese_summary(master_df: pd.DataFrame) -> str:
     )
     line3 = (
         f"其中 {lesion_df.iloc[0]['tf']} 在 lesion 背景下表现出最高的 Recovery Index，"
-        f"提示其 KO 后对 lesion 相关状态重排的影响最强；"
+        f"提示其 扰动后对 lesion 相关状态重排的影响最强；"
         f"{control_df.iloc[0]['tf']} 则是 internal_control 程序中最突出的依赖因子。"
     )
     line4 = (
@@ -414,7 +414,7 @@ def main() -> None:
     candidate_dir = Path(args.candidate_dir).resolve()
     tf_list = [item.strip() for item in args.tf_list.split(",") if item.strip()]
 
-    print(f"[1/5] Reading KO directory: {ko_dir}")
+    print(f"[1/5] Reading perturbation directory: {ko_dir}")
     tf_dirs = discover_tf_dirs(ko_dir, tf_list)
     if not tf_dirs:
         raise ValueError(f"No TF subdirectories found in {ko_dir} for {tf_list}")
@@ -454,7 +454,7 @@ def main() -> None:
     color_map = ["#2f6db3", "#2f6db3", "#2f6db3", "#2f6db3"]
     save_bar_plot(
         values=overall_ranking.set_index("tf")["mean_shift_length"],
-        title="Round-1 KO mean shift length ranking",
+        title="Round-1 perturbation mean shift length ranking",
         ylabel="Mean shift length",
         output_png=plot_dir / "round1_mean_shift_length_ranking.png",
         color_map=color_map[: overall_ranking.shape[0]],

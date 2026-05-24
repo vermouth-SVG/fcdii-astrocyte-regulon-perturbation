@@ -1,4 +1,4 @@
-﻿# Final public release review
+# Final public release review
 
 Review date: 2026-05-15
 

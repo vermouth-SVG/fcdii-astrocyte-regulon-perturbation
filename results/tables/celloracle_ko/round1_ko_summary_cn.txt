@@ -1,5 +1,5 @@
-CellOracle 第一轮 in silico KO 结果显示，4 个候选 TF 均能诱导可观的状态偏移，但总体扰动强度存在明显层级。按 overall mean_shift_length 排序，NFE2L2 最强，其后为 THRB，BHLHE40 居中，SOX2 最弱。
+CellOracle 第一轮 in silico perturbation 结果显示，4 个候选 TF 均能诱导可观的状态偏移，但总体扰动强度存在明显层级。按 overall mean_shift_length 排序，NFE2L2 最强，其后为 THRB，BHLHE40 居中，SOX2 最弱。
 从分组结果看，lesion 侧候选主要为 NFE2L2, BHLHE40, SOX2，internal_control 侧候选为 THRB。
-其中 NFE2L2 在 lesion 背景下表现出最高的 Recovery Index，提示其 KO 后对 lesion 相关状态重排的影响最强；THRB 则是 internal_control 程序中最突出的依赖因子。
+其中 NFE2L2 在 lesion 背景下表现出最高的 mean shift；THRB 具有最高 Approx. Recovery Index，提示其模拟扰动方向与 lesion-to-internal-control reference vector 的方向一致性最高。
 综合 mean_shift_length、随机对照校正后的 net shift、分组特异性以及平均位移向量一致性，下一轮优先推荐 NFE2L2、THRB 进入更深入分析；SOX2 虽然仍有信号，但可作为次优先对象。
 整体上，这批结果支持 lesion 与 internal_control 并非共享同一套 TF 依赖结构，而是分别由 lesion 偏高程序和 internal_control 偏高程序中的关键节点维持。

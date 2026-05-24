@@ -804,7 +804,7 @@ def write_index(best_config: V21Config, search: pd.DataFrame, primary: pd.DataFr
         "- 运行 120 组确定性有限参数搜索，并按 objective 自动选择最佳配置。",
         "",
         "本轮没做什么:",
-        "- 未重跑 pySCENIC、CellOracle、KO、外部验证、robustness、GO/KEGG。",
+        "- 未重跑 pySCENIC、CellOracle、扰动、外部验证、robustness、GO/KEGG。",
         "- 未重跑 Enrichr/DSigDB 原始检索，未下载新资源。",
         "- 未执行 docking，未调用任何 docking 脚本。",
         "- BBB 仍为后续手动搜索与整理，本轮只生成 pre-BBB 结果和手动 BBB 模板。",

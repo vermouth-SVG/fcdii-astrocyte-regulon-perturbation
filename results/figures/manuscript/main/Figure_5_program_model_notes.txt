@@ -1,4 +1,4 @@
-﻿Figure5_program_model
+Figure5_program_model
 ==============================
 
 Version note:
@@ -6,7 +6,7 @@ v4 is a layout-level reconstruction, not an upstream analysis update. It keeps t
 functional interpretation, program convergence, and schematic inputs.
 
 Caption title:
-Fig. 5. Program-level interpretation and working model of the NFE2L2-THRB dual-axis architecture
+Fig. 5. Program-level interpretation and working model of the NFE2L2–THRB dual-axis architecture
 
 Input enrichment files:
 - functional_interpretation/03_go_enrichment_all.csv

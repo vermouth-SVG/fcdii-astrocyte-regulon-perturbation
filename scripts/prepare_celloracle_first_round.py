@@ -104,7 +104,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--ko-tfs",
         default=",".join(ROUND1_KO_TFS),
-        help="Comma-separated TFs for round-1 KO simulation.",
+        help="Comma-separated TFs for round-1 perturbation simulation.",
     )
     return parser.parse_args()
 
@@ -275,7 +275,7 @@ def main() -> None:
     ko_tfs = [item.strip() for item in args.ko_tfs.split(",") if item.strip()]
     missing_ko = [tf for tf in ko_tfs if tf not in shortlist_tfs]
     if missing_ko:
-        raise ValueError(f"Round-1 KO TFs are not all in the shortlist: {missing_ko}")
+        raise ValueError(f"Round-1 perturbation TFs are not all in the shortlist: {missing_ko}")
 
     print("[2/7] Loading base-GRN edges from current pySCENIC results")
     regulon_edges = load_edges_from_regulons(Path(args.regulons_csv), shortlist_tfs, args.max_targets_per_tf)

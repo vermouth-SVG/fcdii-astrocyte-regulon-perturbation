@@ -17,7 +17,7 @@ from matplotlib.patches import Rectangle
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = ROOT / "manuscript_output" / "figures_main"
 STEM = "Fig4_main_v3_robustness_support"
-CAPTION_TITLE = "Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2-THRB dual-axis model"
+CAPTION_TITLE = "Fig. 4. Sample-level robustness and supportive external evidence for the NFE2L2–THRB dual-axis model"
 
 TF_ORDER = ["NFE2L2", "THRB", "BHLHE40", "SOX2"]
 AXIS_ORDER = ["NFE2L2", "THRB"]

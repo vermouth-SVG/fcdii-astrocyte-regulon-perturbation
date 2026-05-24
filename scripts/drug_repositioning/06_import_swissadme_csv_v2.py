@@ -556,7 +556,7 @@ def make_summary(
             "",
             "流程边界:",
             "- 本步骤只读取 SwissADME CSV 并回填 BBB 分层。",
-            "- 未重跑 Enrichr、compound aggregation、pySCENIC、CellOracle、KO、外部验证、robustness 或 GO/KEGG。",
+            "- 未重跑 Enrichr、compound aggregation、pySCENIC、CellOracle、扰动、外部验证、robustness 或 GO/KEGG。",
             "- 未执行 docking，未调用任何 docking 脚本。",
         ]
     )

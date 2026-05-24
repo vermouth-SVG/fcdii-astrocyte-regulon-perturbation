@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import textwrap
 from pathlib import Path
@@ -561,7 +561,7 @@ def plot_vector_panel(
     arrow_counts: dict[str, int],
     limits: tuple[float, float, float, float] | None,
 ) -> None:
-    ax.set_title(f"{tf} KO simulation", pad=8, color=TF_COLORS[tf], fontweight="bold")
+    ax.set_title(f"{tf} perturbation simulation", pad=8, color=TF_COLORS[tf], fontweight="bold")
     if scores is None or scores.empty:
         ax.text(0.5, 0.5, "Vector field data unavailable", transform=ax.transAxes, ha="center", va="center", color=MID_GREY)
         ax.set_xticks([])
@@ -671,7 +671,7 @@ def write_notes(
     {CAPTION_TITLE}
 
     Revision scope:
-    - Main-text Fig. 3 v3 was rebuilt as a CellOracle / in silico KO perturbation prioritization figure.
+    - Main-text Fig. 3 v3 was rebuilt as a CellOracle / in silico perturbation perturbation prioritization figure.
     - Robustness, supportive external/contextual evidence, exploratory drug-signature clues, and pySCENIC regulon landscape panels were not included.
     - No complete figure suptitle is drawn inside the graphic; panel titles only.
 
@@ -704,7 +704,7 @@ def write_notes(
     - Interpretation labels: NFE2L2 = dominant perturbation; THRB = recovery anchor; BHLHE40 = secondary; SOX2 = retained.
 
     Panel C/D vector field sources:
-    - Simulated KO shift columns are embedding_x/embedding_y and delta_x/delta_y from each TF state_shift_scores.csv.
+    - Simulated perturbation shift columns are embedding_x/embedding_y and delta_x/delta_y from each TF state_shift_scores.csv.
     - Randomized-control columns were not plotted in the main figure.
     - Vector column mapping: {vector_cols}
 

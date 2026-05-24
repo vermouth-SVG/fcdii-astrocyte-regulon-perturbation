@@ -741,7 +741,7 @@ def build_fig3() -> dict[str, list[str]]:
     - The figure-wide title was removed from the graphic area for submission-style layout.
     - The top row was kept as a dual-metric ranking plus slope panel, avoiding dashboard-style bar charts.
     - Recovery index is still presented as an approximate pathological reversal index derived from the current state-shift workflow, not as a newly re-derived strict geometric model.
-    - BHLHE40 was retained in the ranking panels but not given a dedicated vector-field panel to keep the figure focused on the dual-core NFE2L2-THRB axis.
+    - BHLHE40 was retained in the ranking panels but not given a dedicated vector-field panel to keep the figure focused on the dual-core NFE2L2–THRB axis.
     """
     write_text(out_dir / "Fig3_notes_submission.txt", notes)
     return {"Fig3_submission": inputs}

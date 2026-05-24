@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import csv
 import re
@@ -73,7 +73,7 @@ def main_table_1() -> tuple[pd.DataFrame, Path]:
                 "Analytical object": "AUCell-matched astrocyte pilot",
                 "Cells": "2,322",
                 "Comparison": "Lesion vs internal-control",
-                "Use in manuscript": "pySCENIC discovery; CellOracle in silico KO; sample-level robustness",
+                "Use in manuscript": "pySCENIC discovery; CellOracle in silico perturbation; sample-level robustness",
             },
             {
                 "Dataset": "GSE140393",
@@ -154,7 +154,7 @@ def st01() -> tuple[pd.DataFrame, Path]:
                 "Object": "AUCell-matched astrocyte pilot",
                 "Comparison": "Lesion vs internal-control",
                 "Current manuscript status": "Included discovery cohort",
-                "Reason / boundary statement": "Used for pySCENIC discovery, CellOracle in silico KO, and sample-level robustness.",
+                "Reason / boundary statement": "Used for pySCENIC discovery, CellOracle in silico perturbation, and sample-level robustness.",
             },
             {
                 "Dataset": "GSE140393",
@@ -664,7 +664,7 @@ def write_audit(output_paths: list[Path]) -> Path:
         ("validated drug", "absent", "required absent"),
         ("clinical candidate", "absent", "required absent"),
         ("treatment lead", "absent", "required absent"),
-        ("experimental KO", "absent", "required absent"),
+        ("experimental perturbation", "absent", "required absent"),
         ("in silico perturbation", "present", "required"),
         ("supportive evidence", "present", "required"),
         ("cross-syndrome supportive analysis", "present", "required"),

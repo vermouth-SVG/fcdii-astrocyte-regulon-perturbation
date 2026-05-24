@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import math
 import re
@@ -18,7 +18,7 @@ from matplotlib.lines import Line2D
 ROOT = Path(__file__).resolve().parents[2]
 OUT_DIR = ROOT / "manuscript_output" / "figures_main"
 STEM = "Fig5_main_v31_program_model"
-CAPTION_TITLE = "Fig. 5. Program-level interpretation and working model of the NFE2L2-THRB dual-axis architecture"
+CAPTION_TITLE = "Fig. 5. Program-level interpretation and working model of the NFE2L2–THRB dual-axis architecture"
 
 LESION_COLOR = "#9A1F2D"
 CONTROL_COLOR = "#0B6670"

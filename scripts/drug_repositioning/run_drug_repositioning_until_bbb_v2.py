@@ -19,7 +19,7 @@ STEPS = [
 
 def main() -> None:
     print("开始执行 drug repositioning v2：只重做药物部分，停在 BBB 手工复核前。")
-    print("不会重跑 pySCENIC / CellOracle / KO / 外部验证 / 功能解释；不会执行 docking。")
+    print("不会重跑 pySCENIC / CellOracle / perturbation / 外部验证 / 功能解释；不会执行 docking。")
     for step in STEPS:
         print("\n>>> 运行 " + " ".join(step))
         subprocess.check_call([sys.executable, str(SCRIPT_DIR / step[0]), *step[1:]])

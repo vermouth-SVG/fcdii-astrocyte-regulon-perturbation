@@ -8,7 +8,7 @@
 
 - pySCENIC
 - CellOracle
-- KO
+- CellOracle perturbation
 - 外部验证
 - 内部稳健性验证
 - GO/KEGG

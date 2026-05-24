@@ -3,23 +3,27 @@
 ## Discovery run
 
 - Docker image: `aertslab/pyscenic:0.12.1`.
-- Command launch environment: Ubuntu-D WSL using Docker Desktop WSL integration.
+- GRN inference: GRNBoost2.
 - Workers: `--num_workers 4` for GRN, ctx, and AUCell.
-- GRN method: GRNBoost2 by pySCENIC 0.12.1 default. The recovered GRN command did not explicitly pass `--method`.
-- Fixed seed: no fixed `--seed` was supplied in the recovered retained discovery GRN or AUCell commands.
+- Input expression matrix: `input/expression_for_pyscenic.csv`, representing 2,322 astrocytes by 36,601 genes. This large derived matrix is not redistributed.
+- AUCell matching: AUCell output was matched back to 2,322 astrocytes with no missing or extra cells in the retained merge record.
+- Final downstream regulons: 105.
+- Fixed seed: no fixed seed was recovered for the retained GRN or AUCell commands.
 
-## Input and output files
+## cisTarget / motif resources retained in the run
 
-- Expression matrix: `input/expression_for_pyscenic.csv`, 2,322 cells x 36,601 genes. This large derived matrix is not redistributed.
-- TF list: `allTFs_hg38.txt`, 1,892 TFs.
-- Ranking database: `hg38_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather`.
-- Motif annotation: `motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl`.
-- GRN output: `output/grn_adj.tsv`. This large adjacency table is not redistributed.
-- Regulon output: `output/regulons.csv`. This small regulon table is included under `results/tables/pyscenic/`.
-- AUCell output: `output/auc_mtx.csv`. The full per-cell AUC matrix is not redistributed; summary and matched-object audit outputs are included.
+Repository documentation should describe the retained resources as:
 
-## Resource source notes
+> cisTarget hg38 gene-based ranking database with 10 kb upstream/downstream of transcription start sites and v10 motif annotation.
 
-- TF list source recovered from project audit: `https://resources.aertslab.org/cistarget/tf_lists/allTFs_hg38.txt`.
-- Ranking database source recovered from project audit: AertsLab cisTarget hg38/refseq_r80/mc_v10_clust gene-based ranking database matching the filename above.
-- The direct motif annotation URL was not recovered from the current project files; the local filename and reuse provenance were recovered.
+Full retained filenames:
+
+- TF list: `db/allTFs_hg38.txt`.
+- Ranking database: `db/hg38_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather`.
+- Motif annotation: `db/motifs-v10nr_clust-nr.hgnc-m0.001-o0.0.tbl`.
+
+These resources are third-party files and are not redistributed in the manuscript-level release package.
+
+## Manuscript consistency note
+
+`Manuscript.docx` has been updated to match the retained v10 resource description. No unresolved pySCENIC resource inconsistency remains in the audited manuscript package.

@@ -906,7 +906,7 @@ def make_prebbb_summary() -> None:
     lines = [
         "药物重定位 v2 pre-BBB 主汇总",
         "=" * 50,
-        "本轮仅重做 drug repurposing 部分，复用 functional_interpretation / robustness 结果；未重跑 pySCENIC、CellOracle、KO、外部验证或功能解释。",
+        "本轮仅重做 drug repurposing 部分，复用 functional_interpretation / robustness 结果；未重跑 pySCENIC、CellOracle、扰动、外部验证或功能解释。",
         "本轮未执行 docking，也未生成 docking shortlist。",
         "",
         "主线约束:",
@@ -933,7 +933,7 @@ def make_prebbb_summary() -> None:
         "",
         "关键问题回答:",
         "1. 是否完成药物部分全重跑: 是，仅 drug repurposing。",
-        "2. 是否严格没有重跑 pySCENIC / CellOracle / KO / 外部验证: 是。",
+        "2. 是否严格没有重跑 pySCENIC / CellOracle / perturbation / 外部验证: 是。",
         "3. 是否严格没有做 docking: 是。",
         f"4. 最终保留 pre-BBB 主表候选: {top.shape[0]} 个。",
         f"5. NFE2L2={nfe_n}，THRB={thrb_n}。",
