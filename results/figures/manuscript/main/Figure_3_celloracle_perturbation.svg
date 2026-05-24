@@ -10435,7 +10435,7 @@ L 229.454991 351.346079
     <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="101.393961" y="308.949987" transform="rotate(-0 101.393961 308.949987)">C</text>
    </g>
    <g id="text_64">
-    <text style="font-weight: 700; font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9a1f2d" x="216.45" y="309.887034" transform="rotate(-0 216.45 309.887034)">NFE2L2 KO simulation</text>
+    <text style="font-weight: 700; font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #9a1f2d" x="216.45" y="309.887034" transform="rotate(-0 216.45 309.887034)">NFE2L2 in silico perturbation simulation</text>
    </g>
   </g>
   <g id="axes_4">
@@ -19984,7 +19984,7 @@ L 661.898747 351.354603
     <text style="font-weight: 700; font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start" x="533.843961" y="308.949987" transform="rotate(-0 533.843961 308.949987)">D</text>
    </g>
    <g id="text_67">
-    <text style="font-weight: 700; font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b6670" x="648.9" y="309.887034" transform="rotate(-0 648.9 309.887034)">THRB KO simulation</text>
+    <text style="font-weight: 700; font-size: 8.8px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #0b6670" x="648.9" y="309.887034" transform="rotate(-0 648.9 309.887034)">THRB in silico perturbation simulation</text>
    </g>
   </g>
  </g>
