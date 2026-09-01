@@ -1,0 +1,13 @@
+CellOracle permutation test — summary
+==============================================================
+
+Paired observed-vs-randomized test: per-cell flip of (observation, randomized) labels, mean of |delta| - |delta_random|.
+Group-direction test: permutation of group labels, magnitude of group mean-vector difference.
+
+  tf      n      obs      rand   obs>rand   pairedDiff   p_effect     z_effect   groupDiff   p_dir     z_dir   cohenD
+  NFE2L2    2322   0.699   0.178     0.953      0.521      <1e-4     40.91       0.267   <1e-4   16.83    1.61
+  THRB      2322   0.689   0.203     0.957      0.487      <1e-4     40.24       0.285   <1e-4   17.72    1.50
+  BHLHE40   2322   0.567   0.220     0.874      0.347      <1e-4     36.01       0.220   <1e-4   18.86    1.13
+  SOX2      2322   0.522   0.226     0.884      0.296      <1e-4     34.81       0.257   <1e-4   23.19    1.04
+
+Fixed seed 20240817, N_perm=10000 per TF. 'obs>rand' = fraction of cells where observed shift exceeds its paired randomized control. p reported as '<1e-4' when no permutation reached the observed statistic (lower resolvable bound = 1/N_perm).

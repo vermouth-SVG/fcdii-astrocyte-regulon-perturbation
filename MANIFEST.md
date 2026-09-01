@@ -2,17 +2,18 @@
 
 Audited manuscript version: `Manuscript.docx`
 
-Manuscript title: `Regulon and in silico perturbation analysis identifies asymmetric NFE2L2–THRB programs in FCD II astrocytes`
+Manuscript title: `Single-cell regulatory analysis identifies astrocyte stress response and homeostatic support in focal cortical dysplasia type II`
 
-Audit date: 2026-05-24
+Audit date: 2026-09-01
 
 ## 1. Manuscript files
 
 | File | Purpose |
 |---|---|
-| `Manuscript.docx` | Current manuscript version for supervisor review / submission preparation. |
-| `Supplementary_Figures_S1_S7_BMC_Genomics_最新版.docx` | Current Supplementary Figures S1-S7 package. |
+| `Manuscript.docx` | Current BMC Genomics submission manuscript. |
+| `Supplementary_Figures_S1_S7_preview_not_for_submission.docx` | Current Supplementary Figures S1-S7 review package. |
 | `Supplementary_Tables_ST01_ST09_submission_ready.xlsx` | Current Supplementary Tables ST01-ST09 workbook. |
+| `RELEASE_NOTES_v0.3.0-submission.md` | Submission-version release notes and interpretation boundaries. |
 
 ## 2. Scripts
 
@@ -35,6 +36,7 @@ Audit date: 2026-05-24
 | ST01-ST09 | `results/tables/manuscript/supplementary/Supplementary_Table_S1.csv` through `Supplementary_Table_S9.csv` | Supplementary table CSV exports matching the manuscript. |
 | pySCENIC/AUCell summaries | `results/tables/pyscenic_overview/` | Regulon activity summaries and retained regulon names. |
 | CellOracle perturbation summaries | `results/tables/celloracle_ko/` | Per-TF perturbation metrics and Approx. RI summaries. Legacy folder name retained. |
+| CellOracle formal permutation controls | `results/tables/celloracle_ko/permutation_test/` | Fixed-seed, 10,000-permutation test results and summary. |
 | Robustness outputs | `results/tables/robustness/` | LOSO, pseudobulk, and sensitivity summaries. |
 | Supportive external outputs | `results/tables/supportive_*` | GSE140393 and GSE190452 support summaries. |
 | Functional enrichment outputs | `results/tables/functional_interpretation/` | GO/KEGG and convergence summaries. |
@@ -50,6 +52,7 @@ Audit date: 2026-05-24
 | Figure 4 | `results/figures/manuscript/main/Figure_4_robustness_support.*` | Robustness and supportive evidence. |
 | Figure 5 | `results/figures/manuscript/main/Figure_5_program_model.*` | Functional interpretation and program-level working model. |
 | Fig. S1-S7 | `results/figures/manuscript/supplementary/Supplementary_Figure_S1.*` through `Supplementary_Figure_S7.*` | Supplementary figure outputs matching the manuscript. |
+| CellOracle permutation null distributions | `results/figures/celloracle_ko/permutation_test/` | Formal observed-versus-randomized and group-directionality control distributions. |
 
 ## 5. Audit / provenance
 

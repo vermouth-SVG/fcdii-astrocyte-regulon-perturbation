@@ -30,7 +30,9 @@ Full retained resource filenames are listed in `configs/pyscenic_runtime_and_res
 - Verified container package versions include `celloracle==0.18.0`, `scanpy==1.10.0`, `anndata==0.10.6`, `numpy==1.26.4`, `pandas==1.5.3`, `scipy==1.12.0`, `h5py==3.10.0`, `scikit-learn==1.3.0`, `matplotlib==3.6.3`, `seaborn==0.13.2`, and `statsmodels==0.14.0`.
 - CellOracle outputs are in silico perturbation simulations and should be interpreted as candidate-prioritization evidence only.
 
-Approx. Recovery Index / Approx. RI is a study-defined cosine-similarity-based alignment metric. It is not a CellOracle official standard metric and is not a clinical recovery metric.
+Approx. Recovery Index / Approx. RI is a study-defined, non-negative composite score calculated as `mean_net_shift_overall * (1 + group_selectivity) * (1 + coherence_target_group) * direction_agreement_factor`, where the direction-agreement factor is 1.0 for concordant group direction and 0.75 otherwise. It is not a cosine similarity, is not normalized to 0-1, and has the theoretical range `[0, +inf)`. It is intended only for within-pipeline candidate comparison and is not a CellOracle official standard metric or a clinical recovery metric.
+
+Formal permutation controls use 10,000 permutations with fixed seed `20240817`. They assess observed-versus-randomized state-shift magnitude and group-specific vector directionality; they do not replace independent biological replication.
 
 ## Python package notes
 

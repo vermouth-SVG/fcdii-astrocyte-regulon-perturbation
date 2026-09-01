@@ -1,5 +1,14 @@
 # GitHub upload report
 
+## Current submission-release status (2026-09-01)
+
+The current BMC Genomics submission package has been synchronized to the local
+release tree and prepared for the annotated tag `v0.3.0-submission`. The remote
+repository could not be reached from this host during this revision, so the new
+commit/tag has not yet been pushed and repository visibility has not yet been
+verified. The successful upload recorded below refers to the earlier repository
+state, not to the 2026-09-01 submission release.
+
 ## Target repository
 
 https://github.com/vermouth-SVG/fcdii-astrocyte-regulon-perturbation
@@ -23,7 +32,7 @@ Windows Git 2.54.0.windows.1
 
 Credential-scan terms were detected only in `.gitignore`, `public_release_safety_report.md`, or safety-scan report text and were not counted as credential leaks.
 
-## Upload result
+## Earlier upload result
 
 success
 

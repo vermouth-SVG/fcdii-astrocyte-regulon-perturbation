@@ -1,459 +1,488 @@
-# File manifest
+# Release file manifest
 
-Generated on 2026-05-15. Updated after GitHub upload task.
+Generated: 2026-09-01
 
-| Relative path | Category | Size MB | Safety | Description |
-|---|---:|---:|---|---|
-| `.gitignore` | config | 0.000 | passed | Git ignore rules |
-| `CITATION.cff` | documentation | 0.000 | passed | Citation metadata |
-| `code_availability_statement.md` | documentation | 0.001 | passed | BMC-style code availability statement draft |
-| `configs/celloracle/prep_config_round1.json` | config | 0.001 | passed | CellOracle preparation configuration |
-| `configs/celloracle/round1_ko_run_config.json` | config | 0.000 | passed | CellOracle perturbation run configuration |
-| `configs/celloracle_environment_notes.md` | config | 0.001 | passed | CellOracle runtime interpretation notes |
-| `configs/drug_repositioning/02_best_config.yaml` | config | 0.001 | passed | Exploratory drug-signature scoring configuration |
-| `configs/pyscenic/allTFs_hg38.txt` | config | 0.013 | passed | AertsLab hg38 TF list used by pySCENIC |
-| `configs/pyscenic_runtime_and_resources.md` | config | 0.002 | passed | pySCENIC command/resource summary |
-| `data_availability_statement.md` | documentation | 0.001 | passed | BMC-style data availability statement draft |
-| `docs/README_project_root_sanitized.md` | audit | 0.003 | passed | Original project-root README, path-sanitized |
-| `docs/release_preparation_terminal_summary.txt` | documentation | 0.001 | passed | Release package file |
-| `environment_notes.md` | documentation | 0.003 | passed | Runtime and package notes |
-| `excluded_files_manifest.csv` | audit | 0.040 | passed | Manifest of important excluded files and reasons |
-| `file_manifest.csv` | audit | 0.123 | passed | Machine-readable release file manifest |
-| `file_manifest.md` | audit | 0.061 | passed | Markdown release file manifest |
-| `final_public_release_review.md` | audit | 0.006 | passed | Final manual-assisted public release review |
-| `final_public_release_review_v2.md` | audit | 0.002 | passed | Final public release review v2 |
-| `github_upload_report.md` | audit | 0.002 | passed | GitHub upload report |
-| `init_git_and_push_template.ps1` | script | 0.000 | passed | Git initialization and push template for PowerShell |
-| `init_git_and_push_template.sh` | script | 0.000 | passed | Git initialization and push template for bash |
-| `LICENSE` | documentation | 0.001 | passed | MIT license for code |
-| `metadata/gse268807/dataset_registry.csv` | metadata | 0.005 | passed | Dataset registry |
-| `metadata/gse268807/GSE268807_input_manifest.csv` | metadata | 0.015 | passed | GSE268807 input manifest |
-| `metadata/gse268807/README_metadata.txt` | metadata | 0.001 | passed | GSE268807 metadata notes |
-| `metadata/gse268807/sample_metadata.csv` | metadata | 0.014 | passed | GSE268807 sample metadata |
-| `metadata/gse268807/sample_metadata_columns_cn.txt` | metadata | 0.002 | passed | Metadata column notes |
-| `metadata/source_data_accessions.md` | metadata | 0.001 | passed | Public data accession notes |
-| `public_release_safety_report.md` | audit | 0.001 | passed | Public release safety scan report |
-| `README.md` | documentation | 0.007 | passed | Repository README |
-| `reproducibility_checklist.md` | documentation | 0.001 | passed | Public release reproducibility checklist |
-| `requirements.txt` | config | 0.000 | passed | Unpinned package requirements inferred from scripts |
-| `results/audit/DIRECTORY_CLEANUP_LOG_20260422.md` | audit | 0.003 | passed | Directory cleanup/provenance log |
-| `results/audit/MANUSCRIPT_SUBMISSION_AUDIT_20260426.md` | audit | 0.002 | passed | Submission terminology/provenance audit |
-| `results/audit/merge_report.txt` | audit | 0.000 | passed | AUCell to h5ad merge report |
-| `results/audit/methods_audit_pyscenic_aucell_reproducibility.csv` | audit | 0.014 | passed | Machine-readable pySCENIC/AUCell audit |
-| `results/audit/methods_audit_pyscenic_aucell_reproducibility.md` | audit | 0.023 | passed | pySCENIC/AUCell reproducibility audit |
-| `results/audit/redacted_logs/01_grn_log_redacted.txt` | audit | 0.001 | passed | Path-redacted GRN log |
-| `results/audit/redacted_logs/02_ctx_log_redacted.txt` | audit | 1.624 | passed | Path-redacted ctx log |
-| `results/audit/redacted_logs/03_aucell_log_redacted.txt` | audit | 0.000 | passed | Path-redacted AUCell log |
-| `results/audit/redacted_logs/round2_auc_projection_report_redacted.txt` | audit | 0.001 | passed | Path-redacted round2 AUCell projection report |
-| `results/audit/redacted_logs/round2_pyscenic_commands_redacted.txt` | audit | 0.001 | passed | Path-redacted round2 pySCENIC commands |
-| `results/audit/RUN_ORDER_CURRENT_MAINLINE.md` | audit | 0.002 | passed | Current mainline run order notes |
-| `results/audit/structure_check/group_candidate_columns.csv` | result_table | 0.002 | passed | Object structure audit output |
-| `results/audit/structure_check/layer_keys.csv` | result_table | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_check/obs_columns_overview.csv` | result_table | 0.002 | passed | Object structure audit output |
-| `results/audit/structure_check/obsm_keys.csv` | result_table | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_check/regulon_overview_stats.csv` | result_table | 0.005 | passed | Object structure audit output |
-| `results/audit/structure_check/selected_group_column.txt` | audit | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_check/selected_group_counts.csv` | result_table | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_check/structure_summary.json` | result_table | 0.001 | passed | Object structure audit output |
-| `results/audit/structure_check/top_regulons_overall.csv` | result_table | 0.001 | passed | Object structure audit output |
-| `results/audit/structure_check/umap_key.txt` | audit | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_check/uns_keys.csv` | result_table | 0.000 | passed | Object structure audit output |
-| `results/audit/structure_summary.json` | audit | 0.001 | passed | Final object structure summary |
-| `results/audit/SUPPLEMENTARY_PACKAGE_INDEX_SUBMISSION.md` | audit | 0.006 | passed | Supplementary package index |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow.png` | figure | 2.745 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow_with_clusters.png` | figure | 2.656 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_quiver.png` | figure | 1.240 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow.png` | figure | 2.622 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow_with_clusters.png` | figure | 2.616 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_quiver.png` | figure | 1.226 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow.png` | figure | 2.838 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow_with_clusters.png` | figure | 2.613 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_quiver.png` | figure | 1.230 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/summary_plots/round1_group_shift_comparison.png` | figure | 0.053 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/summary_plots/round1_mean_shift_length_ranking.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_bubble.png` | figure | 0.076 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_ranking.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/THRB/THRB_grid_flow.png` | figure | 2.777 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/THRB/THRB_grid_flow_with_clusters.png` | figure | 2.641 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/THRB/THRB_quiver.png` | figure | 1.257 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_boxplot.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure |
-| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_embedding.png` | figure | 0.314 | passed | CellOracle in silico perturbation figure |
-| `results/figures/differential_regulon/differential_regulons_volcano.png` | figure | 0.112 | passed | Differential regulon analysis output |
-| `results/figures/differential_regulon/group_mean_heatmap_raw.png` | figure | 0.342 | passed | Differential regulon analysis output |
-| `results/figures/differential_regulon/group_mean_heatmap_row_zscore.png` | figure | 0.353 | passed | Differential regulon analysis output |
-| `results/figures/differential_regulon/top_regulons_group_boxplots.png` | figure | 0.315 | passed | Differential regulon analysis output |
-| `results/figures/differential_regulon/top20_differential_regulons_barplot.png` | figure | 0.113 | passed | Differential regulon analysis output |
-| `results/figures/functional_interpretation/03_BHLHE40_GO_KEGG_dotplot.png` | figure | 0.113 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/functional_interpretation/03_NFE2L2_GO_KEGG_dotplot.png` | figure | 0.146 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/functional_interpretation/03_SOX2_GO_KEGG_dotplot.png` | figure | 0.123 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/functional_interpretation/03_THRB_GO_KEGG_dotplot.png` | figure | 0.123 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/functional_interpretation/04_integrated_evidence_bubble.png` | figure | 0.053 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/functional_interpretation/04_tf_program_theme_heatmap.png` | figure | 0.074 | passed | GO/KEGG functional interpretation figure |
-| `results/figures/manuscript/main/Figure_1_study_design.pdf` | figure | 0.110 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_1_study_design.png` | figure | 1.265 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_1_study_design.svg` | figure | 1.686 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_1_study_design.tiff` | figure | 1.211 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_2_regulon_landscape.pdf` | figure | 0.058 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_2_regulon_landscape.png` | figure | 1.019 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_2_regulon_landscape.svg` | figure | 0.092 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_2_regulon_landscape.tiff` | figure | 4.113 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_2_regulon_landscape_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.pdf` | figure | 0.216 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.png` | figure | 1.618 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.svg` | figure | 0.981 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.tiff` | figure | 2.241 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_3_celloracle_perturbation_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_4_robustness_support.pdf` | figure | 0.032 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_4_robustness_support.png` | figure | 0.704 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_4_robustness_support.svg` | figure | 0.057 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_4_robustness_support.tiff` | figure | 2.496 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_4_robustness_support_notes.txt` | documentation | 0.006 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_5_program_model.pdf` | figure | 0.137 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_5_program_model.png` | figure | 3.121 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_5_program_model.svg` | figure | 0.199 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_5_program_model.tiff` | figure | 5.242 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/main/Figure_5_program_model_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.pdf` | figure | 0.030 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.png` | figure | 0.595 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.tiff` | figure | 2.779 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_notes.txt` | documentation | 0.002 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.pdf` | figure | 0.046 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.png` | figure | 0.696 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.tiff` | figure | 4.815 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.pdf` | figure | 0.327 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.png` | figure | 2.012 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.tiff` | figure | 6.749 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.pdf` | figure | 0.035 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.png` | figure | 0.660 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.tiff` | figure | 6.370 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.pdf` | figure | 0.035 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.png` | figure | 0.593 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.tiff` | figure | 6.349 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_notes.txt` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.pdf` | figure | 0.039 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.png` | figure | 1.059 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.tiff` | figure | 3.788 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.pdf` | figure | 0.059 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.png` | figure | 0.820 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.tiff` | figure | 3.858 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_notes.txt` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note |
-| `results/figures/pyscenic_overview/top_regulons_mean_auc.png` | figure | 0.073 | passed | pySCENIC overview output |
-| `results/figures/pyscenic_overview/top_regulons_std_auc.png` | figure | 0.082 | passed | pySCENIC overview output |
-| `results/figures/robustness/02_leave_one_out_consistency_heatmap.png` | figure | 0.045 | passed | Robustness analysis figure |
-| `results/figures/robustness/02_leave_one_out_expr_forest.png` | figure | 0.069 | passed | Robustness analysis figure |
-| `results/figures/robustness/02_leave_one_out_regulon_forest.png` | figure | 0.069 | passed | Robustness analysis figure |
-| `results/figures/robustness/03_pseudobulk_candidate_tf_plot.png` | figure | 0.069 | passed | Robustness analysis figure |
-| `results/figures/robustness/03_pseudobulk_heatmap.png` | figure | 0.038 | passed | Robustness analysis figure |
-| `results/figures/robustness/03_pseudobulk_regulon_plot.png` | figure | 0.064 | passed | Robustness analysis figure |
-| `results/figures/robustness/04_shortlist_sensitivity_heatmap.png` | figure | 0.057 | passed | Robustness analysis figure |
-| `results/figures/supportive_gse140393/expression_barplots_by_sample.png` | figure | 0.064 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse140393/expression_boxplots.png` | figure | 0.128 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/regulon_validation_plots/round2_expression_regulon_combined_ranking.png` | figure | 0.051 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/regulon_validation_plots/round2_priority_regulon_focus.png` | figure | 0.146 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_cluster_heatmap.png` | figure | 0.069 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_group_boxplot.png` | figure | 0.104 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_group_mean_barplot.png` | figure | 0.050 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/summary_plots/external_round2_celltype_heatmap.png` | figure | 0.063 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/summary_plots/external_round2_group_boxplot.png` | figure | 0.086 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/summary_plots/external_round2_group_mean_barplot.png` | figure | 0.051 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/summary_plots/external_round2_priority_tfs_focus.png` | figure | 0.130 | passed | Supportive/contextual external dataset figure |
-| `results/figures/supportive_gse190452/summary_plots/external_round2_support_ranking_barplot.png` | figure | 0.035 | passed | Supportive/contextual external dataset figure |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/next_step_recommendations.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_master_table.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_run_config.json` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_summary_by_group.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_summary_cn.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_summary_outputs.json` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_summary_overall.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_internal_control.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_lesion.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_recovery_index_by_group.csv` | result_table | 0.002 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_recovery_index_definition.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/round1_recovery_index_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/THRB/THRB_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary |
-| `results/tables/differential_regulon/comparison_summary.json` | result_table | 0.001 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/differential_regulon_summary.json` | result_table | 0.000 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/differential_regulon_summary_cn.txt` | audit | 0.001 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/group_candidate_columns.csv` | result_table | 0.002 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/group_mean_auc.csv` | result_table | 0.003 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/group_mean_auc_row_zscore.csv` | result_table | 0.002 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/obs_columns_overview.csv` | result_table | 0.002 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/regulon_group_statistics.csv` | result_table | 0.023 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/selected_group_column.txt` | audit | 0.000 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/selected_group_counts.csv` | result_table | 0.000 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/top_regulons_for_boxplot.csv` | result_table | 0.000 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/top10_up_in_internal_control.csv` | result_table | 0.003 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/top10_up_in_lesion.csv` | result_table | 0.003 | passed | Differential regulon analysis output |
-| `results/tables/differential_regulon/top20_differential_regulons.csv` | result_table | 0.003 | passed | Differential regulon analysis output |
-| `results/tables/exploratory_drug_signature/00_v21_run_index_cn.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/01_parameter_search_summary.csv` | result_table | 0.034 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/02_best_config.yaml` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/03_integrated_rescored_v21.csv` | result_table | 0.165 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/04_primary_mechanism_direction_leads.csv` | result_table | 0.006 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/05_supportive_manual_review_leads.csv` | result_table | 0.011 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/06_retained_full_list_v21.csv` | result_table | 0.140 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/07_paper_ready_table_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/08_v21_summary_cn.txt` | result_table | 0.008 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/09_manual_bbb_template_v21.tsv` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/10_compound_tag_template_v21.csv` | result_table | 0.018 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/11_swissadme_parsed_and_matched_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/12_bbb_annotation_manual_review_v21.csv` | result_table | 0.004 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/13_integrated_after_bbb_v21.csv` | result_table | 0.196 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/14_primary_leads_after_bbb_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/15_supportive_after_bbb_v21.csv` | result_table | 0.018 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/16_paper_ready_table_after_bbb_v21.csv` | result_table | 0.006 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/17_after_bbb_summary_cn.txt` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/18_after_bbb_transition_note_cn.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/BHLHE40_supplement_program.gmt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/BHLHE40_supplement_program.txt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_core_program.gmt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_core_program.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_regulon_targets.gmt` | result_table | 0.003 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_regulon_targets.txt` | result_table | 0.003 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_core_program.gmt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_core_program.txt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_regulon_targets.gmt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_regulon_targets.txt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output |
-| `results/tables/functional_interpretation/00_naming_correction_note_cn.txt` | result_table | 0.002 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/01_resource_check_cn.txt` | result_table | 0.002 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/02_discovery_light_deg_table.csv` | result_table | 4.698 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/02_tf_gene_sets_detail.json` | result_table | 0.301 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/02_tf_gene_sets_summary.csv` | result_table | 0.001 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/02_tf_gene_sets_summary_cn.txt` | result_table | 0.001 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_bhlhe40_top_terms.csv` | result_table | 0.008 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_functional_enrichment_summary_cn.txt` | result_table | 0.003 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_gene_set_library_status.csv` | result_table | 0.000 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_go_enrichment_all.csv` | result_table | 1.429 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_kegg_enrichment_all.csv` | result_table | 0.151 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_nfe2l2_top_terms.csv` | result_table | 0.012 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_sox2_top_terms.csv` | result_table | 0.006 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/03_thrb_top_terms.csv` | result_table | 0.007 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/04_program_convergence_summary_cn.txt` | result_table | 0.006 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/04_program_convergence_table.csv` | result_table | 0.003 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/04_program_overlap_statistics.csv` | result_table | 0.000 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/04_tf_integrated_evidence_table.csv` | result_table | 0.004 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/05_functional_interpretation_integrated_table.csv` | result_table | 0.003 | passed | GO/KEGG functional interpretation output |
-| `results/tables/functional_interpretation/05_functional_interpretation_master_summary_cn.txt` | result_table | 0.016 | passed | GO/KEGG functional interpretation output |
-| `results/tables/manuscript/documentation/Table_Index.csv` | result_table | 0.003 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/documentation/Table_Revision_Log.md` | documentation | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/documentation/Table_Terminology_Audit.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/main/Main_Table_1.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/main/Main_Table_2.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/main/Main_Table_Legends.md` | documentation | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/README_tables.md` | documentation | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_Legends.md` | documentation | 0.002 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S1.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S2.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S3.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S4.csv` | result_table | 0.005 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S5.csv` | result_table | 0.000 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S6.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S7.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S8.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation |
-| `results/tables/manuscript/supplementary/Supplementary_Table_S9.csv` | result_table | 0.004 | passed | Final manuscript table or table documentation |
-| `results/tables/pyscenic/regulon_auc_mean.csv` | result_table | 0.003 | passed | Mean regulon AUC summary |
-| `results/tables/pyscenic/regulon_names.txt` | result_table | 0.001 | passed | Final regulon names |
-| `results/tables/pyscenic/regulons.csv` | result_table | 0.984 | passed | pySCENIC regulon refinement output |
-| `results/tables/pyscenic_overview/regulon_overview_stats.csv` | result_table | 0.006 | passed | pySCENIC overview output |
-| `results/tables/pyscenic_overview/top_regulons_by_variability.csv` | result_table | 0.001 | passed | pySCENIC overview output |
-| `results/tables/pyscenic_overview/top_regulons_overall.csv` | result_table | 0.001 | passed | pySCENIC overview output |
-| `results/tables/pyscenic_overview/umap_not_found.txt` | audit | 0.000 | passed | pySCENIC overview output |
-| `results/tables/robustness/00_naming_correction_note_cn.txt` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_detected_fields.json` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_donor_group_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_group_sample_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_input_object_summary.txt` | result_table | 0.003 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_obs_columns.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/01_sample_group_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_full_data_baseline_results.csv` | result_table | 0.003 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_out_expr_results.csv` | result_table | 0.008 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_out_master_results.csv` | result_table | 0.013 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_out_regulon_results.csv` | result_table | 0.007 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_out_summary_cn.txt` | result_table | 0.004 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_out_tf_summary.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_sample_out_master_results_revised.csv` | result_table | 0.012 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/02_leave_one_sample_out_tf_summary_revised.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_candidate_target_expression_matrix.csv` | result_table | 0.080 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_candidate_tf_table.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_regulon_by_donor.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_regulon_table.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_sample_metadata.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/03_pseudobulk_summary_cn.txt` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/04_shortlist_membership_frequency.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/04_shortlist_priority_stability.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/04_shortlist_sensitivity_grid.csv` | result_table | 0.010 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/04_shortlist_sensitivity_long.csv` | result_table | 0.171 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/04_shortlist_summary_cn.txt` | result_table | 0.004 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/05_robustness_validation_integrated_table.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/05_robustness_validation_master_summary_cn.txt` | result_table | 0.010 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/robustness/05_robustness_validation_master_summary_cn_revised.txt` | result_table | 0.011 | passed | LOSO/pseudobulk/threshold robustness output |
-| `results/tables/supportive_gse140393/donor_level_summary.csv` | result_table | 0.004 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse140393/expression_summary.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse140393/external_support_ranking.csv` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse140393/external_support_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/candidate_assessment_report.json` | result_table | 0.004 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/candidate_assessment_report.txt` | result_table | 0.004 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_master_table.csv` | result_table | 0.003 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_regulon_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_support_ranking.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_tf_expression_celltype_stats.csv` | result_table | 0.021 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/external_round2_tf_expression_group_stats.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/logs/auc_projection_report.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/logs/pyscenic_commands.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf.csv` | result_table | 0.000 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf.gmt` | result_table | 0.005 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf_selected_rows.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/readiness_report.json` | result_table | 0.004 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/pyscenic_recalc/readiness_report.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/round2_expression_and_regulon_master_table.csv` | result_table | 0.005 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/round2_regulon_cluster_stats.csv` | result_table | 0.018 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/round2_regulon_group_stats.csv` | result_table | 0.001 | passed | Supportive/contextual external dataset output |
-| `results/tables/supportive_gse190452/round2_regulon_support_ranking.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output |
-| `results/tables/tf_prioritization/celloracle_candidate_tf_metrics.csv` | result_table | 0.006 | passed | TF prioritization output |
-| `results/tables/tf_prioritization/celloracle_tf_shortlist.csv` | result_table | 0.004 | passed | TF prioritization output |
-| `results/tables/tf_prioritization/celloracle_tf_shortlist_high_confidence.csv` | result_table | 0.004 | passed | TF prioritization output |
-| `results/tables/tf_prioritization/celloracle_tf_shortlist_summary.json` | result_table | 0.001 | passed | TF prioritization output |
-| `results/tables/tf_prioritization/celloracle_tf_shortlist_summary_cn.txt` | audit | 0.001 | passed | TF prioritization output |
-| `scripts/assess_external_validation_candidates.py` | script | 0.013 | passed | Analysis or figure/table generation script |
-| `scripts/build_discovery_regulons_4tf_gmt.py` | script | 0.007 | passed | Analysis or figure/table generation script |
-| `scripts/build_external_validation_h5ad.py` | script | 0.019 | passed | Analysis or figure/table generation script |
-| `scripts/build_external_validation_round2_h5ad.py` | script | 0.013 | passed | Analysis or figure/table generation script |
-| `scripts/build_round2_minimal_expression_for_4tf_auc.py` | script | 0.008 | passed | Analysis or figure/table generation script |
-| `scripts/check_celloracle_input_compat.py` | script | 0.009 | passed | Analysis or figure/table generation script |
-| `scripts/check_round2_pyscenic_readiness.py` | script | 0.007 | passed | Analysis or figure/table generation script |
-| `scripts/compare_regulons_by_group.py` | script | 0.011 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/01_check_drugrep_inputs_v2.py` | script | 0.003 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/02_run_dsigdb_enrichr_v2.py` | script | 0.000 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/03_aggregate_compounds_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/04_refine_parameters_and_rerun_v2.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/05_prepare_swissadme_manual_review_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/06_import_swissadme_csv_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/06_make_prebbb_summary_v2.py` | script | 0.000 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/config/drugrep_v21_compound_tags.csv` | documentation | 0.018 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/config/drugrep_v21_penalties.yaml` | documentation | 0.000 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/config/drugrep_v21_scoring.yaml` | documentation | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/drugrep_common_v2.py` | script | 0.046 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/README_drugrep_v2.md` | documentation | 0.002 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/rescore_v21.py` | script | 0.041 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/run_after_bbb_v21.py` | script | 0.026 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/run_continue_after_manual_bbb_v2.py` | script | 0.011 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/run_drug_repositioning_until_bbb_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/drug_repositioning/run_prebbb_v21.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/export_round2_for_pyscenic.py` | script | 0.006 | passed | Analysis or figure/table generation script |
-| `scripts/functional/00_revise_robustness_terms.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/functional/01_check_resources.py` | script | 0.003 | passed | Analysis or figure/table generation script |
-| `scripts/functional/02_build_tf_gene_sets.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/functional/03_run_go_kegg.py` | script | 0.005 | passed | Analysis or figure/table generation script |
-| `scripts/functional/04_program_convergence.py` | script | 0.008 | passed | Analysis or figure/table generation script |
-| `scripts/functional/05_make_functional_master_summary.py` | script | 0.005 | passed | Analysis or figure/table generation script |
-| `scripts/functional/functional_common.py` | script | 0.011 | passed | Analysis or figure/table generation script |
-| `scripts/functional/README_functional_interpretation.md` | documentation | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/functional/run_all_functional_interpretation.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/00_check_environment.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/01_validate_metadata.py` | script | 0.009 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/02_qc_and_downsample_scanpy.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/08_download_geo_gse268807.py` | script | 0.006 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/09_mtx_gz_to_h5ad.py` | script | 0.007 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/10_concat_h5ad.py` | script | 0.002 | passed | Analysis or figure/table generation script |
-| `scripts/gse268807_pilot/README.md` | documentation | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/inspect_h5ad_structure.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig1_main_v3_study_design.py` | script | 0.019 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig1_main_v4_study_design.py` | script | 0.020 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig2_main_v3_regulon_landscape.py` | script | 0.036 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig2_main_v31_regulon_landscape.py` | script | 0.037 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig2_main_v32_regulon_landscape.py` | script | 0.037 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig3_main_v3_celloracle_perturbation.py` | script | 0.028 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig3_main_v31_celloracle_perturbation.py` | script | 0.028 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig4_main_v3_robustness_support.py` | script | 0.030 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig4_main_v31_robustness_support.py` | script | 0.030 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig5_main_v3_program_model.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig5_main_v31_program_model.py` | script | 0.029 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_fig5_main_v4_program_model.py` | script | 0.033 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS1_discovery_object_qc_revised_v2.py` | script | 0.024 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS2_full_differential_regulon_landscape_revised_v2.py` | script | 0.022 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS3_celloracle_perturbation_metrics_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS3_celloracle_perturbation_metrics_revised_v2_minorfix.py` | script | 0.019 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS4_sample_level_robustness_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS4_sample_level_robustness_revised_v2_minorfix.py` | script | 0.020 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS5_supportive_external_evidence_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS5_supportive_external_evidence_revised_v2_minorfix.py` | script | 0.007 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS6_functional_enrichment_convergence_revised_v2.py` | script | 0.022 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS6_functional_enrichment_convergence_revised_v2_minorfix.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS7_drug_repositioning_exploratory_revised_v2.py` | script | 0.026 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_figS7_drug_repositioning_exploratory_revised_v2_minorfix.py` | script | 0.006 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_main_figures.py` | script | 0.028 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_main_figures_v2.py` | script | 0.039 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_main_figures_v3.py` | script | 0.047 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_supplementary_package.py` | script | 0.054 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_figures/build_supplementary_package_v3.py` | script | 0.060 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_tables/build_main_and_supplementary_tables_v3.py` | script | 0.035 | passed | Analysis or figure/table generation script |
-| `scripts/manuscript_tables/build_main_and_supplementary_tables_v3_minorfix.py` | script | 0.017 | passed | Analysis or figure/table generation script |
-| `scripts/merge_auc_to_h5ad.py` | script | 0.003 | passed | Analysis or figure/table generation script |
-| `scripts/merge_round2_auc_to_h5ad.py` | script | 0.003 | passed | Analysis or figure/table generation script |
-| `scripts/mtx_to_csv.py` | script | 0.004 | passed | Analysis or figure/table generation script |
-| `scripts/plot_pyscenic_overview.py` | script | 0.005 | passed | Analysis or figure/table generation script |
-| `scripts/prepare_celloracle_first_round.py` | script | 0.018 | passed | Analysis or figure/table generation script |
-| `scripts/pyscenic_analysis_common.py` | script | 0.010 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/01_inspect_input_object.py` | script | 0.007 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/02_leave_one_donor_out.py` | script | 0.014 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/03_pseudobulk_validation.py` | script | 0.010 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/04_shortlist_sensitivity.py` | script | 0.009 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/05_make_master_summary.py` | script | 0.008 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/README_robustness_validation.md` | documentation | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/README_robustness_validation_revised.md` | documentation | 0.002 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/robustness_common.py` | script | 0.015 | passed | Analysis or figure/table generation script |
-| `scripts/robustness/run_all_robustness_validation.py` | script | 0.001 | passed | Analysis or figure/table generation script |
-| `scripts/run_celloracle_in_silico_ko_round1.py` | script | 0.018 | passed | Analysis or figure/table generation script |
-| `scripts/run_external_validation_round1.py` | script | 0.031 | passed | Analysis or figure/table generation script |
-| `scripts/run_external_validation_round2.py` | script | 0.026 | passed | Analysis or figure/table generation script |
-| `scripts/run_external_validation_round2_regulon.py` | script | 0.025 | passed | Analysis or figure/table generation script |
-| `scripts/run_external_validation_single_group_support.py` | script | 0.021 | passed | Analysis or figure/table generation script |
-| `scripts/run_round2_aucell_projection_4tf.py` | script | 0.005 | passed | Analysis or figure/table generation script |
-| `scripts/run_round2_pyscenic_pipeline.py` | script | 0.006 | passed | Analysis or figure/table generation script |
-| `scripts/screen_celloracle_candidate_tfs.py` | script | 0.018 | passed | Analysis or figure/table generation script |
-| `scripts/summarize_celloracle_ko_round1.py` | script | 0.023 | passed | Analysis or figure/table generation script |
-| `scripts/summarize_group_compare_results.py` | script | 0.012 | passed | Analysis or figure/table generation script |
+Files recorded: 480
+
+| Relative path | Category | Size (MB) | Safety | Description | SHA-256 |
+|---|---|---:|---|---|---|
+| `.gitignore` | config | 0.000 | passed | Git ignore rules | `54b0ed3399cc3e055caf7a87ddc03a92a8b8042515fb2e2bbea4a92d2973fe9b` |
+| `CITATION.cff` | documentation | 0.000 | passed | Citation metadata | `0ef17b4a8b0af689eb763f276a4535dfe3550c88b7fba3da720be259c9995d86` |
+| `code_availability_statement.md` | documentation | 0.001 | passed | BMC-style code availability statement draft | `0ed874968e92105e1530d607a8b0e727c9d5b12348e6c4a708cd147a73a68e6d` |
+| `configs/celloracle/prep_config_round1.json` | config | 0.001 | passed | CellOracle preparation configuration | `f24664a1ae9b6d0a2e833f95a9a7c192448f946313e7b1decf44e569dad5602e` |
+| `configs/celloracle/round1_ko_run_config.json` | config | 0.000 | passed | CellOracle perturbation run configuration | `748ec71e18521b7b160351452dc5afed323a1dceb797b230aa158c901ba80450` |
+| `configs/celloracle_environment_notes.md` | config | 0.000 | passed | CellOracle runtime interpretation notes | `ba07a487e099a8f439c1438c41bccf797187b72bd8a65de4b7ef0551b87c9aa7` |
+| `configs/celloracle_runtime_and_resources.md` | config | 0.002 | passed | Analysis configuration or runtime documentation | `8f27282a8700efecc9d8eeabe6401eee57430f1df84602749701c1f6ac97bb49` |
+| `configs/drug_repositioning/02_best_config.yaml` | config | 0.001 | passed | Exploratory drug-signature scoring configuration | `0e5ebda5b3973f31fca9f1ac6cae9703e8df8bfc7f3046dc574fb5f862914255` |
+| `configs/pyscenic/allTFs_hg38.txt` | config | 0.013 | passed | AertsLab hg38 TF list used by pySCENIC | `3bf70a64aefa3878ad560479bb5891218e72e3459456e6a67d3cc57f1cecbbf3` |
+| `configs/pyscenic_runtime_and_resources.md` | config | 0.001 | passed | pySCENIC command/resource summary | `53a0b0a164927cfc181f3e95a98f33a59ea44e34a10ff3207777d81d54a7df14` |
+| `data_availability_statement.md` | documentation | 0.001 | passed | BMC-style data availability statement draft | `4c406ebd8f6a92a38c24cf600f7f7893fe977ab710754c46134b1a58555071f6` |
+| `docs/README_project_root_sanitized.md` | audit | 0.001 | passed | Original project-root README, path-sanitized | `f12a453d5feea2f4a674a7ca59b512b2f2b3e84e3e05c34aa668abd914f8cd54` |
+| `docs/release_preparation_terminal_summary.txt` | documentation | 0.001 | passed | Release package file | `a80ff4dbd7317ad615de86894f8e596be31c763943569d3dc2a82efb58953c0f` |
+| `environment_notes.md` | documentation | 0.004 | passed | Runtime and package notes | `36d498b48d0a90e2590cb8ca5b3db8109d73c967c9b3ceb5f7956ec130d8b245` |
+| `excluded_files_manifest.csv` | audit | 0.040 | passed | Manifest of important excluded files and reasons | `a570c2d28327f4908089b57e341df88d2b9eff048fbde7c9cf76eb7c0f38855f` |
+| `file_manifest.csv` | audit | generated | passed | Machine-readable release file manifest | `self-referential; omitted` |
+| `file_manifest.md` | audit | generated | passed | Human-readable release file manifest | `self-referential; omitted` |
+| `final_public_release_review.md` | audit | 0.006 | passed | Final manual-assisted public release review | `483e4b6337094d27b5788bdff8a8502cad0a2d7bc814d4d51ea40901f766f46d` |
+| `final_public_release_review_v2.md` | audit | 0.002 | passed | Final public release review v2 | `6c27627ba952d485a8a8cd80d926f5259fb432aaf3255e4bcbbf4526336fecfe` |
+| `final_public_release_review_v3.md` | audit | 0.002 | passed | Submission release safety and readiness audit | `6b9f8c3a6934ed51dae6920081cfa335939b16e60af067ff2d1c075d801e0d63` |
+| `github_upload_report.md` | audit | 0.002 | passed | GitHub upload report | `796a76a6057681d7f08823184f82fb9227d34df6f323bbdb28c6b972268bb472` |
+| `init_git_and_push_template.ps1` | script | 0.000 | passed | Git initialization and push template for PowerShell | `8bfae39c7a92028cca1a7eba012bd55f84bee26289f9d57d924c05f4ba66c1a5` |
+| `init_git_and_push_template.sh` | script | 0.000 | passed | Git initialization and push template for bash | `f1618eb8f99dc615f7b908aef5363d2d2dd503d8fcc19aa41426a43cd39ddc5f` |
+| `LICENSE` | documentation | 0.001 | passed | MIT license for code | `e538f77b06d00b13beb737b8897fbacf353149d34a90526821d36ec25605d75c` |
+| `MANIFEST.md` | documentation | 0.005 | passed | Repository documentation | `8224dbe7fc436a828854eb65404ea611882df7a25d565e21004acf19b35bb72d` |
+| `Manuscript.docx` | documentation | 3.831 | passed | Repository documentation | `3a58ed43fd51c71431fa3b84bf46973105d9b4eddd63b880bb6ab5482d2e412c` |
+| `metadata/gse268807/dataset_registry.csv` | metadata | 0.005 | passed | Dataset registry | `b6f0696aa34b4e545146886e0221a6feba319d3bd2946a95c2b287ffd16a8ea3` |
+| `metadata/gse268807/GSE268807_input_manifest.csv` | metadata | 0.015 | passed | GSE268807 input manifest | `7194f1583b34373483a673fda04b04d581aa4eba8a37784f849e47f82b42f247` |
+| `metadata/gse268807/README_metadata.txt` | metadata | 0.001 | passed | GSE268807 metadata notes | `c655a739d8c9a4b2d8efc3f01b4ceee0fe6b8aa7ebc4e01f07ecfcd3ae1e31ea` |
+| `metadata/gse268807/sample_metadata.csv` | metadata | 0.014 | passed | GSE268807 sample metadata | `9d3760f852acb0117a2996aa3c7ec33a2094b5a80b579963317daccb769becfe` |
+| `metadata/gse268807/sample_metadata_columns_cn.txt` | metadata | 0.002 | passed | Metadata column notes | `62392954dbffd429d6fd83f0c4ebf131bc5ba73e94191bfce2b64c0f42611767` |
+| `metadata/source_data_accessions.md` | metadata | 0.001 | passed | Public data accession notes | `8a01b5e3786bcf4cf9160a6e9c2dede91f1af63770cbb65ec11a44fc7281d488` |
+| `public_release_safety_report.md` | audit | 0.002 | passed | Public release safety scan report | `1050ae50457b8dae1085582afabcf4470728d82b56ac77c4112926e744bd3594` |
+| `README.md` | documentation | 0.005 | passed | Repository README | `ddeed99121b309692e8ebf5f04ef15d6dad88e607585eb45bd88fddb50197279` |
+| `RELEASE_NOTES_v0.3.0-submission.md` | documentation | 0.001 | passed | Submission release notes | `effd36c32e4ccd122025fd47b2cdb664e7177dcd4c79b27ee48b3b1b472db62f` |
+| `reproducibility_checklist.md` | documentation | 0.002 | passed | Public release reproducibility checklist | `658b82ac6862698711c4fdcbc09e0430acc05c60b7fab1cb9d770adc0b6840a3` |
+| `requirements.lock.txt` | documentation | 0.001 | passed | Repository documentation | `8ada81af69dbf57d6814bb7621106c8cce0628d19e8e45930067c0e3e49d391d` |
+| `requirements.txt` | config | 0.000 | passed | Unpinned package requirements inferred from scripts | `88b56283af0406db753bbf0a9c82444c75b1cd14abc7548895133b348b2732a8` |
+| `results/audit/DIRECTORY_CLEANUP_LOG_20260422.md` | audit | 0.003 | passed | Directory cleanup/provenance log | `9734c6a4213bcb819131ce0d10ab702db5eb8318e4fb04841bb1c9ef4981d3c0` |
+| `results/audit/MANUSCRIPT_SUBMISSION_AUDIT_20260426.md` | audit | 0.002 | passed | Submission terminology/provenance audit | `4f7b449e92a794db7617bda6b72f836e659a5e311f7904fd0604624b144989fd` |
+| `results/audit/merge_report.txt` | audit | 0.000 | passed | AUCell to h5ad merge report | `457c2807695f3140f90f0915234a1175a0336dd93704a933fa1e673cb6b9cf30` |
+| `results/audit/methods_audit_pyscenic_aucell_reproducibility.csv` | audit | 0.014 | passed | Machine-readable pySCENIC/AUCell audit | `d6a381f75fdc17b125664da738bed4f14aae3d20ca9006d2a13a710895b69ed1` |
+| `results/audit/methods_audit_pyscenic_aucell_reproducibility.md` | audit | 0.023 | passed | pySCENIC/AUCell reproducibility audit | `aeece2fa29182b148a165ae90d1558cdb5c2bc00301060d3ea732768f6de05da` |
+| `results/audit/redacted_logs/01_grn_log_redacted.txt` | audit | 0.001 | passed | Path-redacted GRN log | `018a24d87b508aa45317ead4ed65d214cd035d01db439f77e29f1ce29c4703be` |
+| `results/audit/redacted_logs/02_ctx_log_redacted.txt` | audit | 1.624 | passed | Path-redacted ctx log | `e437a8d00a93462afbd1d76426a119740f266572649ca23c9fe144d2591e9802` |
+| `results/audit/redacted_logs/03_aucell_log_redacted.txt` | audit | 0.000 | passed | Path-redacted AUCell log | `6f3bfd2b1b6d18bb2501f9652688742ee94c91c3a64f4eb5e85af580c64ef4ee` |
+| `results/audit/redacted_logs/round2_auc_projection_report_redacted.txt` | audit | 0.001 | passed | Path-redacted round2 AUCell projection report | `0d3e157e5b51fe6ce4cd9c91a086b060d822e54bb4b31d649c5750b0b4c54e19` |
+| `results/audit/redacted_logs/round2_pyscenic_commands_redacted.txt` | audit | 0.001 | passed | Path-redacted round2 pySCENIC commands | `29c60ac929884f0ef8f7384429c45481887aab5b5785d7ba47ab1779ef3b0678` |
+| `results/audit/repository_release_audit.md` | audit | 0.009 | passed | Reproducibility or release audit | `11de408473827fb1766a34c1a4d8e9899f3410becef8a7f80df2cf62fcd05117` |
+| `results/audit/RUN_ORDER_CURRENT_MAINLINE.md` | audit | 0.002 | passed | Current mainline run order notes | `d7286bf61f293ecf3ce4395b83f9997051c5a4b3165c21115fc34a10691228cd` |
+| `results/audit/structure_check/group_candidate_columns.csv` | result_table | 0.002 | passed | Object structure audit output | `8a2df8edb3385df5eceffa26348ae8f6a8db76c4ed2939a8cb36bb4f366635ea` |
+| `results/audit/structure_check/layer_keys.csv` | result_table | 0.000 | passed | Object structure audit output | `73e54375bed8613f034ff64c728dd2d77a146eeef0c89295d6c817f540c81a50` |
+| `results/audit/structure_check/obs_columns_overview.csv` | result_table | 0.002 | passed | Object structure audit output | `bf0aec3b3fb7f0c4a92e5b2ff5814599b6be7968e75c90bf1cb4af0d898099ab` |
+| `results/audit/structure_check/obsm_keys.csv` | result_table | 0.000 | passed | Object structure audit output | `aaac138abff37a8774e605484419b13d9b8af0168e9a937d827a6b6ddd10e757` |
+| `results/audit/structure_check/regulon_overview_stats.csv` | result_table | 0.005 | passed | Object structure audit output | `757a55addceaf69438d80beb758a84eda26a3aba749f1c884faf4bed2b21e08a` |
+| `results/audit/structure_check/selected_group_column.txt` | audit | 0.000 | passed | Object structure audit output | `377cc6f6eadce9afbc8e4b95461f5706b32f8fb749363235a43a09ea70d40eab` |
+| `results/audit/structure_check/selected_group_counts.csv` | result_table | 0.000 | passed | Object structure audit output | `6cffada37935dd069f15f0e4915827366a217987f183abf176a18072ac2c225a` |
+| `results/audit/structure_check/structure_summary.json` | result_table | 0.001 | passed | Object structure audit output | `bba35ac7ca02ac18491e456f194012828bb33ecdced2b5829834d10e2f1d8f11` |
+| `results/audit/structure_check/top_regulons_overall.csv` | result_table | 0.001 | passed | Object structure audit output | `9f1cbef00523233baaabd840ca4b69ce0b40bfded7ffaaca52a7e5af39934850` |
+| `results/audit/structure_check/umap_key.txt` | audit | 0.000 | passed | Object structure audit output | `4c735ee4dffa08f9eb254284050ca480467649d887bf446345dfc48cf6318b45` |
+| `results/audit/structure_check/uns_keys.csv` | result_table | 0.000 | passed | Object structure audit output | `763748cb9e3e894a2c8a6f1fb61d835251dde823573f5d86216f1195cc198e00` |
+| `results/audit/structure_summary.json` | audit | 0.001 | passed | Final object structure summary | `bba35ac7ca02ac18491e456f194012828bb33ecdced2b5829834d10e2f1d8f11` |
+| `results/audit/SUPPLEMENTARY_PACKAGE_INDEX_SUBMISSION.md` | audit | 0.006 | passed | Supplementary package index | `7a737f1761c102345075708415d37531ec20070e8c4d2ffb4bb42a3a0a64be19` |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow.png` | figure | 2.745 | passed | CellOracle in silico perturbation figure | `a878e73d87013e40657a5144113e380d741384d2346089f9e2a3486e00965c5f` |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_grid_flow_with_clusters.png` | figure | 2.656 | passed | CellOracle in silico perturbation figure | `cc44f5e169abdc44b9860a80e2bc8b42931b4de6e08a654d4665cdbdd9f905b9` |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_quiver.png` | figure | 1.240 | passed | CellOracle in silico perturbation figure | `79132ad9bcfab6aa1ff0b199565ce8650bd672a15bb75478ebd8bc99f11335d8` |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure | `d046b426889fa107f3602aa479f586244bfee498e8b6725ca61c54370ff10c77` |
+| `results/figures/celloracle_ko/BHLHE40/BHLHE40_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure | `b6238c9f809f6ee66dcaec073cf83ce2322038ab5e04a21af76927d8207d8475` |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow.png` | figure | 2.622 | passed | CellOracle in silico perturbation figure | `ac8a8dd778fb5a7961b631af79172824a94d7ce34ab9e729a42aa81d921f0491` |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_grid_flow_with_clusters.png` | figure | 2.616 | passed | CellOracle in silico perturbation figure | `f91e122000d35782d96488280893fe161afd13cc4008dd9aefa34896e9034e69` |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_quiver.png` | figure | 1.226 | passed | CellOracle in silico perturbation figure | `24ad89bce244d0e13cee6fbf8937cfe3e9670bb09091f6e81313539c02740fde` |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure | `df543bc56cf05c82d32fc5bc8710d06e3f6bd246ce1232615f79fabf4e95207c` |
+| `results/figures/celloracle_ko/NFE2L2/NFE2L2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure | `69b0d4660266eae595ee55cbd3d2a8b178a827d413539a4d919428e9f3315022` |
+| `results/figures/celloracle_ko/permutation_test/celloracle_permutation_null_distributions.pdf` | figure | 0.029 | passed | CellOracle permutation null distributions | `72b679ab68d53c3d39ab70bce9eb5368d1c8fb3836180e091f342a5e7e50b79f` |
+| `results/figures/celloracle_ko/permutation_test/celloracle_permutation_null_distributions.png` | figure | 0.512 | passed | CellOracle permutation null distributions | `ff6f7506422a7955f11b07be52a280de97b6fddb6f8b6eebf15df18e4e668a3f` |
+| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow.png` | figure | 2.838 | passed | CellOracle in silico perturbation figure | `7e82648f8f293480db02adec8079d99c9c32933de65a67ab940c640bc06a7355` |
+| `results/figures/celloracle_ko/SOX2/SOX2_grid_flow_with_clusters.png` | figure | 2.613 | passed | CellOracle in silico perturbation figure | `6a23a94483047f887cebeef5fd382073a09014ccd1718eebb7e6b7489018f3a6` |
+| `results/figures/celloracle_ko/SOX2/SOX2_quiver.png` | figure | 1.230 | passed | CellOracle in silico perturbation figure | `5b7fc8b1aab16b4a262a6f6c7868af809187b761c7420865446d00cb3b88aaa1` |
+| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_boxplot.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure | `3ee3b4158cb7115362f22e8b58ac8aec110b58c5126e342b2980a201efc7e396` |
+| `results/figures/celloracle_ko/SOX2/SOX2_shift_magnitude_embedding.png` | figure | 0.315 | passed | CellOracle in silico perturbation figure | `97986ced81fd2ac8fe4e1a388d40d6772dae10fc7bd172dc170b89ef90c3b3bf` |
+| `results/figures/celloracle_ko/summary_plots/round1_group_shift_comparison.png` | figure | 0.053 | passed | CellOracle in silico perturbation figure | `7507e6cc35d0a9727c459de8d5ed2e1d78976b02c63b6cbdd5280a2d4a5a8bb7` |
+| `results/figures/celloracle_ko/summary_plots/round1_mean_shift_length_ranking.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure | `48876e27e9b3ddceb2c0a0f78640442fdd78254b3feb50239fe99545e1203c27` |
+| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_bubble.png` | figure | 0.076 | passed | CellOracle in silico perturbation figure | `882d05059b41514556413a1d1ab4595bceebcfa305451c5aa5220ac8588af980` |
+| `results/figures/celloracle_ko/summary_plots/round1_recovery_index_ranking.png` | figure | 0.048 | passed | CellOracle in silico perturbation figure | `10798a63bee275c3769124506c0e876ce7a260107d12aa600d42be87aa3fbee2` |
+| `results/figures/celloracle_ko/THRB/THRB_grid_flow.png` | figure | 2.777 | passed | CellOracle in silico perturbation figure | `4d17ed0baaac1b85fb7f4e8103ac9cfdacbc41548b85131690cfe1e3b89b7720` |
+| `results/figures/celloracle_ko/THRB/THRB_grid_flow_with_clusters.png` | figure | 2.641 | passed | CellOracle in silico perturbation figure | `76ee3aef0e60d0a133e70d6b43925b27afdd8a2e7ad1fd310839bd6825dbb59f` |
+| `results/figures/celloracle_ko/THRB/THRB_quiver.png` | figure | 1.257 | passed | CellOracle in silico perturbation figure | `44e477b470ae59742ff3e167e7972938aebee8710abdf20b6d58f6e9e709a880` |
+| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_boxplot.png` | figure | 0.047 | passed | CellOracle in silico perturbation figure | `1035a017cbdfae93e178dd84dd2e6dfe0b9384ca9187af1aca53bde04ec44260` |
+| `results/figures/celloracle_ko/THRB/THRB_shift_magnitude_embedding.png` | figure | 0.314 | passed | CellOracle in silico perturbation figure | `5d3faef6603b008c522d4c3be50490ebaa9444ed5819ea4b7d42f7cd4716a4a1` |
+| `results/figures/differential_regulon/differential_regulons_volcano.png` | figure | 0.112 | passed | Differential regulon analysis output | `3ead84842d406ea4903331c61380a1dbeb996364a96dc11db6662a1ebdce6ae7` |
+| `results/figures/differential_regulon/group_mean_heatmap_raw.png` | figure | 0.342 | passed | Differential regulon analysis output | `3c01d70c312a7ff8eff9a26117864d7c0ed0e1268021e4285d75530df1cf6dc7` |
+| `results/figures/differential_regulon/group_mean_heatmap_row_zscore.png` | figure | 0.353 | passed | Differential regulon analysis output | `5cff31efc5952d453ebf09facc00c20c096706058fb388e5700108e24caddc0e` |
+| `results/figures/differential_regulon/top20_differential_regulons_barplot.png` | figure | 0.113 | passed | Differential regulon analysis output | `5bcbb831732fb8d51dedb703bdcf5884d7305ff9293251fa55769b1766e327d6` |
+| `results/figures/differential_regulon/top_regulons_group_boxplots.png` | figure | 0.315 | passed | Differential regulon analysis output | `4fddfeb6b9050fc00f4f44028762715c2fc7fd7dfc693bea2f6bd4de31a8f526` |
+| `results/figures/functional_interpretation/03_BHLHE40_GO_KEGG_dotplot.png` | figure | 0.113 | passed | GO/KEGG functional interpretation figure | `cb5df4de444c226e70df56218eba6b7e952760929c1c3c954c282aac7b9b566f` |
+| `results/figures/functional_interpretation/03_NFE2L2_GO_KEGG_dotplot.png` | figure | 0.146 | passed | GO/KEGG functional interpretation figure | `3d59f80b59ac55da013a7a21b322ab179d086d38de8a9a5d63d2082890c11f9c` |
+| `results/figures/functional_interpretation/03_SOX2_GO_KEGG_dotplot.png` | figure | 0.123 | passed | GO/KEGG functional interpretation figure | `41a78bb4caf1b8a58014f6693ba7e957d633c451eb517e098d88e93db20938a8` |
+| `results/figures/functional_interpretation/03_THRB_GO_KEGG_dotplot.png` | figure | 0.123 | passed | GO/KEGG functional interpretation figure | `748c3bf7faeef31dec43ad959725bcd7363e0ea99bea489e3aafe961b6b98951` |
+| `results/figures/functional_interpretation/04_integrated_evidence_bubble.png` | figure | 0.053 | passed | GO/KEGG functional interpretation figure | `fc52a89525d93a5d06ec6939ca38bb7e59287b2177ebb5a04063bd6456b83d1b` |
+| `results/figures/functional_interpretation/04_tf_program_theme_heatmap.png` | figure | 0.074 | passed | GO/KEGG functional interpretation figure | `c43be9cd6f2acf2f18ba69029af36b320ecc7a7fa8237396d28065681871b6ac` |
+| `results/figures/manuscript/main/Figure_1_study_design.pdf` | figure | 0.155 | passed | Final manuscript figure file or companion note | `dea59c0f02259345151ee989a09db3039e6e6656c2fd93f5b0fa9d668a323e0d` |
+| `results/figures/manuscript/main/Figure_1_study_design.png` | figure | 0.444 | passed | Final manuscript figure file or companion note | `8504a3fba99783a1508e89020b9f5187ae5ce8351bf9c7abf5ec4e4a1c3b788c` |
+| `results/figures/manuscript/main/Figure_1_study_design.svg` | figure | 1.686 | passed | Final manuscript figure file or companion note | `12130a1928af4a8b34d6b34550ac5f62b38112196049fc73ea8874c9d5628bfb` |
+| `results/figures/manuscript/main/Figure_1_study_design.tiff` | figure | 1.132 | passed | Final manuscript figure file or companion note | `4568a2dccc7973835140e60d7e53aeaf8706215c214d3fde451d5df1f339cc82` |
+| `results/figures/manuscript/main/Figure_2_regulon_landscape.pdf` | figure | 0.058 | passed | Final manuscript figure file or companion note | `c4af104c4db81df169043725c5a36ef78ff680720f8432644369dea9f86a80bb` |
+| `results/figures/manuscript/main/Figure_2_regulon_landscape.png` | figure | 1.019 | passed | Final manuscript figure file or companion note | `eb483f9b0c1565ca4481e23263692adaced0a876e0138e1ad6d11ebdcdd64b51` |
+| `results/figures/manuscript/main/Figure_2_regulon_landscape.svg` | figure | 0.092 | passed | Final manuscript figure file or companion note | `1ee6ead1d0fe9cdd217bb48fe847c0ef53c9dcf2ed8cfedaeb0eb00cabe2e819` |
+| `results/figures/manuscript/main/Figure_2_regulon_landscape.tiff` | figure | 4.113 | passed | Final manuscript figure file or companion note | `a296dadd346a103cd78496be3b8eef31c26f8dc49434a15ff361afc62dbd726a` |
+| `results/figures/manuscript/main/Figure_2_regulon_landscape_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note | `cc283a039ce6c19fe77f780daf2f639f06131b9e0051f71256b288cae1cde9ab` |
+| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.pdf` | figure | 0.216 | passed | Final manuscript figure file or companion note | `4c0ae5e620a379532985a5f73b540976a0c70cc80ec9bafa4063990852fa5e37` |
+| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.png` | figure | 1.618 | passed | Final manuscript figure file or companion note | `b3070dcbe93125468f6cef49af3398b26d8a16539963024b495605dd3b3d5f34` |
+| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.svg` | figure | 0.981 | passed | Final manuscript figure file or companion note | `d0e627631f25d0aade86eb6cfb9aaf3d97efa68d934526fcaecf8a62c6cbe1a7` |
+| `results/figures/manuscript/main/Figure_3_celloracle_perturbation.tiff` | figure | 2.241 | passed | Final manuscript figure file or companion note | `8ca2e9228d2347781afca5521ec27a65a9b496f0b7bda49d0f719aa429005e4c` |
+| `results/figures/manuscript/main/Figure_3_celloracle_perturbation_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note | `8e577b1e4732cdfeb8531ffc9db4bd5796eb37ec1ecde9304f78a1c48469409f` |
+| `results/figures/manuscript/main/Figure_4_robustness_support.pdf` | figure | 0.032 | passed | Final manuscript figure file or companion note | `64b145ef9ab5d0bc3cfe2e6ee9f126e2c5c2a57a047a3e895c616e47edda0cb9` |
+| `results/figures/manuscript/main/Figure_4_robustness_support.png` | figure | 0.704 | passed | Final manuscript figure file or companion note | `9b202a2558199ac0c691bcbfaae6c9928acb1a53fe5f27fcb95175cef0b5e9a4` |
+| `results/figures/manuscript/main/Figure_4_robustness_support.svg` | figure | 0.057 | passed | Final manuscript figure file or companion note | `31c1885ce88fca3d66a9630a0cb811bfe90d8f5626c0483afd9906fc6349c003` |
+| `results/figures/manuscript/main/Figure_4_robustness_support.tiff` | figure | 2.496 | passed | Final manuscript figure file or companion note | `eb8e3c4d52d086c797533cc7103b40f2a38e5bf44860c035e387a56ca295f799` |
+| `results/figures/manuscript/main/Figure_4_robustness_support_notes.txt` | documentation | 0.006 | passed | Final manuscript figure file or companion note | `b7af9f5877d78f1138eeacb38e691f9098e552a7814587c4537fd409c61fcaf4` |
+| `results/figures/manuscript/main/Figure_5_program_model.pdf` | figure | 0.137 | passed | Final manuscript figure file or companion note | `2acee5ccd51db9d8c76955929fdc287af8197984431778029aade46a9b875ce9` |
+| `results/figures/manuscript/main/Figure_5_program_model.png` | figure | 3.121 | passed | Final manuscript figure file or companion note | `5a2723d32a536f6dcf9298d18a0921220df49ed49a910aac22f3e25d4e250684` |
+| `results/figures/manuscript/main/Figure_5_program_model.svg` | figure | 0.199 | passed | Final manuscript figure file or companion note | `da7d9c1182ecf5fba4016b73d2a2e5547a4b8c9a4fe244542db5f07a504bbf18` |
+| `results/figures/manuscript/main/Figure_5_program_model.tiff` | figure | 5.242 | passed | Final manuscript figure file or companion note | `79854f92356dec52318e20d8a4e8d1d8527b2f288b6eec14f38f96b6208e3db0` |
+| `results/figures/manuscript/main/Figure_5_program_model_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note | `fae888192cdb44aa0b57bbe0dde709b99a7eee02afcd0c3c69c7dd7b1dab0e9d` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.pdf` | figure | 0.029 | passed | Final manuscript figure file or companion note | `ec13e563722cf9e8698c1bd90201c9b0c56b7f797803e22766c3c85ebe005c28` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.png` | figure | 0.561 | passed | Final manuscript figure file or companion note | `195a5bc5216979f41039774ca995feb646b3bc6c91b819f12d68d3a8d4ac14d2` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1.tiff` | figure | 2.720 | passed | Final manuscript figure file or companion note | `a3f458e749dc9338cf87c54668c451b264a0b282a1247dee75b71676de8086b0` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `e9cd1132b67dff02065c5acc94fd2473b42da9d1ce062418e7d98db647b3d0ce` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_notes.txt` | documentation | 0.002 | passed | Final manuscript figure file or companion note | `ff360d3b0aae56deb630bf38b30a9e75f2dbfdf517aceca09bd071f0f58d348c` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `b2eff717f45940da84a5839d830059ee3b6a760a5f3d3743a7333d7533af9bae` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S1_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `d63771c949649abcc38b62b4062b1717f5fb8982dad87dffa3233a8f30663210` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.pdf` | figure | 0.046 | passed | Final manuscript figure file or companion note | `5b94e65f95664faf5701f82735f47c73ca3b07717b9a7dd4e639db58cb1a177b` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.png` | figure | 0.696 | passed | Final manuscript figure file or companion note | `d15e7a7f8c0433f688320d62caa0ea5ba2f67d1ff4f7c2082136a25920944467` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2.tiff` | figure | 4.815 | passed | Final manuscript figure file or companion note | `b4bd0257b837f8097f4d2fa06d5c720ee089cc8286188f4ecb85e74fb0e27916` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `ab723c780ddb804e5fa97c62e64c8797134cc2fc829037e0291baf46991a97a5` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note | `59593000e86868530a5f5b244bf4706f9b07bd9ece10559f2d2fddbaade94ff0` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `99d181aaf7421e4ac16dfdc1b17b353c98f6be9602815df4dc98199cb3616603` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S2_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `eeef9622afe0c6b69f07043d659021eb244ca310e092ca0fa57707ace66f6b16` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.pdf` | figure | 0.344 | passed | Final manuscript figure file or companion note | `f5af3bb9b784c92ac10c1f9d4c2c15ada0eeabe63b6f7c197a8496476b6ab729` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.png` | figure | 1.400 | passed | Final manuscript figure file or companion note | `9a073271bf0ab0b8a1c4c78fc1accbe6d6b1ae1d227e42d896e544c438b00cac` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3.tiff` | figure | 5.488 | passed | Final manuscript figure file or companion note | `ec3302232a4f9bf7b8127736c0f74cd2435414e5f175f4c3c5ddf109ae5b885a` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `f05468184ed65fc7f5632827eef01f15622fb46c73f88b5483034d36487b1813` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note | `984a1eefd08b6d68ff30db259297474a8e7303f534a0bf36588567dda7b7a477` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_permutation_update.md` | documentation | 0.001 | passed | Supplementary Figure S3 permutation-panel provenance | `3e60847b0826a9c8160b22f3facc342d5c851c5414756ab1dee63cd294b3264d` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `9c41f09647381fd25adf50afbe714705cf0ae611290b249ef039f56ee082433e` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S3_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `f9bbf6fe46bab351bb39a9c8d5d9423c815d14065ed16930e27e25c810222246` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.pdf` | figure | 0.034 | passed | Final manuscript figure file or companion note | `bbe8082bc0456ece06bc52a90accc6637f48ad7907c8d6e83b46ddfa329c7194` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.png` | figure | 0.623 | passed | Final manuscript figure file or companion note | `c2bfa3471944b076379f5b61db46ca213e556213bc90d0c06f0becbf20f29bd0` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4.tiff` | figure | 5.481 | passed | Final manuscript figure file or companion note | `cc000b1791d0f605ccd4c99ddc012c0b8a4eee05ca9aedd2cc1cfc0790b7bb40` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `ae26b3e9a3227d0d39cb82931a519e9dd3d2ceed10c9539f03454e2c62ab8716` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_notes.txt` | documentation | 0.004 | passed | Final manuscript figure file or companion note | `8167624c99e5e804e578402bf14cdf897c001250e63abf2994d862ff4025f0f9` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `55421c8b8ab9d1af6b00337f43c5f90aae298692b2475b1d94ea2cfe7dccd966` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S4_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `abd77894db48ca16ed9766878c992bd24cd69a0e9e22fe836095fa004d261aca` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.pdf` | figure | 0.603 | passed | Final manuscript figure file or companion note | `44889f88bf819d57f7040066eab72f48a779500a837f6d55a17f66b754741521` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.png` | figure | 0.602 | passed | Final manuscript figure file or companion note | `d33cb8311b77c9e36ec8acdd0489ff854910484a35c7dd3d85f8d78078daf343` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5.tiff` | figure | 3.556 | passed | Final manuscript figure file or companion note | `a8fcd08d65b350f5ef5e8e794083d3a19facb45edd958f22c5407f2ea2ff0e84` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `3dfd24430be684d1d63b2b1502f089e927f55ffc9be8e895f1ac6e1b0158d3fb` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_notes.txt` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `7686bc1841ac2a3e07512ec6a8b236d723e076927631f6c84078bee2e68a973e` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `62f62b1179e6759eed1919266eaf7cbce35c6eae69d396259f3862c7fc29d404` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S5_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `47a9b7ddb3cf61adc50dea6f6d00c6a3bcef6a15f4f0cf940356910146e7abd7` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.pdf` | figure | 0.039 | passed | Final manuscript figure file or companion note | `b1bd31170dcadd623d0daa532130ea0df2df51d0e925563743c4b3ddc2e3bb97` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.png` | figure | 1.043 | passed | Final manuscript figure file or companion note | `d5df23e0e39ba4d02e37da95ae25784ba8fd5a7dc730e4b5a0ce6b6ad2fc280c` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6.tiff` | figure | 3.762 | passed | Final manuscript figure file or companion note | `8d0a43b938b3c56d40a2794cc1bbbc8911b1123b0e405ce1e221f6e5b0e74fc3` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `99e5fe887f7b8702735a91e94dbbf0f7773f76e16633bc05eedacdbf92e189c1` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_notes.txt` | documentation | 0.003 | passed | Final manuscript figure file or companion note | `9d4abe6494b869b4362404b19c12803cb783bfc208a0cbfa1c7db3c62d31e269` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `00279553ba65fd98a5b776803ed0fa0c3ccff60571f7cd46de14f17371b39f75` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S6_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `cf372f631ad1b7f0db1d5d19d1c9253e8d183be25c52c7ef72658dd3b15e0f95` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.pdf` | figure | 0.930 | passed | Final manuscript figure file or companion note | `5c5c81cd32f6811f90ef69df144830fbc5ee2dd3088c7d001103559b6e9e5831` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.png` | figure | 0.892 | passed | Final manuscript figure file or companion note | `e981b7d40646e4f2082d16e04648fc4357e14c328799fc85b2323575e43dcba2` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7.tiff` | figure | 2.678 | passed | Final manuscript figure file or companion note | `eb0af232a924e16e8c5b6d1106e97210efb62986bc2233e525f469db28c366f4` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_caption.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `83f5e63019311440f7bb28852011718e3f5de378e3adede2a83ab5b120e60be6` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_notes.txt` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `58b461750fed2cd801f6539942876d200819cd03a9f2ba116f4bfbacda7c333b` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_revision_log.md` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `f8723ef7c06772734f9c98b6cecf1c1bf85bb0b81c67f2fd9393da2efbd8ca81` |
+| `results/figures/manuscript/supplementary/Supplementary_Figure_S7_terminology_audit.csv` | documentation | 0.001 | passed | Final manuscript figure file or companion note | `2ef90851b3984ac83bbe3047891e6f3025f2691f3452cfd00267391c1f082caa` |
+| `results/figures/pyscenic_overview/top_regulons_mean_auc.png` | figure | 0.073 | passed | pySCENIC overview output | `920ee41628db686d64d287b1e9a7ff82721dce3ed7beae62368661c876d7c4df` |
+| `results/figures/pyscenic_overview/top_regulons_std_auc.png` | figure | 0.082 | passed | pySCENIC overview output | `10fded61490d1623fd3cc01708fb88c657a1464fc11ceba6e4e512a54a734cef` |
+| `results/figures/robustness/02_leave_one_out_consistency_heatmap.png` | figure | 0.045 | passed | Robustness analysis figure | `95778107239a8cbd0f8449c967bc0db9183f7009f84987c66d409fa8a718c926` |
+| `results/figures/robustness/02_leave_one_out_expr_forest.png` | figure | 0.069 | passed | Robustness analysis figure | `8060510eabb4d981f3d477bbf67549e47c86892987ef04531abf8b630dbb6c50` |
+| `results/figures/robustness/02_leave_one_out_regulon_forest.png` | figure | 0.069 | passed | Robustness analysis figure | `77c39a651a8a697973afafd8160f5f6bd000a214b00068deeecc6c91cebc696e` |
+| `results/figures/robustness/03_pseudobulk_candidate_tf_plot.png` | figure | 0.069 | passed | Robustness analysis figure | `afd8c03a93ef4b139d653ff25ed98d0cc1c3d7a2340fc0c583f5c4cdff196a8b` |
+| `results/figures/robustness/03_pseudobulk_heatmap.png` | figure | 0.038 | passed | Robustness analysis figure | `97c9482708d63cd2fa127569df044a1e49462f12e761657f07a1242f5fe2fbe7` |
+| `results/figures/robustness/03_pseudobulk_regulon_plot.png` | figure | 0.064 | passed | Robustness analysis figure | `04f7a6b87fa369c91abc72bc79ec6f627e24c4b6f14d7c619dd5e2dd54f6cbe6` |
+| `results/figures/robustness/04_shortlist_sensitivity_heatmap.png` | figure | 0.057 | passed | Robustness analysis figure | `ec021e0f92813a7edd4287c0771123d982a201e0325cd3073acfaebb409a777d` |
+| `results/figures/supportive_gse140393/expression_barplots_by_sample.png` | figure | 0.064 | passed | Supportive/contextual external dataset figure | `112746c50e955b4a13ca8af13077b257be481022296d60157305040002768721` |
+| `results/figures/supportive_gse140393/expression_boxplots.png` | figure | 0.128 | passed | Supportive/contextual external dataset figure | `ef80bec942d0a5e1467ef38e62c5051b27dca10c51f55cd771dc9fb4b8fa4ec5` |
+| `results/figures/supportive_gse190452/regulon_validation_plots/round2_expression_regulon_combined_ranking.png` | figure | 0.051 | passed | Supportive/contextual external dataset figure | `21c0b6992e2f2afb06ca283f41aec8a5d3eee0e9c167be493164180414bf9dc6` |
+| `results/figures/supportive_gse190452/regulon_validation_plots/round2_priority_regulon_focus.png` | figure | 0.146 | passed | Supportive/contextual external dataset figure | `08ed187f498903036135d67da7a4c1421d15f7fd32f18031d27fb74e0a6581b7` |
+| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_cluster_heatmap.png` | figure | 0.069 | passed | Supportive/contextual external dataset figure | `b6cff7c85160374e1f9c0b17686f2f4eb0126594dd692df39542c9c5863322e7` |
+| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_group_boxplot.png` | figure | 0.104 | passed | Supportive/contextual external dataset figure | `1f9f80e692341552c6a187042e9646c1bdf1db9f1205c6dd55ce692c5d1a774a` |
+| `results/figures/supportive_gse190452/regulon_validation_plots/round2_regulon_group_mean_barplot.png` | figure | 0.050 | passed | Supportive/contextual external dataset figure | `e338a26f57d4440079093401450771aca1f66fe239c09de6c3ff2330ce563484` |
+| `results/figures/supportive_gse190452/summary_plots/external_round2_celltype_heatmap.png` | figure | 0.063 | passed | Supportive/contextual external dataset figure | `faae3630fe19445ba38eeb54a0c41e19c671a1d984e150b513aa9f1766cb5e1b` |
+| `results/figures/supportive_gse190452/summary_plots/external_round2_group_boxplot.png` | figure | 0.086 | passed | Supportive/contextual external dataset figure | `f6dec301598c7bf21f0694d11a34ac8ebe3a986ac13ccff4953925ec1d4e3948` |
+| `results/figures/supportive_gse190452/summary_plots/external_round2_group_mean_barplot.png` | figure | 0.051 | passed | Supportive/contextual external dataset figure | `3a3fdc27a36aae4c1dfc431bab211396ed61295cd64746f0fba3859f6aa07f13` |
+| `results/figures/supportive_gse190452/summary_plots/external_round2_priority_tfs_focus.png` | figure | 0.130 | passed | Supportive/contextual external dataset figure | `cde339ead2f4de5347f79b3600488d3c2c299a5c9ba3d54a4f465fb0118cc35d` |
+| `results/figures/supportive_gse190452/summary_plots/external_round2_support_ranking_barplot.png` | figure | 0.035 | passed | Supportive/contextual external dataset figure | `330b56f71a376e4bc1383c3171cb4ad13828d944a66db7411a8506963bd6b917` |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `2bdcede7fd706771a85db71ebad454ee51b278912fb576c37c4df14e93692143` |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `eb22ed4903eefe6d4e81ae3bf58e3b137b7b8a871ea41c5d7b3eac65175ca234` |
+| `results/tables/celloracle_ko/BHLHE40/BHLHE40_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `f0a9ae455a9948bd313f9e2098cbed9147eb3fcd99874aefc088896d160a9759` |
+| `results/tables/celloracle_ko/next_step_recommendations.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary | `7dfeb835ba16460f38215b66f9a6fc812e022492f150c5e2a3f840ff30c9827e` |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `2bdcede7fd706771a85db71ebad454ee51b278912fb576c37c4df14e93692143` |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `a4c0dd6b585cb1475d6d4a5cf71a3a045faef87e349f433d618471cc667ece16` |
+| `results/tables/celloracle_ko/NFE2L2/NFE2L2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `b1323e5fcd3f67df8a00f3128b1cd355caef73a14b1b9019985a98fcfd9aaf6b` |
+| `results/tables/celloracle_ko/permutation_test/celloracle_permutation_test_results.csv` | result_table | 0.001 | passed | Formal CellOracle permutation-test results | `b2834a0e689555e628c367f881a47b8df08f1fe3a91a3007657d381c58f73f00` |
+| `results/tables/celloracle_ko/permutation_test/celloracle_permutation_test_summary.txt` | result_table | 0.001 | passed | Formal CellOracle permutation-test summary | `2fbcac752317ae50333d678fb44ffb2eef3bb3c36d749dd461d3b42222396ba0` |
+| `results/tables/celloracle_ko/round1_ko_master_table.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary | `2ed9b1cd293c0a136cb4bd77291ce0b870327f73b7382daaea143e866325b77e` |
+| `results/tables/celloracle_ko/round1_ko_run_config.json` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `748ec71e18521b7b160351452dc5afed323a1dceb797b230aa158c901ba80450` |
+| `results/tables/celloracle_ko/round1_ko_summary_by_group.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary | `1505bac92e615716c0101e8316f7351bc6c21d06592b1fac2705bc13acb0dddd` |
+| `results/tables/celloracle_ko/round1_ko_summary_cn.txt` | result_table | 0.001 | passed | CellOracle in silico perturbation summary | `935a2163fb5c6bd484f2a4964720f6b428f3fa30aaf537325cfce0f23d3232b3` |
+| `results/tables/celloracle_ko/round1_ko_summary_outputs.json` | result_table | 0.001 | passed | CellOracle in silico perturbation summary | `d62537adc9210d92e360521a90ec77c3f3c579782f8432bee42e5f5fb6287cd2` |
+| `results/tables/celloracle_ko/round1_ko_summary_overall.csv` | result_table | 0.001 | passed | CellOracle in silico perturbation summary | `aa76b2dd7748fca44ed93c9a5bee782aacc0f6a387562ea52b0b848f9e28ce03` |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary | `c789dd9952ac1253787b98a5bce0a2224166a6674eabde2b6e3aacbc00221df1` |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_internal_control.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary | `c789dd9952ac1253787b98a5bce0a2224166a6674eabde2b6e3aacbc00221df1` |
+| `results/tables/celloracle_ko/round1_ko_tf_strength_ranking_lesion.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary | `c789dd9952ac1253787b98a5bce0a2224166a6674eabde2b6e3aacbc00221df1` |
+| `results/tables/celloracle_ko/round1_recovery_index_by_group.csv` | result_table | 0.002 | passed | CellOracle in silico perturbation summary | `7622465265fb3fb53a774944273a2ee4bf5bd68db37fe47c1552a7369c73458e` |
+| `results/tables/celloracle_ko/round1_recovery_index_definition.txt` | result_table | 0.002 | passed | CellOracle in silico perturbation summary | `0388dbb8e085bdc8eca50acc404b645db1414d8c509764361bcf6743f0510437` |
+| `results/tables/celloracle_ko/round1_recovery_index_ranking.csv` | result_table | 0.004 | passed | CellOracle in silico perturbation summary | `2ed9b1cd293c0a136cb4bd77291ce0b870327f73b7382daaea143e866325b77e` |
+| `results/tables/celloracle_ko/SOX2/SOX2_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `2bdcede7fd706771a85db71ebad454ee51b278912fb576c37c4df14e93692143` |
+| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `52ffce21f4f16c58c81f6e08e0aed90acdd9810e5d694b2e28fb7e260943a3a0` |
+| `results/tables/celloracle_ko/SOX2/SOX2_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `f7f2ce65b21e153c46b48191a2cedbc00261714573a4aba12d2d5804b8b81a5e` |
+| `results/tables/celloracle_ko/THRB/THRB_markov_skipped.txt` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `2bdcede7fd706771a85db71ebad454ee51b278912fb576c37c4df14e93692143` |
+| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_by_group.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `13f7ea4424f8e4b2bdee3adbef25b4db131524b8c237013e1f66c54a97f242bc` |
+| `results/tables/celloracle_ko/THRB/THRB_state_shift_summary_overall.csv` | result_table | 0.000 | passed | CellOracle in silico perturbation summary | `e224cd53c1b4309ff0d0ac1c75a32b2faf079a430db7a5309f24b04e4cc67bc6` |
+| `results/tables/differential_regulon/comparison_summary.json` | result_table | 0.001 | passed | Differential regulon analysis output | `6ba14bd7c3e7ebbb41147028f59e37e93862781950c15906fb37c25c1e348e47` |
+| `results/tables/differential_regulon/differential_regulon_summary.json` | result_table | 0.000 | passed | Differential regulon analysis output | `67b762307c809852a14a9b85cbee39e640bca3b91d0641e9d3745616dc2d8ebf` |
+| `results/tables/differential_regulon/differential_regulon_summary_cn.txt` | audit | 0.001 | passed | Differential regulon analysis output | `1dad0afd40708a789728bbb29367d297f008921492b277405ea2b5c7c63a2715` |
+| `results/tables/differential_regulon/group_candidate_columns.csv` | result_table | 0.002 | passed | Differential regulon analysis output | `8a2df8edb3385df5eceffa26348ae8f6a8db76c4ed2939a8cb36bb4f366635ea` |
+| `results/tables/differential_regulon/group_mean_auc.csv` | result_table | 0.003 | passed | Differential regulon analysis output | `9f4f8fdba79fa6641a96c04c22a8f5701a5430f29b358d7572317d6ba9832dc5` |
+| `results/tables/differential_regulon/group_mean_auc_row_zscore.csv` | result_table | 0.002 | passed | Differential regulon analysis output | `18ba512f3cb782ec4c4f2657659a1aa823dca669b8758753df2163bc032c9385` |
+| `results/tables/differential_regulon/obs_columns_overview.csv` | result_table | 0.002 | passed | Differential regulon analysis output | `bf0aec3b3fb7f0c4a92e5b2ff5814599b6be7968e75c90bf1cb4af0d898099ab` |
+| `results/tables/differential_regulon/regulon_group_statistics.csv` | result_table | 0.023 | passed | Differential regulon analysis output | `7cc6d5a6acbe7636b730ca99194745714624ab2975cccccc8a09548086a7f655` |
+| `results/tables/differential_regulon/selected_group_column.txt` | audit | 0.000 | passed | Differential regulon analysis output | `377cc6f6eadce9afbc8e4b95461f5706b32f8fb749363235a43a09ea70d40eab` |
+| `results/tables/differential_regulon/selected_group_counts.csv` | result_table | 0.000 | passed | Differential regulon analysis output | `6cffada37935dd069f15f0e4915827366a217987f183abf176a18072ac2c225a` |
+| `results/tables/differential_regulon/top10_up_in_internal_control.csv` | result_table | 0.003 | passed | Differential regulon analysis output | `6775481a24ff85644015f1cddd7c45a15790d6977d52c63757da656be86ed566` |
+| `results/tables/differential_regulon/top10_up_in_lesion.csv` | result_table | 0.003 | passed | Differential regulon analysis output | `3c201a52df344676f03dda5bf39406f0885f09b1da3458f9874ca33c852e74e0` |
+| `results/tables/differential_regulon/top20_differential_regulons.csv` | result_table | 0.003 | passed | Differential regulon analysis output | `6f9011be0c3678d86c1a97a34106660fe555987314a4aedbd5537a2565f335d3` |
+| `results/tables/differential_regulon/top_regulons_for_boxplot.csv` | result_table | 0.000 | passed | Differential regulon analysis output | `07802fc9c76ffe5bc90f4d120115a1883c7ec4763de39d9ca62c6c39db088aae` |
+| `results/tables/exploratory_drug_signature/00_v21_run_index_cn.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output | `2b20bfd3f384aa9f352f2ee9bcc733248b07cc7d748fd2553b1a227beee46fb2` |
+| `results/tables/exploratory_drug_signature/01_parameter_search_summary.csv` | result_table | 0.034 | passed | Exploratory drug-signature enrichment output | `bea40c58d2a7b24fbc95115360b08e7ed2032b77ae83213abadd4458f4bbf9c2` |
+| `results/tables/exploratory_drug_signature/02_best_config.yaml` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output | `54284bddeeb3f6cec555fa8c859b4e1a6e8846e4bcb7f54ad629698dddfbbd2b` |
+| `results/tables/exploratory_drug_signature/03_integrated_rescored_v21.csv` | result_table | 0.165 | passed | Exploratory drug-signature enrichment output | `268e5d1b65da62a009d259d0ea23bd17afe41849e835ed7b2cacae45127ca962` |
+| `results/tables/exploratory_drug_signature/04_primary_mechanism_direction_leads.csv` | result_table | 0.006 | passed | Exploratory drug-signature enrichment output | `a4f42c519b02f8e17296190bc55ddc8d2164b2b79ff0bdef7c440097d76091c2` |
+| `results/tables/exploratory_drug_signature/05_supportive_manual_review_leads.csv` | result_table | 0.011 | passed | Exploratory drug-signature enrichment output | `d929df3848659fd24937c782cdc23d7418772bd1f96120024d173737869ead24` |
+| `results/tables/exploratory_drug_signature/06_retained_full_list_v21.csv` | result_table | 0.140 | passed | Exploratory drug-signature enrichment output | `3e0690043151da631c81955a7f37466d936a3b3c187c8418928983f7e8276e82` |
+| `results/tables/exploratory_drug_signature/07_paper_ready_table_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output | `668eda453368f54f5ac2b400ee81ed66bb547f08df34d2af46b00c4768fd5ac3` |
+| `results/tables/exploratory_drug_signature/08_v21_summary_cn.txt` | result_table | 0.008 | passed | Exploratory drug-signature enrichment output | `4aacfcc4a9ab18b94ee22cd72b74e7100ec4077eecf2f112e9ff75291da538c6` |
+| `results/tables/exploratory_drug_signature/09_manual_bbb_template_v21.tsv` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output | `38566a5a8d08cde8952c9219b9a849506226a9ee590ed041c03cdf7dbb821908` |
+| `results/tables/exploratory_drug_signature/10_compound_tag_template_v21.csv` | result_table | 0.018 | passed | Exploratory drug-signature enrichment output | `1a1e042700749f293b90de48b0c5f5d48aeca87cc2a0ca2a97fe91f7f9c22fc6` |
+| `results/tables/exploratory_drug_signature/11_swissadme_parsed_and_matched_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output | `98cbdc7278e079609f6ba684f184adf3625293ec4569aa69ceb4db5edfeb9b45` |
+| `results/tables/exploratory_drug_signature/12_bbb_annotation_manual_review_v21.csv` | result_table | 0.004 | passed | Exploratory drug-signature enrichment output | `4a47b9cd02d5e99747018a35a762e0e497cf54e98748d32a4be217e8667cb343` |
+| `results/tables/exploratory_drug_signature/13_integrated_after_bbb_v21.csv` | result_table | 0.196 | passed | Exploratory drug-signature enrichment output | `59ed2b334d8d1eac475f5860c694305ab0950a2bc20c6934cf9ff1c76dbe38f6` |
+| `results/tables/exploratory_drug_signature/14_primary_leads_after_bbb_v21.csv` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output | `993c4acec0089b828a2cc6d196b2a3233d955d66709027332e0a1fb7f7919039` |
+| `results/tables/exploratory_drug_signature/15_supportive_after_bbb_v21.csv` | result_table | 0.018 | passed | Exploratory drug-signature enrichment output | `0e5435e5bf727c6747233256b25dd104ad3aeda3687ff0ca8ce4273d40f3e217` |
+| `results/tables/exploratory_drug_signature/16_paper_ready_table_after_bbb_v21.csv` | result_table | 0.006 | passed | Exploratory drug-signature enrichment output | `8f2259a28acdcfe681811e51c5884db0b811f3b2ef8e1ec318803ccd7b03cf6b` |
+| `results/tables/exploratory_drug_signature/17_after_bbb_summary_cn.txt` | result_table | 0.005 | passed | Exploratory drug-signature enrichment output | `30db0c37a1e07479207203ce34a8ce583e9c3e6beb75de7ff0486d8a4a9dafff` |
+| `results/tables/exploratory_drug_signature/18_after_bbb_transition_note_cn.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output | `3be6a87f978c44e65f823da361b9da309a1638a2a04220887d5cc04e9d08b418` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/BHLHE40_supplement_program.gmt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output | `1b0424f79bb2e7bd5aa98b9f4462b8469075e5ef56d634f765bd3a63284f21eb` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/BHLHE40_supplement_program.txt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output | `621d276fa16a100ea0afbb2045b2aeb25ca6718a5c35da46f0238a6fbd184457` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_core_program.gmt` | result_table | 0.001 | passed | Exploratory drug-signature enrichment output | `de27732ccb71f2d544ab9f68aec563ee55f05b4baf7886cfcca1ef01cbb2372a` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_core_program.txt` | result_table | 0.002 | passed | Exploratory drug-signature enrichment output | `8fd69e7eb0a19f5c310684116cb5aa9496b277ef6ada6da7b9634341bad1cab6` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_regulon_targets.gmt` | result_table | 0.003 | passed | Exploratory drug-signature enrichment output | `7dce2257c814659c6fa211ff9c2b27e5acb592671eb337d413d455b512e4a501` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/NFE2L2_regulon_targets.txt` | result_table | 0.003 | passed | Exploratory drug-signature enrichment output | `2b3363558f842981a7357c46417ca875e537a72b35263d25b2d5e2c0aaba3bb1` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_core_program.gmt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output | `4889e906286985313be346d5298abf69795ea69234177e4b418d073d8eee2dc1` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_core_program.txt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output | `79ab4b0c28c827cee78f651190443c24c104895ba080f9cbd9705cacc0734855` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_regulon_targets.gmt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output | `5c832399ae392ea7c19df27c787d149bae197386164bf41407ddf6335c73844f` |
+| `results/tables/exploratory_drug_signature/query_gene_sets/THRB_regulon_targets.txt` | result_table | 0.000 | passed | Exploratory drug-signature enrichment output | `fb400a7d46b8c80a82df44170dea2126fc8e2cff8575690bc2c8c2c4a422dcf2` |
+| `results/tables/functional_interpretation/00_naming_correction_note_cn.txt` | result_table | 0.002 | passed | GO/KEGG functional interpretation output | `33a32bcfc35a3ba07c6b32198470b11937f1c1e6aac2e98e190bd07ee4b63e10` |
+| `results/tables/functional_interpretation/01_resource_check_cn.txt` | result_table | 0.002 | passed | GO/KEGG functional interpretation output | `9e237889c2913b447c18ed1fe31ab3d50ba18c4ebc5f9b53b2562f2dfc7f1c94` |
+| `results/tables/functional_interpretation/02_discovery_light_deg_table.csv` | result_table | 4.698 | passed | GO/KEGG functional interpretation output | `4bc39838bb5795ad91167cf1897dda5bbc27b1263b758379478f376046ff59dc` |
+| `results/tables/functional_interpretation/02_tf_gene_sets_detail.json` | result_table | 0.301 | passed | GO/KEGG functional interpretation output | `f5ed6351664b8c1993d17e6d2cc2aacb2ff37df9f0190e9dab5f470be0dea97e` |
+| `results/tables/functional_interpretation/02_tf_gene_sets_summary.csv` | result_table | 0.001 | passed | GO/KEGG functional interpretation output | `5c45fcdd561bddc2851275f91985f560730d028b890c27db54ab96bd41b7646a` |
+| `results/tables/functional_interpretation/02_tf_gene_sets_summary_cn.txt` | result_table | 0.001 | passed | GO/KEGG functional interpretation output | `5a7adf5023bb62aad4c056cd00ad2a6211ede5800406f473137a49e96e5879f3` |
+| `results/tables/functional_interpretation/03_bhlhe40_top_terms.csv` | result_table | 0.008 | passed | GO/KEGG functional interpretation output | `4101b7085de2bef93941a82b33c8e9df0c04e2f197400d95523ad8d36f2c90a7` |
+| `results/tables/functional_interpretation/03_functional_enrichment_summary_cn.txt` | result_table | 0.003 | passed | GO/KEGG functional interpretation output | `c5054b096093c60f17117f165671a968227308694a5052f89039e66b6aa9fc99` |
+| `results/tables/functional_interpretation/03_gene_set_library_status.csv` | result_table | 0.000 | passed | GO/KEGG functional interpretation output | `3e3f413a05e87da008120824a4e91833d10e35fbbcb8a365d15de4f4407e2ef3` |
+| `results/tables/functional_interpretation/03_go_enrichment_all.csv` | result_table | 1.429 | passed | GO/KEGG functional interpretation output | `bdd48b37a9e3037871de46b67d0da85e5598af12d06a65640635bc86cc4a1c5e` |
+| `results/tables/functional_interpretation/03_kegg_enrichment_all.csv` | result_table | 0.151 | passed | GO/KEGG functional interpretation output | `592a42d50ce4c48299eb13340cae8c4b44cf84bc0745407f3059ba518ff4c137` |
+| `results/tables/functional_interpretation/03_nfe2l2_top_terms.csv` | result_table | 0.012 | passed | GO/KEGG functional interpretation output | `75ca7a133b160cd326dc23deb1fceb0defc1edb11586058e8e8beed320e9f942` |
+| `results/tables/functional_interpretation/03_sox2_top_terms.csv` | result_table | 0.006 | passed | GO/KEGG functional interpretation output | `704bae9246c12b2203df13a2538aeee01d269b1bf06a9e624f8fb6a08148847c` |
+| `results/tables/functional_interpretation/03_thrb_top_terms.csv` | result_table | 0.007 | passed | GO/KEGG functional interpretation output | `01681693fcdc4267c982f60026223e15f175d6dcf39abcdfb0d143b9e20482e2` |
+| `results/tables/functional_interpretation/04_program_convergence_summary_cn.txt` | result_table | 0.006 | passed | GO/KEGG functional interpretation output | `998f10063a34d38b6434fc5942c94cff2840ab1a5f1785f583a12cde598d0e03` |
+| `results/tables/functional_interpretation/04_program_convergence_table.csv` | result_table | 0.003 | passed | GO/KEGG functional interpretation output | `d1873d60ab75115fa5f1ce109eb08e678f2733b541e1de8ea0143f4fdedafc31` |
+| `results/tables/functional_interpretation/04_program_overlap_statistics.csv` | result_table | 0.000 | passed | GO/KEGG functional interpretation output | `c7d1c9520aa4c9d94d38245a4b8a90df94ddf7bc64b980b990d5d04548e80bb3` |
+| `results/tables/functional_interpretation/04_tf_integrated_evidence_table.csv` | result_table | 0.004 | passed | GO/KEGG functional interpretation output | `c871a3ac32f82823eca0dc8bc691d526345ea299c927dc9f320b1c457fe0588f` |
+| `results/tables/functional_interpretation/05_functional_interpretation_integrated_table.csv` | result_table | 0.003 | passed | GO/KEGG functional interpretation output | `33fef1ce759bf1f747c665808a8a7f921b03499b6ea25ef02021c82f079b27a7` |
+| `results/tables/functional_interpretation/05_functional_interpretation_master_summary_cn.txt` | result_table | 0.016 | passed | GO/KEGG functional interpretation output | `3101e666c644460f9b8d6e7b62b9373556d27693ee9931c8e3ee0d2420f78c0e` |
+| `results/tables/manuscript/documentation/Table_Index.csv` | result_table | 0.003 | passed | Final manuscript table or table documentation | `0e1299869fb96b32b0ff5efe1bbff293ac00d7e71e80b0c977054b69ca87097b` |
+| `results/tables/manuscript/documentation/Table_Revision_Log.md` | documentation | 0.001 | passed | Final manuscript table or table documentation | `a6c74a4cc78e6ac798c90a6f48a11e88a11755563860b4356d67ae5598948dae` |
+| `results/tables/manuscript/documentation/Table_Terminology_Audit.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation | `bd3c4404ec6ea26a3cf91676b2568f132e32c930ce87d3b81dae8757812d9f00` |
+| `results/tables/manuscript/main/Main_Table_1.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `1c412b5b2c73b62fa2bd73484593179be865ecf2a699d9e2edb1c166c9735209` |
+| `results/tables/manuscript/main/Main_Table_2.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `f69718442391c4c58dff649e3d43bfe7871200e2de4ccaeb7dd096541767a939` |
+| `results/tables/manuscript/main/Main_Table_Legends.md` | documentation | 0.001 | passed | Final manuscript table or table documentation | `248fa4eaab9cb7102fa04309bfc89170d04bb5d3a0d876735f201265470d4cc9` |
+| `results/tables/manuscript/main/Table_1_datasets.docx` | result_table | 0.040 | passed | Processed result or manuscript table | `719003dfc5a46b7d31ac6cfa4651da1a020a619c39f61759ebc2bea8d34def5d` |
+| `results/tables/manuscript/main/Table_2_prioritization.docx` | result_table | 0.047 | passed | Processed result or manuscript table | `87a4088536f8d32bfaaf9b02906117e72895c884255f79c4aa2aba51e0912698` |
+| `results/tables/manuscript/README_tables.md` | documentation | 0.001 | passed | Final manuscript table or table documentation | `a7354c256f5b15a83fafbc7eaebbceeb37424f6f762ee866e08eeacb24d46b21` |
+| `results/tables/manuscript/supplementary/Additional_file_03.xlsx` | result_table | 0.008 | passed | Processed result or manuscript table | `0f88bf4040960e75dd52bef1da10521f9087e04cfef724c748c092ad536049e0` |
+| `results/tables/manuscript/supplementary/Additional_file_04.xlsx` | result_table | 0.005 | passed | Processed result or manuscript table | `b68a273824b8ebedde5014fd8afba95ba6199c2278edca0e9744312172c1eb59` |
+| `results/tables/manuscript/supplementary/Additional_file_05.xlsx` | result_table | 0.005 | passed | Processed result or manuscript table | `95dd0e8404cba3874076d10cf9a3996544b601ea3ecf65f1d3c9c7eeda292be5` |
+| `results/tables/manuscript/supplementary/Additional_file_07.xlsx` | result_table | 0.005 | passed | Processed result or manuscript table | `58949926ae85ea658defdb6c6bd35ad528cf7660f08972f4147eb9b6ada30719` |
+| `results/tables/manuscript/supplementary/Additional_file_09.xlsx` | result_table | 0.006 | passed | Processed result or manuscript table | `c32e07acc4d85e27981949006b78a28c7cf6c8f9b6336c63ad4203a147d4bceb` |
+| `results/tables/manuscript/supplementary/Additional_file_11.xlsx` | result_table | 0.006 | passed | Processed result or manuscript table | `a0ecae1bb519352f0936e97d0daacd43ad9a7c17c509aac71b54e8b41b8f8b1b` |
+| `results/tables/manuscript/supplementary/Additional_file_13.xlsx` | result_table | 0.006 | passed | Processed result or manuscript table | `35c3c63c1856881e5f5bafec435bcf6c5c1e343529b050120b09faf74427011c` |
+| `results/tables/manuscript/supplementary/Additional_file_15.xlsx` | result_table | 0.008 | passed | Processed result or manuscript table | `318be85942795e36cb8f887ee50b372324a0fc51d55bf2db3554769521ea13c8` |
+| `results/tables/manuscript/supplementary/Additional_file_16.xlsx` | result_table | 0.005 | passed | Processed result or manuscript table | `e83ad6df2821edee315cdc5bdfa593b7cda07fc8e212ad8f63da6040bbfae6af` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_Legends.md` | documentation | 0.002 | passed | Final manuscript table or table documentation | `67c3846fd68ffa8812ca6447abc93e9028225910d6544c71cf567d5dcfae840f` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S1.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `56bff72daf11237b9a09435538c0c81d841928bdea49b8a2d415363efa7a2df4` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S2.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `3cb9d3cd53807aec40fafa5bd38680ff0c14e08d29954341a63a9b5d9e943c5b` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S3.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `2724b8c383d55d51b3251348943be60db82424049b03ee0241c849273020352c` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S4.csv` | result_table | 0.005 | passed | Final manuscript table or table documentation | `de207f73b1db9c6b46b502460b2be82b6c71dc11d69da5ec1ab4a431c9266eed` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S5.csv` | result_table | 0.000 | passed | Final manuscript table or table documentation | `597d902b464607fe847a4d45e2634b55766f5f9dbc75223261acb82800b93fd3` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S6.csv` | result_table | 0.001 | passed | Final manuscript table or table documentation | `f58fe401114a6111dbe18e527f7466ac03b7131be744885401781c03676a0e0e` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S7.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation | `e765066ed3049bdf61d5078157d2600fc3fc38b4db2b1da30d869b7be2ae4df9` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S8.csv` | result_table | 0.002 | passed | Final manuscript table or table documentation | `b722b532d5761c56830e9bc1fd57977161483cf3ecd946838b3c8ace863f1d8e` |
+| `results/tables/manuscript/supplementary/Supplementary_Table_S9.csv` | result_table | 0.004 | passed | Final manuscript table or table documentation | `89e55b05243ef8c207e7e2d082616d69cae471cc55792e6173e190b84afeef50` |
+| `results/tables/pyscenic/regulon_auc_mean.csv` | result_table | 0.003 | passed | Mean regulon AUC summary | `61c9ab65faceaf4a47d59ffa28437e6e33bffe98730643a48c4a1e7d356c7974` |
+| `results/tables/pyscenic/regulon_names.txt` | result_table | 0.001 | passed | Final regulon names | `c64dc7d8f2551c4b7e78aedeaa86bb553ffd2ed4ec0a5e26b7951ee10d7b6d4f` |
+| `results/tables/pyscenic/regulons.csv` | result_table | 0.984 | passed | pySCENIC regulon refinement output | `9f599a0501e344663ecdf9a144e1f58d9c8fb2bb2da440cbf11e737abc5efae4` |
+| `results/tables/pyscenic_overview/regulon_overview_stats.csv` | result_table | 0.006 | passed | pySCENIC overview output | `1e673d867602762fd81dcd28b27b0ed2dd6c37e30dd38aef38430da046420826` |
+| `results/tables/pyscenic_overview/top_regulons_by_variability.csv` | result_table | 0.001 | passed | pySCENIC overview output | `fef9acf0fdfba6398f00ff5e0119576c4fe00594ebd2c9a931be8d2e101db229` |
+| `results/tables/pyscenic_overview/top_regulons_overall.csv` | result_table | 0.001 | passed | pySCENIC overview output | `bfe1b65be469d07b5e5fc844a52124ba2dcfb67c7b462778d5ee0156ffb99c79` |
+| `results/tables/pyscenic_overview/umap_not_found.txt` | audit | 0.000 | passed | pySCENIC overview output | `7062246d698e016681f8075f52778656489b0ca40f316f693de758907d5eadcc` |
+| `results/tables/robustness/00_naming_correction_note_cn.txt` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output | `33a32bcfc35a3ba07c6b32198470b11937f1c1e6aac2e98e190bd07ee4b63e10` |
+| `results/tables/robustness/01_detected_fields.json` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `6eed07710e225844cecd06357de74a31f1e68851c374377953881c2ec574f618` |
+| `results/tables/robustness/01_donor_group_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output | `01d0f1ba4b3fd5b9180286ef786cf9b1c5996c4a8fbd0e1fbef805f282783c42` |
+| `results/tables/robustness/01_group_sample_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output | `3bc7663f89c581cd94b9969551dbda016a501281970b8ab59e8a882fac05192f` |
+| `results/tables/robustness/01_input_object_summary.txt` | result_table | 0.003 | passed | LOSO/pseudobulk/threshold robustness output | `6bfa596260f725fe82dfc884564e4359c18572b6854151eeaaa5075d2327f76a` |
+| `results/tables/robustness/01_obs_columns.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output | `c79f62eaff7620d846c1d284651b3107036bfd1f2c8925e70eb4de787903d580` |
+| `results/tables/robustness/01_sample_group_distribution.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output | `3bc7663f89c581cd94b9969551dbda016a501281970b8ab59e8a882fac05192f` |
+| `results/tables/robustness/02_full_data_baseline_results.csv` | result_table | 0.003 | passed | LOSO/pseudobulk/threshold robustness output | `4af7604d7903a5eea640e0caae06eece1f9bac791589c285e6e178b54d3fc653` |
+| `results/tables/robustness/02_leave_one_out_expr_results.csv` | result_table | 0.008 | passed | LOSO/pseudobulk/threshold robustness output | `9b3aae07d77e06e772a5e1d1c5085f2fae572a9be6cf0eee85fa71775d40e50b` |
+| `results/tables/robustness/02_leave_one_out_master_results.csv` | result_table | 0.013 | passed | LOSO/pseudobulk/threshold robustness output | `ffeb5a305db21f6856a1e56b09ea6416bb7e547574131e424ab624dcb685b27a` |
+| `results/tables/robustness/02_leave_one_out_regulon_results.csv` | result_table | 0.007 | passed | LOSO/pseudobulk/threshold robustness output | `34f20c5c05ee757e364ff36493225f5857c9e93f82b91504bd641fe8c6195dcc` |
+| `results/tables/robustness/02_leave_one_out_summary_cn.txt` | result_table | 0.004 | passed | LOSO/pseudobulk/threshold robustness output | `eda4e0acc89dfaace88d909520fc5c58a91d374c90f91a55980dcd48350b62cc` |
+| `results/tables/robustness/02_leave_one_out_tf_summary.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `e1e5abc463ebe913d77eac58742230265c7df8ff60286d2fd3fc110f18ac88ee` |
+| `results/tables/robustness/02_leave_one_sample_out_master_results_revised.csv` | result_table | 0.012 | passed | LOSO/pseudobulk/threshold robustness output | `37252b02606f741a7f5ba5453e2244bb7d543ab1f9dfb69ad7c56009678ab48b` |
+| `results/tables/robustness/02_leave_one_sample_out_tf_summary_revised.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `092cc5a91db706bbd5f36a47f927cf881376081173cc5c1510091a46bd6cbb72` |
+| `results/tables/robustness/03_pseudobulk_candidate_target_expression_matrix.csv` | result_table | 0.080 | passed | LOSO/pseudobulk/threshold robustness output | `ad14c01255fec5828552c563f6c940ec6a0633c2c3bfc9371be2d9f4c7af3d67` |
+| `results/tables/robustness/03_pseudobulk_candidate_tf_table.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output | `f1e6ca4a0d9ee1027503b392211ff7d0baba95673699ba2b5e05727d7921dcad` |
+| `results/tables/robustness/03_pseudobulk_regulon_by_donor.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `da00a650310eea3e88765899312bb8ec160fe021a8dbe1827b70b2de2d2b9bce` |
+| `results/tables/robustness/03_pseudobulk_regulon_table.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output | `c80145ab0ab47eb24c8503e1d594cd157006c0f0121e2af632a11932b8f0bfc6` |
+| `results/tables/robustness/03_pseudobulk_sample_metadata.csv` | result_table | 0.000 | passed | LOSO/pseudobulk/threshold robustness output | `6cfb59ea9b1a017ea2a8b2170bf15fac5a88ea610a5b17b7d796d570bbce5b6b` |
+| `results/tables/robustness/03_pseudobulk_summary_cn.txt` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `29d0e6371ab55e31a501ede2fd7cbd576dabb530eb2a06117a18e5b397cf6d26` |
+| `results/tables/robustness/04_shortlist_membership_frequency.csv` | result_table | 0.002 | passed | LOSO/pseudobulk/threshold robustness output | `4f2b31f13f8ff34c49cdd0a18e514c0756ff17d901ec6ef494b65b9c68e7dff0` |
+| `results/tables/robustness/04_shortlist_priority_stability.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `0bf67c03dba194ce91c695362c83e895c1adfc76edc6dfd9e6f72669b0f4c76c` |
+| `results/tables/robustness/04_shortlist_sensitivity_grid.csv` | result_table | 0.010 | passed | LOSO/pseudobulk/threshold robustness output | `041278069642961d008d50e99518be6bbd098c4711ec0e4aefb89c5c3318c3bc` |
+| `results/tables/robustness/04_shortlist_sensitivity_long.csv` | result_table | 0.171 | passed | LOSO/pseudobulk/threshold robustness output | `e196b43d93ab45f6eb62aeb55942d10cb6cddb40977689ce5ebe5f2bc859735b` |
+| `results/tables/robustness/04_shortlist_summary_cn.txt` | result_table | 0.004 | passed | LOSO/pseudobulk/threshold robustness output | `5740cec49c5c20b390431e30f9199ece6821cf0345f6696a67248e83b3ad952a` |
+| `results/tables/robustness/05_robustness_validation_integrated_table.csv` | result_table | 0.001 | passed | LOSO/pseudobulk/threshold robustness output | `0b03b79f746ad4b2ea9cefa5c41e396d73b3634b6540fa33c955a20300151256` |
+| `results/tables/robustness/05_robustness_validation_master_summary_cn.txt` | result_table | 0.010 | passed | LOSO/pseudobulk/threshold robustness output | `291b3ba901b1ea51c0d112a979af7ca6ec5d79d60d69eea60638bb2cf1323fee` |
+| `results/tables/robustness/05_robustness_validation_master_summary_cn_revised.txt` | result_table | 0.011 | passed | LOSO/pseudobulk/threshold robustness output | `c93c81af59ea68fdf9a9eb5de2321562b8a6b89316273b330cc07d03b4bee14d` |
+| `results/tables/supportive_gse140393/donor_level_summary.csv` | result_table | 0.004 | passed | Supportive/contextual external dataset output | `c79adddac226830655759a399d85c5e50e262ae9daa775c0a6cfd06f45a907ee` |
+| `results/tables/supportive_gse140393/expression_summary.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output | `bde0767578695faeea54e48065cabd58b4793ccd8cd9ef398004f87873478769` |
+| `results/tables/supportive_gse140393/external_support_ranking.csv` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `d9500be31e9fac35f412da6e7a77817c3a1be14a3f4f369d9d6f55b13d212368` |
+| `results/tables/supportive_gse140393/external_support_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `0f4e5ed99f1084b6ff909fd3e00f6ba45cb2ff938e776079ea5bf6573cade21d` |
+| `results/tables/supportive_gse190452/candidate_assessment_report.json` | result_table | 0.004 | passed | Supportive/contextual external dataset output | `ce211d52293720069ec1cff795ac0460657c1aecc3d6f12fdaa86e75597feb01` |
+| `results/tables/supportive_gse190452/candidate_assessment_report.txt` | result_table | 0.004 | passed | Supportive/contextual external dataset output | `7710738ee7a0d0d2f811bd9f0f3cd7140e54b250fba41ecdae485ee61c3a79f4` |
+| `results/tables/supportive_gse190452/external_round2_master_table.csv` | result_table | 0.003 | passed | Supportive/contextual external dataset output | `0d68df93e6742ed301b296e1d0da9d79906b1d56e45d17e36f3cae0788b67ea1` |
+| `results/tables/supportive_gse190452/external_round2_regulon_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `626b2f39009bc2ccbcab302d2f8ca158e5743f4e3801485f756dcef0b5c56181` |
+| `results/tables/supportive_gse190452/external_round2_summary_cn.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `b76f9e79137a2415f115861e173d42c19114b2daeaf0db4dc713b1154665ec23` |
+| `results/tables/supportive_gse190452/external_round2_support_ranking.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output | `130e6a37ef1dac7c60ac99da2ebe53711b96d51b4e9ac43d84073ccfa3065815` |
+| `results/tables/supportive_gse190452/external_round2_tf_expression_celltype_stats.csv` | result_table | 0.021 | passed | Supportive/contextual external dataset output | `395955587e169c48873a4c734f9130c3bd918a6242e76ac41f42c34fd33da060` |
+| `results/tables/supportive_gse190452/external_round2_tf_expression_group_stats.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output | `fe2ae0387f8e55f27215b75d7f93b735271395f2a096858f0c55019108712a26` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/logs/auc_projection_report.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `0d3e157e5b51fe6ce4cd9c91a086b060d822e54bb4b31d649c5750b0b4c54e19` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/logs/pyscenic_commands.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `29c60ac929884f0ef8f7384429c45481887aab5b5785d7ba47ab1779ef3b0678` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf.csv` | result_table | 0.000 | passed | Supportive/contextual external dataset output | `6d7a8081f3835fdef9ba8978c8d53a774009697447e52c5f107843bb6e94f433` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf.gmt` | result_table | 0.005 | passed | Supportive/contextual external dataset output | `6512a6571de1322484fc89b7b70de4085229f5d970b70f2ac6282bb1331c3a3e` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/output/discovery_regulons_4tf_selected_rows.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output | `375e2e0a633e10ebbd252d41b0435827261475aaf3f6c6879254deaa42860dc9` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/readiness_report.json` | result_table | 0.004 | passed | Supportive/contextual external dataset output | `3b68e2d37d6ee997563af1be1ed46bca3d01cb7bb1663a7034429880053c2663` |
+| `results/tables/supportive_gse190452/pyscenic_recalc/readiness_report.txt` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `d3b0146ffa3b3d99a4ed53d3550786d20ba5ffb4b7a8d914e2ed713c347e1769` |
+| `results/tables/supportive_gse190452/round2_expression_and_regulon_master_table.csv` | result_table | 0.005 | passed | Supportive/contextual external dataset output | `33f659db46ca628173d37e70054379f95c12cfbdf57044fe9ded41f4edf8ba13` |
+| `results/tables/supportive_gse190452/round2_regulon_cluster_stats.csv` | result_table | 0.018 | passed | Supportive/contextual external dataset output | `0901df328cacfafec4df56b397e6b7f35f3653e27113cba737087363d78d9776` |
+| `results/tables/supportive_gse190452/round2_regulon_group_stats.csv` | result_table | 0.001 | passed | Supportive/contextual external dataset output | `36d81d15c444d26029ea328257e9b3ef965bb1058dcc73fd402b384c9bf9fdc2` |
+| `results/tables/supportive_gse190452/round2_regulon_support_ranking.csv` | result_table | 0.002 | passed | Supportive/contextual external dataset output | `f7c0076da9dca2ca2437eceedc2ce161e6e91eb1529e8328a482391c71433eb6` |
+| `results/tables/tf_prioritization/celloracle_candidate_tf_metrics.csv` | result_table | 0.006 | passed | TF prioritization output | `c6531db2f3870f1f01ed0e82fb88d2a17b767f0c4d96b3c66b2132dafb085196` |
+| `results/tables/tf_prioritization/celloracle_tf_shortlist.csv` | result_table | 0.004 | passed | TF prioritization output | `3720d6b541bc503e3a34dc914f15427f161479e2288506688fbfe2574374e238` |
+| `results/tables/tf_prioritization/celloracle_tf_shortlist_high_confidence.csv` | result_table | 0.004 | passed | TF prioritization output | `3720d6b541bc503e3a34dc914f15427f161479e2288506688fbfe2574374e238` |
+| `results/tables/tf_prioritization/celloracle_tf_shortlist_summary.json` | result_table | 0.001 | passed | TF prioritization output | `138cb930343c894be93db01ff56ae0aa290ff25e290e09d9a183e8744b173d49` |
+| `results/tables/tf_prioritization/celloracle_tf_shortlist_summary_cn.txt` | audit | 0.001 | passed | TF prioritization output | `f608c9c7d62e659cc6c0b7d766abbfe3f1e82cec483c87d171b6eabc52de0739` |
+| `scripts/assess_external_validation_candidates.py` | script | 0.013 | passed | Analysis or figure/table generation script | `74f5dc9b7b309ed9b494a3fe1ac38005c50303a6e864f6884116aec261dde80e` |
+| `scripts/build_discovery_regulons_4tf_gmt.py` | script | 0.007 | passed | Analysis or figure/table generation script | `142ecd9c92facee392d4dbfc7b932c6bce577287b6a34c8ab287abe4aa1793ad` |
+| `scripts/build_external_validation_h5ad.py` | script | 0.019 | passed | Analysis or figure/table generation script | `3a807e3ffdf5b0a4252a2948532cb381e2c48d59109d4abec5eec23706e67c1f` |
+| `scripts/build_external_validation_round2_h5ad.py` | script | 0.013 | passed | Analysis or figure/table generation script | `bcee566138c79f87abb2219759cbb9ffc5017627b7c4189c2f8dff74e97aa88a` |
+| `scripts/build_round2_minimal_expression_for_4tf_auc.py` | script | 0.008 | passed | Analysis or figure/table generation script | `d382e81dca17b0cf58c3db638beabd97af36264b4a03b797ff38a56445234483` |
+| `scripts/check_celloracle_input_compat.py` | script | 0.009 | passed | Analysis or figure/table generation script | `b94fac5d60e85564a2c9d8483114af37b40e0fa1055f2edba3930d581d3fff8b` |
+| `scripts/check_round2_pyscenic_readiness.py` | script | 0.007 | passed | Analysis or figure/table generation script | `6c78a71e42bbf40683b61e8c6b63a65ff183929a7dab7620cb36e915909a181b` |
+| `scripts/compare_regulons_by_group.py` | script | 0.011 | passed | Analysis or figure/table generation script | `4f63538e5e3ca7a45da005ee9d30d3111412626edf23b4a26ee540f52d4a88c7` |
+| `scripts/drug_repositioning/01_check_drugrep_inputs_v2.py` | script | 0.003 | passed | Analysis or figure/table generation script | `b11f12751755d56665f14cc5a5604eb931f735043b5489cc0f3c7dad773b827a` |
+| `scripts/drug_repositioning/02_run_dsigdb_enrichr_v2.py` | script | 0.000 | passed | Analysis or figure/table generation script | `b3f79a948cad02583090e37bcc5913b1c228dfe7f6b2d3e1dc382f232d9323f6` |
+| `scripts/drug_repositioning/03_aggregate_compounds_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script | `bfb83d26ac577e276e21b29dee7881d2e8ea9d7668c208f7ee27c632c13b978d` |
+| `scripts/drug_repositioning/04_refine_parameters_and_rerun_v2.py` | script | 0.004 | passed | Analysis or figure/table generation script | `1d8374bed1de22af4776835a64597c84aebbd674d1c0d0c72e87d02c9c0997a3` |
+| `scripts/drug_repositioning/05_prepare_swissadme_manual_review_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script | `544d294745cf49a1319dc3cba2761f076214f4304341a6dcc3c9316e7eff3506` |
+| `scripts/drug_repositioning/06_import_swissadme_csv_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script | `7f3cb568674732b6f012ab5115edbb3314af5384a8d8f9be4be165589719fb76` |
+| `scripts/drug_repositioning/06_make_prebbb_summary_v2.py` | script | 0.000 | passed | Analysis or figure/table generation script | `bdae1d8b54ca575b42f80ff74cf8d1b3fb326916e997d05b6c4a741a7a40d7df` |
+| `scripts/drug_repositioning/config/drugrep_v21_compound_tags.csv` | documentation | 0.018 | passed | Analysis or figure/table generation script | `c73e8117cd9301905483af7e1cfce66f7ecae36284cf9395749cb656216b4a4c` |
+| `scripts/drug_repositioning/config/drugrep_v21_penalties.yaml` | documentation | 0.000 | passed | Analysis or figure/table generation script | `b50ff86f4c28420118334f81b4671bb4748618b74f9ecfd35891fe8bd5c534e2` |
+| `scripts/drug_repositioning/config/drugrep_v21_scoring.yaml` | documentation | 0.001 | passed | Analysis or figure/table generation script | `335793cb078806bb711ab47e9f4ead75d9785ae7bd2dc24a2cb662bf6ff815c2` |
+| `scripts/drug_repositioning/drugrep_common_v2.py` | script | 0.046 | passed | Analysis or figure/table generation script | `8f6a90475f48090e9d53e7eb4848baf6a713b6a864f9b013c94d7be7a3cea0f3` |
+| `scripts/drug_repositioning/README_drugrep_v2.md` | documentation | 0.002 | passed | Analysis or figure/table generation script | `eadbfb5311d54433599c16b0412aa162c08c753b721e222485f4930e8641c17d` |
+| `scripts/drug_repositioning/rescore_v21.py` | script | 0.041 | passed | Analysis or figure/table generation script | `5ac8dd0466057d56b94a8b23271e7d8a22ffd5e63e3a415faaaef6a98a37f4e7` |
+| `scripts/drug_repositioning/run_after_bbb_v21.py` | script | 0.026 | passed | Analysis or figure/table generation script | `fd3be36fd26e77026a02ee29aa875a0171ff3ec03e701dac04088af4e4f7bece` |
+| `scripts/drug_repositioning/run_continue_after_manual_bbb_v2.py` | script | 0.011 | passed | Analysis or figure/table generation script | `d09271dc6f21b7118900a4155b6151f85ce026845652fcaca5dc6686e63bb8c0` |
+| `scripts/drug_repositioning/run_drug_repositioning_until_bbb_v2.py` | script | 0.001 | passed | Analysis or figure/table generation script | `6dd09c19755e156d2fbbe427963649d80bed4b390b74f6810982129bf62e7428` |
+| `scripts/drug_repositioning/run_prebbb_v21.py` | script | 0.001 | passed | Analysis or figure/table generation script | `facf849456ef4da27322244c5efb45de2798969cbab7f3ff41baad2ca40adaa3` |
+| `scripts/export_round2_for_pyscenic.py` | script | 0.006 | passed | Analysis or figure/table generation script | `fb238726a831e995b361e98260cf472bc527d143bb5e79a9a06eddcd9813fdc2` |
+| `scripts/functional/00_revise_robustness_terms.py` | script | 0.004 | passed | Analysis or figure/table generation script | `2f8504208db8efaae13b6d6bfa37d139b5db3abc93a929e0bbe664e612852ba6` |
+| `scripts/functional/01_check_resources.py` | script | 0.003 | passed | Analysis or figure/table generation script | `639980804a4c0a8c99085627f103e5467486762046735036777199387f977a76` |
+| `scripts/functional/02_build_tf_gene_sets.py` | script | 0.004 | passed | Analysis or figure/table generation script | `5fb3c9f01582bc5f551b3946dc6799ca63fcfe1869fe25112029aef2c9255e29` |
+| `scripts/functional/03_run_go_kegg.py` | script | 0.005 | passed | Analysis or figure/table generation script | `e2bd07587f18001bcdcd59896a7a5cc5025f92bcd2c1383a34d5a60e088b0f66` |
+| `scripts/functional/04_program_convergence.py` | script | 0.008 | passed | Analysis or figure/table generation script | `fa88ba35a66427b2e7cd90dfc0a4ed726df91b8caa789213dcdc088d617ce477` |
+| `scripts/functional/05_make_functional_master_summary.py` | script | 0.005 | passed | Analysis or figure/table generation script | `7d5ad6666f4af3129a4d5b0a4fd789bafc3cf7fb934e7aa937eda1e846f6e8bf` |
+| `scripts/functional/functional_common.py` | script | 0.011 | passed | Analysis or figure/table generation script | `17b9a80383aa7b0d52156cd5f11e59efb6f9c41eadff77e1a20a6ac19645f1e1` |
+| `scripts/functional/README_functional_interpretation.md` | documentation | 0.001 | passed | Analysis or figure/table generation script | `d343d963e61e734b2fa9f77ca62b64143bc27302603ec8711101d517c8e6a6f0` |
+| `scripts/functional/run_all_functional_interpretation.py` | script | 0.001 | passed | Analysis or figure/table generation script | `7d2b2c522c39d506431073de7cdf865e7a268901038aa500070fa6ef83228d19` |
+| `scripts/gse268807_pilot/00_check_environment.py` | script | 0.004 | passed | Analysis or figure/table generation script | `51c079482076b9ac7519069d1a32af7370c75b79af0f91a78b2eb1ab31594ea0` |
+| `scripts/gse268807_pilot/01_validate_metadata.py` | script | 0.009 | passed | Analysis or figure/table generation script | `42c7cf5f02d50408e8f9dc2009f088fd053464af522c07e926feb10253b72917` |
+| `scripts/gse268807_pilot/02_qc_and_downsample_scanpy.py` | script | 0.004 | passed | Analysis or figure/table generation script | `c8fdb3c9a928b0701362dc3ffefbd3e0c521c314e5303a3fd27458e60c068261` |
+| `scripts/gse268807_pilot/08_download_geo_gse268807.py` | script | 0.006 | passed | Analysis or figure/table generation script | `bc6ab9f42c7d6ce11a8d67336c9087073cd4e094a1006fbcbbc5fd0334225b92` |
+| `scripts/gse268807_pilot/09_mtx_gz_to_h5ad.py` | script | 0.007 | passed | Analysis or figure/table generation script | `f6073882b0eebc71d5ae01d9341632c83754223bf18536944e2c4ac6e19f8b88` |
+| `scripts/gse268807_pilot/10_concat_h5ad.py` | script | 0.002 | passed | Analysis or figure/table generation script | `ab03e65cf4f9556bafca9b099969e20c2c5ea80da6f53e6cdc95e26255576117` |
+| `scripts/gse268807_pilot/README.md` | documentation | 0.001 | passed | Analysis or figure/table generation script | `315b4e7554719b1ef1a4bc44ae5bee8183fca65a7594f0d99dbaeb4a3b090748` |
+| `scripts/inspect_h5ad_structure.py` | script | 0.004 | passed | Analysis or figure/table generation script | `50589ff62f35d6f30e19b5004397396c987c6496763937c9b9f0ada2a10ed9f8` |
+| `scripts/manuscript_figures/build_fig1_main_v3_study_design.py` | script | 0.019 | passed | Analysis or figure/table generation script | `bc81452314733197d4abb78924ea0be39dca8cc0efb02e9f687cc8d0bc26ecb0` |
+| `scripts/manuscript_figures/build_fig1_main_v4_study_design.py` | script | 0.020 | passed | Analysis or figure/table generation script | `3c717eaa2974737fab7c01306e603fbe0ce5aa68b49dcc419ef118bb18076580` |
+| `scripts/manuscript_figures/build_fig2_main_v31_regulon_landscape.py` | script | 0.037 | passed | Analysis or figure/table generation script | `c29c16d8922b5b467a37ff023756721c88ac19f5601f4359445858d71874c73b` |
+| `scripts/manuscript_figures/build_fig2_main_v32_regulon_landscape.py` | script | 0.037 | passed | Analysis or figure/table generation script | `fbf695baf4f600923f4adfe591244d3a6adb38081d3fca6af11941b9bb8f7d51` |
+| `scripts/manuscript_figures/build_fig2_main_v3_regulon_landscape.py` | script | 0.036 | passed | Analysis or figure/table generation script | `f9a0130f227b7a4429e23d5716b451e5b87a8775a5fef32af02c737b6fce855e` |
+| `scripts/manuscript_figures/build_fig3_main_v31_celloracle_perturbation.py` | script | 0.028 | passed | Analysis or figure/table generation script | `13a64cf19aece2894033d776ff5ff8a3c0bd992b8de9a5cf08a6e61034d43120` |
+| `scripts/manuscript_figures/build_fig3_main_v3_celloracle_perturbation.py` | script | 0.028 | passed | Analysis or figure/table generation script | `7c79ba4d90a325a31e0e084666a6f3526c1cf00e4bc747881a13b0cf7461c643` |
+| `scripts/manuscript_figures/build_fig4_main_v31_robustness_support.py` | script | 0.030 | passed | Analysis or figure/table generation script | `43f5a16cd25685b50cf9fc7f5004880fd55fa392cf697f891c383cc268740bbb` |
+| `scripts/manuscript_figures/build_fig4_main_v3_robustness_support.py` | script | 0.030 | passed | Analysis or figure/table generation script | `27969668d8ac6413df88ecf21afa67ee02132d40174af9cbdd574ca74c1f04ec` |
+| `scripts/manuscript_figures/build_fig5_main_v31_program_model.py` | script | 0.029 | passed | Analysis or figure/table generation script | `4ef66f1e4a24309deeacb44ff56a4ada135eefa0018917a5cb69c8aff9bba536` |
+| `scripts/manuscript_figures/build_fig5_main_v3_program_model.py` | script | 0.023 | passed | Analysis or figure/table generation script | `c32fe16445177a8f89ada416aa22cc0aa7c9014637fa63305bac28cec26819a4` |
+| `scripts/manuscript_figures/build_fig5_main_v4_program_model.py` | script | 0.033 | passed | Analysis or figure/table generation script | `690f93952af3403564833f0f1e4252b94e1cd013fe5f30c2d662e068f12bc321` |
+| `scripts/manuscript_figures/build_figS1_discovery_object_qc_revised_v2.py` | script | 0.024 | passed | Analysis or figure/table generation script | `06c831676547a5b805cba004bf031edf83383bb3628d4cf3847734aa3d2152be` |
+| `scripts/manuscript_figures/build_figS2_full_differential_regulon_landscape_revised_v2.py` | script | 0.022 | passed | Analysis or figure/table generation script | `25753866fadc5cb56cb676d82cb0139e742e157f0c2e2867368fdf1247de45f7` |
+| `scripts/manuscript_figures/build_figS3_celloracle_perturbation_metrics_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script | `cc66f972267721f487582a36cb8bd7d3be1d206f9cdc3032f78587898d3212c7` |
+| `scripts/manuscript_figures/build_figS3_celloracle_perturbation_metrics_revised_v2_minorfix.py` | script | 0.019 | passed | Analysis or figure/table generation script | `33bf3c7cd22e73b8eae340528ce6e8eb38f1e8b1365ea7dda6aa414602a863dc` |
+| `scripts/manuscript_figures/build_figS3_with_permutation_panels.py` | script | 0.006 | passed | Assemble Supplementary Figure S3 permutation panels | `94c650beb69c63e0d2721e837f713b6ab7e507f2e0e0dd77a46e0226a86d7612` |
+| `scripts/manuscript_figures/build_figS4_sample_level_robustness_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script | `f1ce27a46784c0820d02f3b57edbae00ab03189dee79a75df275e02a802e1127` |
+| `scripts/manuscript_figures/build_figS4_sample_level_robustness_revised_v2_minorfix.py` | script | 0.020 | passed | Analysis or figure/table generation script | `ff6ffc3988c1805808a9384bf27c199dd658fd8ee04396b16acdcd1dd1f0ffe9` |
+| `scripts/manuscript_figures/build_figS5_supportive_external_evidence_revised_v2.py` | script | 0.023 | passed | Analysis or figure/table generation script | `565210115b19ce4de9e0f85dc8ecab04fc21aab6d23f4193e13193b4b8e18f4c` |
+| `scripts/manuscript_figures/build_figS5_supportive_external_evidence_revised_v2_minorfix.py` | script | 0.007 | passed | Analysis or figure/table generation script | `4e47604fc73020bbe1e4270723f7d0b37505dda07bf844dcd64226fc8066054a` |
+| `scripts/manuscript_figures/build_figS6_functional_enrichment_convergence_revised_v2.py` | script | 0.022 | passed | Analysis or figure/table generation script | `3b876459b31cc9cf9c1137591c07c67438f71c69eff6b4c6956af22b11a30995` |
+| `scripts/manuscript_figures/build_figS6_functional_enrichment_convergence_revised_v2_minorfix.py` | script | 0.023 | passed | Analysis or figure/table generation script | `8eafd2c579360ec6cda1a559fbd7feeebbca05918044b50cb92aea0e9a7b816b` |
+| `scripts/manuscript_figures/build_figS7_drug_repositioning_exploratory_revised_v2.py` | script | 0.026 | passed | Analysis or figure/table generation script | `1df354fd4a1d51260383599210cea2fcbdec026058500f282584d81f48ca9b20` |
+| `scripts/manuscript_figures/build_figS7_drug_repositioning_exploratory_revised_v2_minorfix.py` | script | 0.006 | passed | Analysis or figure/table generation script | `0103b1c1dc6c349e81e5ea747d049c022320d67e30fc7d4176fd8969b096f19d` |
+| `scripts/manuscript_figures/build_main_figures.py` | script | 0.028 | passed | Analysis or figure/table generation script | `bbb8875b43f2df9a8940bc5e555627ea09a3cce5e5d4b3bbee91db9a17561b6c` |
+| `scripts/manuscript_figures/build_main_figures_v2.py` | script | 0.039 | passed | Analysis or figure/table generation script | `1c50b3a71751b9927e26113819f7183c29fb929b67be97a37c8ccc0febe88ad0` |
+| `scripts/manuscript_figures/build_main_figures_v3.py` | script | 0.047 | passed | Analysis or figure/table generation script | `92022d36dfc99a17ea47ab8954aed028b6c867ae6470f81c7a16412ddd3a9786` |
+| `scripts/manuscript_figures/build_supplementary_package.py` | script | 0.054 | passed | Analysis or figure/table generation script | `10f4108bae7b88676a0c4341904d34bb9f3446b27fe11e6e94d39052df2ef290` |
+| `scripts/manuscript_figures/build_supplementary_package_v3.py` | script | 0.060 | passed | Analysis or figure/table generation script | `edc892740431cf714e1a75f8b127b1122a9e5d41c81f2c710d8554c9319b4dff` |
+| `scripts/manuscript_tables/build_main_and_supplementary_tables_v3.py` | script | 0.035 | passed | Analysis or figure/table generation script | `00130d02ddd9dcd39e27adcc3e49042276a2f3027b38454987db808d3adaeec0` |
+| `scripts/manuscript_tables/build_main_and_supplementary_tables_v3_minorfix.py` | script | 0.017 | passed | Analysis or figure/table generation script | `7905426535007b341b58418ae105b6f7e6a2dacd3f91b13dcb728e7d3c7afe3c` |
+| `scripts/merge_auc_to_h5ad.py` | script | 0.003 | passed | Analysis or figure/table generation script | `8da5e208d012675d05f161f0568a8d1b50b1ba289642c834df2b6dcc0e18f58e` |
+| `scripts/merge_round2_auc_to_h5ad.py` | script | 0.003 | passed | Analysis or figure/table generation script | `ae356f706828ad27853da449f06a39bb876bc794e0a55f05d582c678e82590f9` |
+| `scripts/mtx_to_csv.py` | script | 0.004 | passed | Analysis or figure/table generation script | `b1a2a103b074559553e31dc8a521f1f99d5481bb4ab2b084c6f6a0de045200a1` |
+| `scripts/permutation_test_celloracle.py` | script | 0.011 | passed | Formal CellOracle permutation-test workflow | `0cb4611bcafd1a03d94c67d9d6d99c473d7abd2eb8f4eb9c70a59ffdd70834cb` |
+| `scripts/plot_pyscenic_overview.py` | script | 0.005 | passed | Analysis or figure/table generation script | `f0092a107efc5ed3e5d32f251188e1169ad42befc97ebf331688db75f0c5888d` |
+| `scripts/prepare_celloracle_first_round.py` | script | 0.018 | passed | Analysis or figure/table generation script | `b519c76b64cb9bcd7f8872f231696860955fb6ff51c696e870aecda86edaee8d` |
+| `scripts/pyscenic_analysis_common.py` | script | 0.010 | passed | Analysis or figure/table generation script | `3bd24aa2d80bcd05eec90389723f21b8faf108c32943defadbe3c4f304f09ae5` |
+| `scripts/robustness/01_inspect_input_object.py` | script | 0.007 | passed | Analysis or figure/table generation script | `beb5e8d36ffc4d74536e93b90fef4b68c03e054a50c437e5e180ebbacc353c01` |
+| `scripts/robustness/02_leave_one_donor_out.py` | script | 0.014 | passed | Analysis or figure/table generation script | `34ab2e2a66529ccd2dc799ab920d431cc65869758408ebf579ae08df0e30fe70` |
+| `scripts/robustness/03_pseudobulk_validation.py` | script | 0.010 | passed | Analysis or figure/table generation script | `332d0b21b1626d5a47c1a564191eb28fd08847693ef4518fcaf89566a9c37aab` |
+| `scripts/robustness/04_shortlist_sensitivity.py` | script | 0.009 | passed | Analysis or figure/table generation script | `338a8954a60adfa706d4ddb2a15c8ec83167764d3304eb1c586f9b4de6102a92` |
+| `scripts/robustness/05_make_master_summary.py` | script | 0.008 | passed | Analysis or figure/table generation script | `56435b42ce35717f2a530399c9068d0943b8d7374367f2ddd9720b32df3502a7` |
+| `scripts/robustness/README_robustness_validation.md` | documentation | 0.001 | passed | Analysis or figure/table generation script | `390f09ad393874c27c63d590bc255463222bed0cec190ef9e268ab127915998d` |
+| `scripts/robustness/README_robustness_validation_revised.md` | documentation | 0.002 | passed | Analysis or figure/table generation script | `d2756b013a07fb1df7b453262a9aebee2ee573d227afd9fc67d0e80b3f72989b` |
+| `scripts/robustness/robustness_common.py` | script | 0.015 | passed | Analysis or figure/table generation script | `bdf650826e0cae532606047c870aa6073cbf68e2050194056795ac6c4b60aa84` |
+| `scripts/robustness/run_all_robustness_validation.py` | script | 0.001 | passed | Analysis or figure/table generation script | `d9ac6c5fb3cf356b4ddff2cd6c4596ddd0f3630f1f1b88d4b169fc61b204d781` |
+| `scripts/run_celloracle_in_silico_ko_round1.py` | script | 0.018 | passed | Analysis or figure/table generation script | `ca6c97f740241a375495b6f52067122b807fad058d6dd9e99f664ed7f59a1b51` |
+| `scripts/run_external_validation_round1.py` | script | 0.031 | passed | Analysis or figure/table generation script | `f43ebe6d6b8cb3549f159b0b2145682963f9018dea4f2eafe23707ddce7c210c` |
+| `scripts/run_external_validation_round2.py` | script | 0.026 | passed | Analysis or figure/table generation script | `f4304d2c9c6ab4f205cbe494e44ba179631ec87e3a4db32d223d23599e0bfcaf` |
+| `scripts/run_external_validation_round2_regulon.py` | script | 0.025 | passed | Analysis or figure/table generation script | `40387fbac4003ba53e34bba6d7d2d4ad51970a0723af85b842f01a31be7784d1` |
+| `scripts/run_external_validation_single_group_support.py` | script | 0.021 | passed | Analysis or figure/table generation script | `97f2c7eba0b4477f8f4aa1799ace1c03b332ff56df5fdf2a46ddcef815d97f00` |
+| `scripts/run_round2_aucell_projection_4tf.py` | script | 0.005 | passed | Analysis or figure/table generation script | `030d4c95fb348d9fce32a7d6dcf9302d278a21d409b9c8a1a49fd0006707cce7` |
+| `scripts/run_round2_pyscenic_pipeline.py` | script | 0.006 | passed | Analysis or figure/table generation script | `9f8e2d6df44b98fa6e193f6424427f1364ec1db9bc5c70ad388898d5760ed697` |
+| `scripts/screen_celloracle_candidate_tfs.py` | script | 0.018 | passed | Analysis or figure/table generation script | `1450b3f302f5d5e8016acf0e2808be635c9dc8e6159602167dd94e6006262bc0` |
+| `scripts/summarize_celloracle_ko_round1.py` | script | 0.023 | passed | Analysis or figure/table generation script | `65cb1da6bb6ae728c1d59bc8aa73d4b53d36c5eb88fabfbcff8b67a2b2832336` |
+| `scripts/summarize_group_compare_results.py` | script | 0.012 | passed | Analysis or figure/table generation script | `866c2c412cdf7d5419ae918ff2c90b4a271e70b9826b448af0f3af03613b18a6` |
+| `Supplementary_Figures_S1_S7_preview_not_for_submission.docx` | documentation | 6.564 | passed | Combined supplementary figure review copy | `62193aa5a8b7420bb57a7152637ef29a3e02db01295478edce1c0afe7dc470d1` |
+| `Supplementary_Tables_ST01_ST09_submission_ready.xlsx` | result_table | 0.029 | passed | Processed result or manuscript table | `f17a9747035acfd2425ade65c0a3e9beb9c8a5f0470124146022c688b29f1ae8` |

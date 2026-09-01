@@ -30,8 +30,10 @@ Some retained paths include legacy names such as `ko_round1` or `round1_ko_*`. T
 
 ## Approx. RI interpretation
 
-Approx. RI is a study-defined cosine-similarity-based alignment metric:
+Approx. RI is a study-defined composite score:
 
-`Approx. RI = cos(perturbation vector, lesion-to-internal-control reference vector)`.
+`Approx. RI = mean_net_shift_overall * (1 + group_selectivity) * (1 + coherence_target_group) * direction_agreement_factor`.
 
-It is not a CellOracle official standard metric, not an experimental perturbation result, and not a clinical recovery metric. It should be interpreted only as a computational alignment summary within this study.
+The direction-agreement factor is 1.0 when the expected regulon-effect group matches the higher-expression group and 0.75 otherwise. The score is non-negative and unbounded above (`[0, +inf)`); it is not a cosine similarity and is not normalized to 0-1. It is intended only for within-pipeline candidate comparison. It is not a CellOracle official standard metric, an experimental perturbation result, or a clinical recovery metric.
+
+The formal control analysis uses 10,000 paired-label and group-label permutations with fixed seed `20240817`. These tests assess simulated perturbation structure relative to randomized controls, not biological replication across donors.

@@ -1,10 +1,10 @@
-# Regulon and in silico perturbation analysis identifies asymmetric NFE2L2–THRB programs in FCD II astrocytes
+# Single-cell regulatory analysis identifies astrocyte stress response and homeostatic support in focal cortical dysplasia type II
 
-Current manuscript title: `Regulon and in silico perturbation analysis identifies asymmetric NFE2L2–THRB programs in FCD II astrocytes`
+Current manuscript title: `Single-cell regulatory analysis identifies astrocyte stress response and homeostatic support in focal cortical dysplasia type II`
 
-Chinese title: `Regulon 活性与计算扰动分析识别 FCD II 星形胶质细胞中的非对称 NFE2L2–THRB 程序`
+Chinese title: `单细胞调控分析揭示局灶性皮质发育不良 II 型星形胶质细胞的应激反应与稳态支持程序`
 
-Running title: `NFE2L2–THRB programs in FCD II astrocytes`
+Running title: `Astrocyte regulatory programs in FCD II`
 
 ## Overview
 
@@ -32,6 +32,7 @@ The manuscript methods are organized around the following analysis modules:
 3. Differential regulon analysis.
 4. Candidate transcription factor prioritization.
 5. CellOracle in silico perturbation simulation.
+   - Formal paired-label and group-label permutation controls use 10,000 permutations with fixed seed `20240817`.
 6. Robustness and sensitivity analyses.
 7. Supportive external data analyses.
 8. Functional enrichment and convergence analysis.
@@ -86,7 +87,7 @@ Some retained folders and files use legacy names such as `celloracle_ko`, `ko_ro
 
 ## Citation
 
-Ye X. Regulon and in silico perturbation analysis identifies asymmetric NFE2L2–THRB programs in FCD II astrocytes. Manuscript in preparation/submission.
+Ye X. Single-cell regulatory analysis identifies astrocyte stress response and homeostatic support in focal cortical dysplasia type II. Manuscript in preparation/submission.
 
 See `CITATION.cff` for repository citation metadata.
 

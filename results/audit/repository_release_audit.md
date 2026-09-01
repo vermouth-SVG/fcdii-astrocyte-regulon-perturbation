@@ -47,7 +47,7 @@ Audit date: 2026-05-24
 | Differential regulon analysis | Lesion versus internal-control AUCell comparison; Delta AUC = mean AUC lesion minus mean AUC internal-control; two-sided Wilcoxon rank-sum tests; Benjamini-Hochberg FDR; significance threshold FDR < 0.05. |
 | Candidate TF prioritization | Integrated TF expression direction, regulon activity direction, positive-cell proportion, FDR, target count, CellOracle metrics, and robustness metrics; no additional manual weights. |
 | CellOracle in silico perturbation | Docker image `kenjikamimoto126/celloracle_ubuntu:0.18.0`; CellOracle 0.18.0; Python 3.10.11 recovered from container; inputs include matched astrocyte expression object, candidate TFs, metadata, low-dimensional embedding, and inferred regulatory network. |
-| CellOracle metrics | Perturbation vectors, mean shift, Approx. RI, and random perturbation controls. Approx. RI is study-defined cosine alignment to the lesion-to-internal-control reference vector, not a CellOracle official metric or clinical recovery metric. |
+| CellOracle metrics | Perturbation vectors, mean shift, Approx. RI, and random perturbation controls. Approx. RI is a study-defined, non-negative and unbounded composite of net shift, group selectivity, target-group coherence, and direction agreement; it is not a cosine similarity, a CellOracle official metric, or a clinical recovery metric. |
 | Robustness / sensitivity | Leave-one-sample-out, pseudobulk sample x group summaries, and threshold sensitivity analyses. |
 | Supportive external analyses | GSE140393 and GSE190452 used only for supportive expression / gene-set analyses, not formal validation or independent regulon-level replication. |
 | Functional enrichment | Enrichr GO/KEGG, Benjamini-Hochberg FDR, significance threshold FDR < 0.05. |
@@ -93,7 +93,7 @@ Supplementary references:
 | pySCENIC runtime | Matched to retained run | Docker image `aertslab/pyscenic:0.12.1`, GRNBoost2, 4 workers, 105 final regulons. |
 | cisTarget resources | Matched | Manuscript resource sentence has been updated to the retained v10 resources. |
 | CellOracle environment | Matched | Docker image `kenjikamimoto126/celloracle_ubuntu:0.18.0`, CellOracle 0.18.0, Python 3.10.11 recovered from container. |
-| Approx. RI interpretation | Fixed in docs | Documented as a study-defined cosine-similarity-based alignment metric, not a CellOracle official metric or clinical recovery metric. |
+| Approx. RI interpretation | Fixed in docs | Documented as a study-defined composite with range `[0, +inf)`, not a normalized similarity, CellOracle official metric, or clinical recovery metric. |
 | Supplementary table/figure existence | Present | Main and supplementary figure/table outputs are present in manuscript output folders and release package copies. |
 | Data availability statement | Matched | Large raw matrices, controlled-access matrices, cisTarget resources, motif annotation files, and Docker layers are not redistributed. |
 | Code availability statement | Matched | Repository supports layered reproducibility with scripts, processed outputs, figure/table generation materials, and audit notes. |

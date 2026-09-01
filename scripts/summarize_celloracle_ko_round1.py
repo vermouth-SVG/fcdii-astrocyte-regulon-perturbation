@@ -233,9 +233,13 @@ def add_ranks(master_df: pd.DataFrame, by_group_df: pd.DataFrame) -> tuple[pd.Da
 
 
 def write_recovery_definition(ko_dir: Path) -> None:
-    text = """Round-1 Recovery Index (approximate) definition
+    text = """Round-1 Recovery Index (Approximate RI) definition
 
-This is a pragmatic score built only from existing CellOracle state-shift outputs.
+Approx. RI is a study-defined composite score used to summarize CellOracle in silico
+perturbation direction and group-matched state-rewiring potency.
+
+IMPORTANT: Approx. RI is NOT a cosine similarity metric. It is a composite weighted score
+built only from existing CellOracle state-shift outputs.
 
 For each TF and group g:
 1. mean_shift_g = mean(shift_length)
@@ -252,7 +256,7 @@ For each TF overall:
 4. unmatched_net = net_shift_other_group
 5. group_selectivity = (matched_net - unmatched_net) / (abs(matched_net) + abs(unmatched_net) + 1e-9)
 6. direction_agreement_factor = 1.0 if expected_regulon_effect_group == expected_expr_higher_group else 0.75
-7. recovery_index =
+7. Approx. RI (recovery_index) =
    mean_net_shift_overall
    * (1 + group_selectivity)
    * (1 + coherence_target_group)
@@ -263,9 +267,18 @@ Interpretation:
 - Higher net_shift means the perturbation exceeds randomized control.
 - Higher coherence means the average vector shift is more directional and less diffuse.
 - Higher group_selectivity means the perturbation perturbs its expected group more than the opposite group.
+- Higher Approx. RI indicates stronger group-matched, direction-consistent state-rewiring potency.
+- Random perturbation controls were used as negative-control context for the simulated perturbation outputs.
 
-This is not a literal rescue probability. It is an executable proxy for group-matched state-rewiring potency
-using the currently available CellOracle perturbation outputs.
+Value range:
+- Approx. RI is a non-negative composite score with range [0, +inf).
+- It is NOT bounded to [-1, 1] because it is not a cosine similarity.
+
+Boundary:
+- Approx. RI is not a CellOracle official standard metric.
+- Approx. RI is not a clinical recovery metric.
+- Approx. RI is not a literal rescue probability.
+- CellOracle outputs are computational in silico perturbation results, not experimental perturbation evidence.
 """
     with open(ko_dir / "round1_recovery_index_definition.txt", "w", encoding="utf-8") as handle:
         handle.write(text)
@@ -395,7 +408,7 @@ def build_next_step_recommendations(master_df: pd.DataFrame) -> str:
         "2. Expand TFs or validate first",
         "- Recommendation: validate the current top round-1 TFs first before expanding the TF list.",
         "- Practical order: NFE2L2 and THRB first, then BHLHE40, then SOX2 if extra bandwidth is available.",
-        "- Follow-up can include expression/regulon consistency checks, supportive external/contextual dataset review, or targeted wet-lab experiments if available.",
+        "- Validation can include expression/regulon consistency checks, external dataset replication, or targeted wet-lab follow-up if available.",
         "",
         "3. Figure placement",
         "- Main figures: overall mean_shift_length ranking bar plot, group comparison bar plot, Recovery Index ranking plot, and representative quiver/grid-flow images for NFE2L2 and THRB.",

@@ -9,10 +9,14 @@
 - [x] Third-party ranking and motif database files are excluded or documented with source filenames/URLs.
 - [x] pySCENIC/AUCell audit files are included under `results/audit/`.
 - [x] CellOracle results are labeled as in silico simulated perturbations.
+- [x] Formal CellOracle permutation-test scripts and fixed-seed outputs are included (`N = 10,000`, seed `20240817`).
+- [x] Approx. RI is documented consistently as a non-negative, unbounded composite rather than a cosine similarity or normalized 0-1 metric.
 - [x] Exploratory drug-signature results are labeled as exploratory and not therapeutic recommendations.
 - [x] No files larger than 50 MB are included in this release package based on the preparation audit.
 - [x] No h5ad, loom, h5, raw mtx, feather, or CellOracle binary object files are included.
 - [x] Public safety scan was performed and documented in `public_release_safety_report.md`.
 - [x] Manuscript claims are supported by included processed tables and audit files: 4 samples, 2 lesion / 2 internal-control samples, 2 donors, 2,322 astrocytes, 36,601 genes, and 105 pySCENIC regulons.
-- [ ] Manual review before public upload: confirm GitHub URL and decide whether Zenodo archival is needed.
+- [x] Local release tree synchronized to BMC Genomics submission version `v0.3.0-submission`.
+- [ ] Push commit/tag to GitHub and confirm repository visibility when network access is available.
+- [ ] Decide whether Zenodo archival is needed and add the DOI if created.
 - [ ] Manual review before public upload: confirm final author/contact information before submission.
