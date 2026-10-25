@@ -13,7 +13,7 @@ Files recorded: 471
 | `Cover_Letter.docx` | documentation | 0.044 | passed | Cover letter for the BMC Genomics submission | `ccc929df66075ae9c5356d39feaa2281129d98cc8a8e9429414c1c587c43119e` |
 | `LICENSE` | documentation | 0.001 | passed | MIT license for code | `e538f77b06d00b13beb737b8897fbacf353149d34a90526821d36ec25605d75c` |
 | `MANIFEST.md` | documentation | 0.006 | passed | Repository manifest for the 2026-10-25 submission version | `6b4f4b4fffec1ac3585bdadb11c773da6f4761f21e28fccec1f31ae296776dce` |
-| `Manuscript.docx` | documentation | 6.683 | passed | Submitted BMC Genomics manuscript, 2026-10-25 version | `3d5e6e05b4704a448bfd3a45909a717ed89877839fa741d5b52506f6c885b5d7` |
+| `Manuscript.docx` | documentation | 6.683 | passed | Submitted BMC Genomics manuscript, 2026-10-25 version | `817594eaf9ed9b5c43d74a5e55f9e2dae04da0f938c66c0c456bb14aaa1fdc0d` |
 | `README.md` | documentation | 0.005 | passed | Repository overview for the 2026-10-25 submission version | `34e3b1006d269ce944ceb9a31cd41d5e5687fa66e2669d90ee3d57aa644cdede` |
 | `RELEASE_NOTES_20261025.md` | documentation | 0.002 | passed | Release notes for the 2026-10-25 submission version | `110251bca3a6bf2d5501b5f510dd42bf1dd0cb7ffc5e5ec868a74b984558de41` |
 | `RELEASE_NOTES_v0.3.0-submission.md` | documentation | 0.001 | passed | Submission release notes | `effd36c32e4ccd122025fd47b2cdb664e7177dcd4c79b27ee48b3b1b472db62f` |
